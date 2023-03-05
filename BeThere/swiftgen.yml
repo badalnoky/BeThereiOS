@@ -1,0 +1,8 @@
+strings:
+  inputs:
+    - BeThere/Resources/Localizable/en.lproj/Localizable.strings
+  outputs:
+    params:
+      enumName: Txt
+    templateName: structured-swift5
+    output: BeThere/Resources/Generated/Localizable.swift

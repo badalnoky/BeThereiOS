@@ -14,6 +14,8 @@
 		79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA68129B4FB7000B04E2A /* Preview Assets.xcassets */; };
 		79DDA68C29B4FB7000B04E2A /* BeThereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA68B29B4FB7000B04E2A /* BeThereTests.swift */; };
 		79DDA69629B4FB7000B04E2A /* BeThereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA69529B4FB7000B04E2A /* BeThereUITests.swift */; };
+		79DDA6AB29B5006400B04E2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA6AD29B5006400B04E2A /* Localizable.strings */; };
+		79DDA6B029B5017F00B04E2A /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6AF29B5017F00B04E2A /* Localizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		79DDA68B29B4FB7000B04E2A /* BeThereTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereTests.swift; sourceTree = "<group>"; };
 		79DDA69129B4FB7000B04E2A /* BeThereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeThereUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA69529B4FB7000B04E2A /* BeThereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereUITests.swift; sourceTree = "<group>"; };
+		79DDA6AC29B5006400B04E2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		79DDA6AF29B5017F00B04E2A /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		9A46FDF8AD0B5CB5B7F9A24B /* Pods_BeThere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeThere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A019FF2B4B235760874CD4 /* Pods-BeThere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThere.release.xcconfig"; path = "Target Support Files/Pods-BeThere/Pods-BeThere.release.xcconfig"; sourceTree = "<group>"; };
 		CF35A98EBE118096C5AF97E8 /* Pods-BeThere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThere.debug.xcconfig"; path = "Target Support Files/Pods-BeThere/Pods-BeThere.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		79DDA67929B4FB6F00B04E2A /* BeThere */ = {
 			isa = PBXGroup;
 			children = (
+				79DDA6A529B5000900B04E2A /* Resources */,
 				79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */,
 				79DDA67C29B4FB6F00B04E2A /* ContentView.swift */,
 				79DDA67E29B4FB7000B04E2A /* Assets.xcassets */,
@@ -148,6 +153,31 @@
 			path = BeThereUITests;
 			sourceTree = "<group>";
 		};
+		79DDA6A529B5000900B04E2A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				79DDA6A629B5002000B04E2A /* Generated */,
+				79DDA6A829B5003700B04E2A /* Localizable */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		79DDA6A629B5002000B04E2A /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				79DDA6AF29B5017F00B04E2A /* Localizable.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		79DDA6A829B5003700B04E2A /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				79DDA6AD29B5006400B04E2A /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +186,7 @@
 			buildConfigurationList = 79DDA69B29B4FB7000B04E2A /* Build configuration list for PBXNativeTarget "BeThere" */;
 			buildPhases = (
 				98F2AFF51B0231D4601280CD /* [CP] Check Pods Manifest.lock */,
+				79DDA6AE29B500AE00B04E2A /* SwiftGen */,
 				79DDA6A429B4FDFA00B04E2A /* SwiftLint */,
 				79DDA67329B4FB6F00B04E2A /* Sources */,
 				79DDA67429B4FB6F00B04E2A /* Frameworks */,
@@ -255,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */,
+				79DDA6AB29B5006400B04E2A /* Localizable.strings in Resources */,
 				79DDA67F29B4FB7000B04E2A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +327,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
+		79DDA6AE29B500AE00B04E2A /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+		};
 		98F2AFF51B0231D4601280CD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79DDA67D29B4FB6F00B04E2A /* ContentView.swift in Sources */,
+				79DDA6B029B5017F00B04E2A /* Localizable.swift in Sources */,
 				79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +411,17 @@
 			targetProxy = 79DDA69229B4FB7000B04E2A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		79DDA6AD29B5006400B04E2A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79DDA6AC29B5006400B04E2A /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		79DDA69929B4FB7000B04E2A /* Debug */ = {
