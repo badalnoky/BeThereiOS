@@ -2,6 +2,9 @@ platform :ios, '16.0'
 
 target 'BeThere' do
   use_frameworks!
+
+  pod 'SwiftLint'
+
 end
 
 post_install do |installer|

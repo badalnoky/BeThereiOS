@@ -1,10 +1,12 @@
-import XCTest
 @testable import BeThere
+import XCTest
 
 final class BeThereTests: XCTestCase {
-    override func setUpWithError() throws {}
+    override func setUpWithError() throws {
+        try super.setUpWithError()
+    }
 
-    override func tearDownWithError() throws {}
-
-    func testExample() throws {}
+    override func tearDownWithError() throws {
+        try super.tearDownWithError()
+    }
 }
