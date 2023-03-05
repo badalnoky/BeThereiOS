@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:BaseKit/BaseKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:BeThere.xcodeproj">
    </FileRef>
    <FileRef
