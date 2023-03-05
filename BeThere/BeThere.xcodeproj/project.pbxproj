@@ -122,12 +122,14 @@
 		79DDA67929B4FB6F00B04E2A /* BeThere */ = {
 			isa = PBXGroup;
 			children = (
-				79DDA6A529B5000900B04E2A /* Resources */,
-				79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */,
-				79DDA67C29B4FB6F00B04E2A /* ContentView.swift */,
-				79DDA67E29B4FB7000B04E2A /* Assets.xcassets */,
+				79DDA6B329B508EF00B04E2A /* App */,
+				79DDA6B429B508F600B04E2A /* DI */,
+				79DDA6B529B5090800B04E2A /* Domain */,
+				79DDA6B629B5091400B04E2A /* Navigation */,
 				79DDA68029B4FB7000B04E2A /* Preview Content */,
-				79DDA6B129B5040E00B04E2A /* DI.swift */,
+				79DDA6A529B5000900B04E2A /* Resources */,
+				79DDA6B729B5092100B04E2A /* Scene */,
+				79DDA6B829B5092D00B04E2A /* Service */,
 			);
 			path = BeThere;
 			sourceTree = "<group>";
@@ -159,6 +161,7 @@
 		79DDA6A529B5000900B04E2A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				79DDA6B929B5095400B04E2A /* Assets */,
 				79DDA6A629B5002000B04E2A /* Generated */,
 				79DDA6A829B5003700B04E2A /* Localizable */,
 			);
@@ -179,6 +182,59 @@
 				79DDA6AD29B5006400B04E2A /* Localizable.strings */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		79DDA6B329B508EF00B04E2A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		79DDA6B429B508F600B04E2A /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				79DDA6B129B5040E00B04E2A /* DI.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		79DDA6B529B5090800B04E2A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		79DDA6B629B5091400B04E2A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		79DDA6B729B5092100B04E2A /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				79DDA67C29B4FB6F00B04E2A /* ContentView.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		79DDA6B829B5092D00B04E2A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		79DDA6B929B5095400B04E2A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				79DDA67E29B4FB7000B04E2A /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
