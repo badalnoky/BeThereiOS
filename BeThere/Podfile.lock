@@ -1,0 +1,24 @@
+PODS:
+  - Resolver (1.5.0)
+  - SwiftGen (6.6.2)
+  - SwiftLint (0.49.1)
+
+DEPENDENCIES:
+  - Resolver
+  - SwiftGen
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Resolver
+    - SwiftGen
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Resolver: 68984624572763018fd8ec7b8e3e8df0e3b6bba5
+  SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
+  SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
+
+PODFILE CHECKSUM: fb789bf7e8a8f3ba101f363486db9fba0e4b20d4
+
+COCOAPODS: 1.11.3
