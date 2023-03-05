@@ -5,6 +5,7 @@ target 'BeThere' do
 
   pod 'SwiftLint'
   pod 'SwiftGen'
+  pod 'Resolver'
 
 end
 
