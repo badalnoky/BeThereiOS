@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		79DDA6C929B50AEF00B04E2A /* BaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79DDA6C829B50AEF00B04E2A /* BaseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79DDA6D229B50B1D00B04E2A /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6D029B50B1D00B04E2A /* UserDefault.swift */; };
 		79DDA6D329B50B1D00B04E2A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6D129B50B1D00B04E2A /* NetworkMonitor.swift */; };
 		79DDA6DA29B50B2700B04E2A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6D529B50B2700B04E2A /* Extensions.swift */; };
 		79DDA6DB29B50B2700B04E2A /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6D629B50B2700B04E2A /* Screen.swift */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		79DDA6C529B50AEF00B04E2A /* BaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA6C829B50AEF00B04E2A /* BaseKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseKit.h; sourceTree = "<group>"; };
-		79DDA6D029B50B1D00B04E2A /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		79DDA6D129B50B1D00B04E2A /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		79DDA6D529B50B2700B04E2A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		79DDA6D629B50B2700B04E2A /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				79DDA6D129B50B1D00B04E2A /* NetworkMonitor.swift */,
-				79DDA6D029B50B1D00B04E2A /* UserDefault.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -167,7 +164,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				79DDA6DE29B50B2700B04E2A /* Navigator.swift in Sources */,
-				79DDA6D229B50B1D00B04E2A /* UserDefault.swift in Sources */,
 				79DDA6DC29B50B2700B04E2A /* SceneFactory.swift in Sources */,
 				79DDA6DD29B50B2700B04E2A /* Coordinator.swift in Sources */,
 				79DDA6DA29B50B2700B04E2A /* Extensions.swift in Sources */,
