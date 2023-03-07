@@ -10,8 +10,8 @@ public final class ContentSceneFactory: SceneFactory {
         case .main: ContentView(text: "main")
         case .settings: ContentView(text: "setting")
         case .search: ContentView(text: "search")
-        case .eventChat: ContentView(text: "chat")
-        case .eventDetails: ContentView(text: "event")
+        case .chat: ContentView(text: "chat")
+        case .event: ContentView(text: "event")
         }
     }
 }
