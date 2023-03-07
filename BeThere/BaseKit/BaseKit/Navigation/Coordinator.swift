@@ -3,7 +3,7 @@ import SwiftUI
 
 // swiftlint: disable: explicit_init
 
-protocol CoordinatorInput {
+public protocol CoordinatorInput {
     associatedtype Factory: SceneFactory
 
     var isFlowFinished: PassthroughSubject<Bool, Never> { get }
@@ -15,21 +15,21 @@ protocol CoordinatorInput {
     func registerBinding()
 }
 
-extension CoordinatorInput {
+public extension CoordinatorInput {
     @ViewBuilder func start() -> some View { navigator }
 }
 
 open class Coordinator<Factory: SceneFactory>: CoordinatorInput {
-    var isFlowFinished = PassthroughSubject<Bool, Never>()
-    var cancellables = Set<AnyCancellable>()
-    var navigator: Navigator<Factory>
+    public var isFlowFinished = PassthroughSubject<Bool, Never>()
+    public var cancellables = Set<AnyCancellable>()
+    public var navigator: Navigator<Factory>
 
     public required init(root: Factory.FlowScreen) {
         self.navigator = Navigator(sceneFactory: Factory.init(), root: root)
         registerBinding()
     }
 
-    func registerBinding() {
+    public func registerBinding() {
         navigator.flowFinished.subscribe(isFlowFinished).store(in: &cancellables)
     }
 }

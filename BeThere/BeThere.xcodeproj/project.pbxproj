@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		112D7F5EE4519EE61062E6DF /* Pods_BeThere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A46FDF8AD0B5CB5B7F9A24B /* Pods_BeThere.framework */; };
 		793A5A1229B78F09009A3D5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1129B78F09009A3D5B /* AppDelegate.swift */; };
+		793A5A1429B79369009A3D5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1329B79369009A3D5B /* AppCoordinator.swift */; };
+		793A5A1829B796CA009A3D5B /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1729B796CA009A3D5B /* AuthenticationCoordinator.swift */; };
+		793A5A1A29B796E1009A3D5B /* AuthenticationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1929B796E1009A3D5B /* AuthenticationScreen.swift */; };
+		793A5A1C29B796F7009A3D5B /* AuthenticationSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1B29B796F7009A3D5B /* AuthenticationSceneFactory.swift */; };
+		793A5A1E29B79908009A3D5B /* ContentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1D29B79908009A3D5B /* ContentCoordinator.swift */; };
+		793A5A2129B79A00009A3D5B /* ContentSceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A2029B79A00009A3D5B /* ContentSceneFactory.swift */; };
+		793A5A2329B79A0D009A3D5B /* ContentScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A2229B79A0D009A3D5B /* ContentScreen.swift */; };
 		79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */; };
 		79DDA67D29B4FB6F00B04E2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA67C29B4FB6F00B04E2A /* ContentView.swift */; };
 		79DDA67F29B4FB7000B04E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA67E29B4FB7000B04E2A /* Assets.xcassets */; };
@@ -55,6 +62,13 @@
 
 /* Begin PBXFileReference section */
 		793A5A1129B78F09009A3D5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		793A5A1329B79369009A3D5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		793A5A1729B796CA009A3D5B /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
+		793A5A1929B796E1009A3D5B /* AuthenticationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationScreen.swift; sourceTree = "<group>"; };
+		793A5A1B29B796F7009A3D5B /* AuthenticationSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSceneFactory.swift; sourceTree = "<group>"; };
+		793A5A1D29B79908009A3D5B /* ContentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCoordinator.swift; sourceTree = "<group>"; };
+		793A5A2029B79A00009A3D5B /* ContentSceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSceneFactory.swift; sourceTree = "<group>"; };
+		793A5A2229B79A0D009A3D5B /* ContentScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentScreen.swift; sourceTree = "<group>"; };
 		79DDA67729B4FB6F00B04E2A /* BeThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereApp.swift; sourceTree = "<group>"; };
 		79DDA67C29B4FB6F00B04E2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +130,26 @@
 				B7A019FF2B4B235760874CD4 /* Pods-BeThere.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		793A5A1529B795EB009A3D5B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				793A5A1729B796CA009A3D5B /* AuthenticationCoordinator.swift */,
+				793A5A1B29B796F7009A3D5B /* AuthenticationSceneFactory.swift */,
+				793A5A1929B796E1009A3D5B /* AuthenticationScreen.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		793A5A1629B795F4009A3D5B /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				793A5A1D29B79908009A3D5B /* ContentCoordinator.swift */,
+				793A5A2029B79A00009A3D5B /* ContentSceneFactory.swift */,
+				793A5A2229B79A0D009A3D5B /* ContentScreen.swift */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 		79DDA66E29B4FB6F00B04E2A = {
@@ -208,8 +242,9 @@
 		79DDA6B329B508EF00B04E2A /* App */ = {
 			isa = PBXGroup;
 			children = (
-				79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */,
+				793A5A1329B79369009A3D5B /* AppCoordinator.swift */,
 				793A5A1129B78F09009A3D5B /* AppDelegate.swift */,
+				79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -232,6 +267,8 @@
 		79DDA6B629B5091400B04E2A /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				793A5A1529B795EB009A3D5B /* Authentication */,
+				793A5A1629B795F4009A3D5B /* Content */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -475,11 +512,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				793A5A1429B79369009A3D5B /* AppCoordinator.swift in Sources */,
+				793A5A1829B796CA009A3D5B /* AuthenticationCoordinator.swift in Sources */,
 				79DDA6B229B5040E00B04E2A /* DI.swift in Sources */,
 				79DDA67D29B4FB6F00B04E2A /* ContentView.swift in Sources */,
 				79DDA6B029B5017F00B04E2A /* Localizable.swift in Sources */,
+				793A5A1A29B796E1009A3D5B /* AuthenticationScreen.swift in Sources */,
 				793A5A1229B78F09009A3D5B /* AppDelegate.swift in Sources */,
+				793A5A2129B79A00009A3D5B /* ContentSceneFactory.swift in Sources */,
 				79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */,
+				793A5A2329B79A0D009A3D5B /* ContentScreen.swift in Sources */,
+				793A5A1E29B79908009A3D5B /* ContentCoordinator.swift in Sources */,
+				793A5A1C29B796F7009A3D5B /* AuthenticationSceneFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
