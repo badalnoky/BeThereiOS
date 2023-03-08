@@ -11,3 +11,8 @@
 "Registration.passwordLabel" = "Password";
 "Registration.passwordAgainLabel" = "Password again";
 "Registration.registrateLabel" = "Registrate";
+
+"SuccessfulRegistration.title" = "Successful registration";
+"SuccessfulRegistration.nextLabel" = "Next";
+
+"Icons.check" = "checkmark";
