@@ -1,1 +1,5 @@
-"test" = "test";
+"Login.title" = "Sign in";
+"Login.emailLabel" = "Email";
+"Login.passwordLabel" = "Password";
+"Login.registrateLabel" = "registrate";
+"Login.signInLabel" = "Sign in";

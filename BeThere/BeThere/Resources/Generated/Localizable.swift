@@ -10,8 +10,18 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Txt {
-  /// test
-  internal static let test = Txt.tr("Localizable", "test", fallback: "test")
+  internal enum Login {
+    /// Email
+    internal static let emailLabel = Txt.tr("Localizable", "Login.emailLabel", fallback: "Email")
+    /// Password
+    internal static let passwordLabel = Txt.tr("Localizable", "Login.passwordLabel", fallback: "Password")
+    /// registrate
+    internal static let registrateLabel = Txt.tr("Localizable", "Login.registrateLabel", fallback: "registrate")
+    /// Sign in
+    internal static let signInLabel = Txt.tr("Localizable", "Login.signInLabel", fallback: "Sign in")
+    /// Sign in
+    internal static let title = Txt.tr("Localizable", "Login.title", fallback: "Sign in")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
