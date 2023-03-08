@@ -16,3 +16,11 @@
 "SuccessfulRegistration.nextLabel" = "Next";
 
 "Icons.check" = "checkmark";
+"Icons.signOut" = "rectangle.portrait.and.arrow.right";
+"Icons.addFriends" = "person.fill.badge.plus";
+"Icons.settings" = "gear";
+"Icons.search" = "magnifyingglass";
+"Icons.plus" = "plus";
+"Icons.edit" = "pencil";
+"Icons.send" = "paperplane";
+"Icons.profilePicture" = "person.fill";

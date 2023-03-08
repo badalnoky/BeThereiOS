@@ -11,8 +11,24 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Txt {
   internal enum Icons {
+    /// person.fill.badge.plus
+    internal static let addFriends = Txt.tr("Localizable", "Icons.addFriends", fallback: "person.fill.badge.plus")
     /// checkmark
     internal static let check = Txt.tr("Localizable", "Icons.check", fallback: "checkmark")
+    /// pencil
+    internal static let edit = Txt.tr("Localizable", "Icons.edit", fallback: "pencil")
+    /// plus
+    internal static let plus = Txt.tr("Localizable", "Icons.plus", fallback: "plus")
+    /// person.fill
+    internal static let profilePicture = Txt.tr("Localizable", "Icons.profilePicture", fallback: "person.fill")
+    /// magnifyingglass
+    internal static let search = Txt.tr("Localizable", "Icons.search", fallback: "magnifyingglass")
+    /// paperplane
+    internal static let send = Txt.tr("Localizable", "Icons.send", fallback: "paperplane")
+    /// gear
+    internal static let settings = Txt.tr("Localizable", "Icons.settings", fallback: "gear")
+    /// rectangle.portrait.and.arrow.right
+    internal static let signOut = Txt.tr("Localizable", "Icons.signOut", fallback: "rectangle.portrait.and.arrow.right")
   }
   internal enum Login {
     /// Email
