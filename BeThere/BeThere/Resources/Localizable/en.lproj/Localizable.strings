@@ -3,3 +3,11 @@
 "Login.passwordLabel" = "Password";
 "Login.registrateLabel" = "registrate";
 "Login.signInLabel" = "Sign in";
+
+"Registration.title" = "Registration";
+"Registration.emailLabel" = "Email";
+"Registration.firstNameLabel" = "First name";
+"Registration.lastNameLabel" = "Last name";
+"Registration.passwordLabel" = "Password";
+"Registration.passwordAgainLabel" = "Password again";
+"Registration.registrateLabel" = "Registrate";

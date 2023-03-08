@@ -8,7 +8,7 @@ public final class AuthenticationSceneFactory: SceneFactory {
     public func view(for screen: AuthenticationScreen, with navigator: Navigator<AuthenticationSceneFactory>) -> some View {
         switch screen {
         case .login: login(with: navigator)
-        case .registration: RegistrationView()
+        case .registration: registration(with: navigator)
         case .succesfulRegistration: SuccesfulRegistrationView()
         }
     }
@@ -17,5 +17,9 @@ public final class AuthenticationSceneFactory: SceneFactory {
 extension AuthenticationSceneFactory {
     func login(with navigator: Navigator<AuthenticationSceneFactory>) -> LoginView {
         LoginView(viewModel: LoginViewModel(navigator: navigator))
+    }
+
+    func registration(with navigator: Navigator<AuthenticationSceneFactory>) -> RegistrationView {
+        RegistrationView(viewModel: RegistrationViewModel(navigator: navigator))
     }
 }

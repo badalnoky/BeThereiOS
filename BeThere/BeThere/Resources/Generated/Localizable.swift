@@ -22,6 +22,22 @@ internal enum Txt {
     /// Sign in
     internal static let title = Txt.tr("Localizable", "Login.title", fallback: "Sign in")
   }
+  internal enum Registration {
+    /// Email
+    internal static let emailLabel = Txt.tr("Localizable", "Registration.emailLabel", fallback: "Email")
+    /// First name
+    internal static let firstNameLabel = Txt.tr("Localizable", "Registration.firstNameLabel", fallback: "First name")
+    /// Last name
+    internal static let lastNameLabel = Txt.tr("Localizable", "Registration.lastNameLabel", fallback: "Last name")
+    /// Password again
+    internal static let passwordAgainLabel = Txt.tr("Localizable", "Registration.passwordAgainLabel", fallback: "Password again")
+    /// Password
+    internal static let passwordLabel = Txt.tr("Localizable", "Registration.passwordLabel", fallback: "Password")
+    /// Registrate
+    internal static let registrateLabel = Txt.tr("Localizable", "Registration.registrateLabel", fallback: "Registrate")
+    /// Registration
+    internal static let title = Txt.tr("Localizable", "Registration.title", fallback: "Registration")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
