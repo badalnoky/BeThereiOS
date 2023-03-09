@@ -42,6 +42,12 @@ internal enum Txt {
     /// Sign in
     internal static let title = Txt.tr("Localizable", "Login.title", fallback: "Sign in")
   }
+  internal enum Main {
+    /// Create an event
+    internal static let createLabel = Txt.tr("Localizable", "Main.createLabel", fallback: "Create an event")
+    /// Search
+    internal static let searchLabel = Txt.tr("Localizable", "Main.searchLabel", fallback: "Search")
+  }
   internal enum Registration {
     /// Email
     internal static let emailLabel = Txt.tr("Localizable", "Registration.emailLabel", fallback: "Email")

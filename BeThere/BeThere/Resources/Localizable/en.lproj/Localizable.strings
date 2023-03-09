@@ -15,6 +15,9 @@
 "SuccessfulRegistration.title" = "Successful registration";
 "SuccessfulRegistration.nextLabel" = "Next";
 
+"Main.searchLabel" = "Search";
+"Main.createLabel" = "Create an event";
+
 "Icons.check" = "checkmark";
 "Icons.signOut" = "rectangle.portrait.and.arrow.right";
 "Icons.addFriends" = "person.fill.badge.plus";
