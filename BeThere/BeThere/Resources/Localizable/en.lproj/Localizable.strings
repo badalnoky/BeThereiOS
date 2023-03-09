@@ -18,6 +18,8 @@
 "Main.searchLabel" = "Search";
 "Main.createLabel" = "Create an event";
 
+"Settings.saveLabel" = "Save";
+
 "Icons.check" = "checkmark";
 "Icons.signOut" = "rectangle.portrait.and.arrow.right";
 "Icons.addFriends" = "person.fill.badge.plus";

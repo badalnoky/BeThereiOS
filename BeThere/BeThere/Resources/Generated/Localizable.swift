@@ -64,6 +64,10 @@ internal enum Txt {
     /// Registration
     internal static let title = Txt.tr("Localizable", "Registration.title", fallback: "Registration")
   }
+  internal enum Settings {
+    /// Save
+    internal static let saveLabel = Txt.tr("Localizable", "Settings.saveLabel", fallback: "Save")
+  }
   internal enum SuccessfulRegistration {
     /// Next
     internal static let nextLabel = Txt.tr("Localizable", "SuccessfulRegistration.nextLabel", fallback: "Next")
