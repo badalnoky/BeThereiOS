@@ -1,1 +1,49 @@
-"test" = "test";
+/// MARK: screens
+
+"Login.title" = "Sign in";
+"Login.emailLabel" = "Email";
+"Login.passwordLabel" = "Password";
+"Login.registrateLabel" = "registrate";
+"Login.signInLabel" = "Sign in";
+
+"Registration.title" = "Registration";
+"Registration.emailLabel" = "Email";
+"Registration.firstNameLabel" = "First name";
+"Registration.lastNameLabel" = "Last name";
+"Registration.passwordLabel" = "Password";
+"Registration.passwordAgainLabel" = "Password again";
+"Registration.registrateLabel" = "Registrate";
+
+"SuccessfulRegistration.title" = "Successful registration";
+"SuccessfulRegistration.nextLabel" = "Next";
+
+"Main.searchLabel" = "Search";
+"Main.createLabel" = "Create an event";
+
+"Settings.saveLabel" = "Save";
+
+"Search.title" = "Search";
+"Search.searchLabel" = "Name of a person";
+"Search.friendsLabel" = "Your friends";
+"Search.otherLabel" = "Other users";
+
+"Chat.dateLabel" = "Time and Date";
+"Chat.locationLabel" = "Location";
+
+"Event.nameLabel" = "Name of event";
+"Event.dateLabel" = "Time and Date";
+"Event.locationLabel" = "Location";
+"Event.membersLabel" = "Members";
+"Event.saveLabel" = "Save";
+
+/// MARK: Resources
+
+"Icons.check" = "checkmark";
+"Icons.signOut" = "rectangle.portrait.and.arrow.right";
+"Icons.addFriends" = "person.fill.badge.plus";
+"Icons.settings" = "gear";
+"Icons.search" = "magnifyingglass";
+"Icons.plus" = "plus";
+"Icons.edit" = "pencil";
+"Icons.send" = "paperplane";
+"Icons.profilePicture" = "person.fill";
