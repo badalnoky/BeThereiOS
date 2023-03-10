@@ -64,6 +64,16 @@ internal enum Txt {
     /// Registration
     internal static let title = Txt.tr("Localizable", "Registration.title", fallback: "Registration")
   }
+  internal enum Search {
+    /// Your friends
+    internal static let friendsLabel = Txt.tr("Localizable", "Search.friendsLabel", fallback: "Your friends")
+    /// Other users
+    internal static let otherLabel = Txt.tr("Localizable", "Search.otherLabel", fallback: "Other users")
+    /// Name of a person
+    internal static let searchLabel = Txt.tr("Localizable", "Search.searchLabel", fallback: "Name of a person")
+    /// Search
+    internal static let title = Txt.tr("Localizable", "Search.title", fallback: "Search")
+  }
   internal enum Settings {
     /// Save
     internal static let saveLabel = Txt.tr("Localizable", "Settings.saveLabel", fallback: "Save")

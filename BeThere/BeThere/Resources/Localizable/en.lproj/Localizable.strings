@@ -20,6 +20,11 @@
 
 "Settings.saveLabel" = "Save";
 
+"Search.title" = "Search";
+"Search.searchLabel" = "Name of a person";
+"Search.friendsLabel" = "Your friends";
+"Search.otherLabel" = "Other users";
+
 "Icons.check" = "checkmark";
 "Icons.signOut" = "rectangle.portrait.and.arrow.right";
 "Icons.addFriends" = "person.fill.badge.plus";

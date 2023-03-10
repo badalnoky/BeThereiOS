@@ -9,7 +9,7 @@ public final class ContentSceneFactory: SceneFactory {
         switch screen {
         case .main: main(with: navigator)
         case .settings: settings(with: navigator)
-        case .search: SearchView()
+        case .search: search(with: navigator)
         case .chat: ChatView()
         case .event: EventView()
         }
@@ -23,5 +23,9 @@ extension ContentSceneFactory {
 
     func settings(with navigator: Navigator<ContentSceneFactory>) -> SettingsView {
         SettingsView(viewModel: SettingsViewModel(navigator: navigator))
+    }
+
+    func search(with navigator: Navigator<ContentSceneFactory>) -> SearchView {
+        SearchView(viewModel: SearchViewModel(navigator: navigator))
     }
 }

@@ -28,6 +28,8 @@
 		798048DA29BA4DBE006AE94C /* MainViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798048D929BA4DBE006AE94C /* MainViewModel+Mock.swift */; };
 		798048DC29BA5119006AE94C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798048DB29BA5119006AE94C /* SettingsViewModel.swift */; };
 		798048DE29BA512F006AE94C /* SettingsViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798048DD29BA512F006AE94C /* SettingsViewModel+Mock.swift */; };
+		7994CA2529BB3B5000EB90E0 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2429BB3B5000EB90E0 /* SearchViewModel.swift */; };
+		7994CA2729BB3C0900EB90E0 /* SearchViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2629BB3C0900EB90E0 /* SearchViewModel+Mock.swift */; };
 		79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */; };
 		79DDA67F29B4FB7000B04E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA67E29B4FB7000B04E2A /* Assets.xcassets */; };
 		79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA68129B4FB7000B04E2A /* Preview Assets.xcassets */; };
@@ -99,6 +101,8 @@
 		798048D929BA4DBE006AE94C /* MainViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewModel+Mock.swift"; sourceTree = "<group>"; };
 		798048DB29BA5119006AE94C /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		798048DD29BA512F006AE94C /* SettingsViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewModel+Mock.swift"; sourceTree = "<group>"; };
+		7994CA2429BB3B5000EB90E0 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		7994CA2629BB3C0900EB90E0 /* SearchViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewModel+Mock.swift"; sourceTree = "<group>"; };
 		79DDA67729B4FB6F00B04E2A /* BeThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereApp.swift; sourceTree = "<group>"; };
 		79DDA67E29B4FB7000B04E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -259,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				793A5A3A29B7A0DD009A3D5B /* SearchView.swift */,
+				7994CA2429BB3B5000EB90E0 /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				798048D929BA4DBE006AE94C /* MainViewModel+Mock.swift */,
+				7994CA2629BB3C0900EB90E0 /* SearchViewModel+Mock.swift */,
 				798048DD29BA512F006AE94C /* SettingsViewModel+Mock.swift */,
 			);
 			path = Content;
@@ -698,6 +704,7 @@
 				79DDA6B229B5040E00B04E2A /* DI.swift in Sources */,
 				798048DA29BA4DBE006AE94C /* MainViewModel+Mock.swift in Sources */,
 				79EBF85929B9020D00E83646 /* RegistrationViewModel+Mock.swift in Sources */,
+				7994CA2729BB3C0900EB90E0 /* SearchViewModel+Mock.swift in Sources */,
 				79EBF84F29B8F7EF00E83646 /* LoginViewModel.swift in Sources */,
 				79EBF85B29B907E300E83646 /* SuccessfulRegistrationViewModel.swift in Sources */,
 				793A5A3529B7A0B6009A3D5B /* ChatView.swift in Sources */,
@@ -710,6 +717,7 @@
 				793A5A2129B79A00009A3D5B /* ContentSceneFactory.swift in Sources */,
 				79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */,
 				79EBF86129B90D1E00E83646 /* Image+Extensions.swift in Sources */,
+				7994CA2529BB3B5000EB90E0 /* SearchViewModel.swift in Sources */,
 				793A5A2329B79A0D009A3D5B /* ContentScreen.swift in Sources */,
 				793A5A2F29B7A086009A3D5B /* LoginView.swift in Sources */,
 				79EBF85E29B9081E00E83646 /* SuccesfulRegistrationViewModel+Mock.swift in Sources */,
