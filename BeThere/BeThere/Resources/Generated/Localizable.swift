@@ -10,6 +10,12 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Txt {
+  internal enum Chat {
+    /// Time and Date
+    internal static let dateLabel = Txt.tr("Localizable", "Chat.dateLabel", fallback: "Time and Date")
+    /// Location
+    internal static let locationLabel = Txt.tr("Localizable", "Chat.locationLabel", fallback: "Location")
+  }
   internal enum Icons {
     /// person.fill.badge.plus
     internal static let addFriends = Txt.tr("Localizable", "Icons.addFriends", fallback: "person.fill.badge.plus")

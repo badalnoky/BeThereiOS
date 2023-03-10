@@ -25,6 +25,9 @@
 "Search.friendsLabel" = "Your friends";
 "Search.otherLabel" = "Other users";
 
+"Chat.dateLabel" = "Time and Date";
+"Chat.locationLabel" = "Location";
+
 "Icons.check" = "checkmark";
 "Icons.signOut" = "rectangle.portrait.and.arrow.right";
 "Icons.addFriends" = "person.fill.badge.plus";

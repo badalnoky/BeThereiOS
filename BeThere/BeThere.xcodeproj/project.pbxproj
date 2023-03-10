@@ -30,6 +30,8 @@
 		798048DE29BA512F006AE94C /* SettingsViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798048DD29BA512F006AE94C /* SettingsViewModel+Mock.swift */; };
 		7994CA2529BB3B5000EB90E0 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2429BB3B5000EB90E0 /* SearchViewModel.swift */; };
 		7994CA2729BB3C0900EB90E0 /* SearchViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2629BB3C0900EB90E0 /* SearchViewModel+Mock.swift */; };
+		7994CA2929BB3F6D00EB90E0 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2829BB3F6D00EB90E0 /* ChatViewModel.swift */; };
+		7994CA2B29BB402D00EB90E0 /* ChatViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2A29BB402D00EB90E0 /* ChatViewModel+Mock.swift */; };
 		79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */; };
 		79DDA67F29B4FB7000B04E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA67E29B4FB7000B04E2A /* Assets.xcassets */; };
 		79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA68129B4FB7000B04E2A /* Preview Assets.xcassets */; };
@@ -103,6 +105,8 @@
 		798048DD29BA512F006AE94C /* SettingsViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsViewModel+Mock.swift"; sourceTree = "<group>"; };
 		7994CA2429BB3B5000EB90E0 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		7994CA2629BB3C0900EB90E0 /* SearchViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewModel+Mock.swift"; sourceTree = "<group>"; };
+		7994CA2829BB3F6D00EB90E0 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		7994CA2A29BB402D00EB90E0 /* ChatViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatViewModel+Mock.swift"; sourceTree = "<group>"; };
 		79DDA67729B4FB6F00B04E2A /* BeThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereApp.swift; sourceTree = "<group>"; };
 		79DDA67E29B4FB7000B04E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				793A5A3429B7A0B6009A3D5B /* ChatView.swift */,
+				7994CA2829BB3F6D00EB90E0 /* ChatViewModel.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 		79EBF85529B9008100E83646 /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				7994CA2A29BB402D00EB90E0 /* ChatViewModel+Mock.swift */,
 				798048D929BA4DBE006AE94C /* MainViewModel+Mock.swift */,
 				7994CA2629BB3C0900EB90E0 /* SearchViewModel+Mock.swift */,
 				798048DD29BA512F006AE94C /* SettingsViewModel+Mock.swift */,
@@ -708,6 +714,7 @@
 				79EBF84F29B8F7EF00E83646 /* LoginViewModel.swift in Sources */,
 				79EBF85B29B907E300E83646 /* SuccessfulRegistrationViewModel.swift in Sources */,
 				793A5A3529B7A0B6009A3D5B /* ChatView.swift in Sources */,
+				7994CA2B29BB402D00EB90E0 /* ChatViewModel+Mock.swift in Sources */,
 				793A5A3129B7A09C009A3D5B /* RegistrationView.swift in Sources */,
 				79DDA6B029B5017F00B04E2A /* Localizable.swift in Sources */,
 				798048DC29BA5119006AE94C /* SettingsViewModel.swift in Sources */,
@@ -723,6 +730,7 @@
 				79EBF85E29B9081E00E83646 /* SuccesfulRegistrationViewModel+Mock.swift in Sources */,
 				79EBF85429B9000600E83646 /* LoginViewModel+Mock.swift in Sources */,
 				793A5A1E29B79908009A3D5B /* ContentCoordinator.swift in Sources */,
+				7994CA2929BB3F6D00EB90E0 /* ChatViewModel.swift in Sources */,
 				793A5A1C29B796F7009A3D5B /* AuthenticationSceneFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
