@@ -16,6 +16,18 @@ internal enum Txt {
     /// Location
     internal static let locationLabel = Txt.tr("Localizable", "Chat.locationLabel", fallback: "Location")
   }
+  internal enum Event {
+    /// Time and Date
+    internal static let dateLabel = Txt.tr("Localizable", "Event.dateLabel", fallback: "Time and Date")
+    /// Location
+    internal static let locationLabel = Txt.tr("Localizable", "Event.locationLabel", fallback: "Location")
+    /// Members
+    internal static let membersLabel = Txt.tr("Localizable", "Event.membersLabel", fallback: "Members")
+    /// Name of event
+    internal static let nameLabel = Txt.tr("Localizable", "Event.nameLabel", fallback: "Name of event")
+    /// Save
+    internal static let saveLabel = Txt.tr("Localizable", "Event.saveLabel", fallback: "Save")
+  }
   internal enum Icons {
     /// person.fill.badge.plus
     internal static let addFriends = Txt.tr("Localizable", "Icons.addFriends", fallback: "person.fill.badge.plus")

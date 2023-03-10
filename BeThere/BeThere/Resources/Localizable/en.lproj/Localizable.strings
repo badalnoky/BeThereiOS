@@ -1,3 +1,5 @@
+/// MARK: screens
+
 "Login.title" = "Sign in";
 "Login.emailLabel" = "Email";
 "Login.passwordLabel" = "Password";
@@ -27,6 +29,14 @@
 
 "Chat.dateLabel" = "Time and Date";
 "Chat.locationLabel" = "Location";
+
+"Event.nameLabel" = "Name of event";
+"Event.dateLabel" = "Time and Date";
+"Event.locationLabel" = "Location";
+"Event.membersLabel" = "Members";
+"Event.saveLabel" = "Save";
+
+/// MARK: Resources
 
 "Icons.check" = "checkmark";
 "Icons.signOut" = "rectangle.portrait.and.arrow.right";

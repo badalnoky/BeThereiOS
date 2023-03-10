@@ -11,7 +11,7 @@ public final class ContentSceneFactory: SceneFactory {
         case .settings: settings(with: navigator)
         case .search: search(with: navigator)
         case .chat: chat(with: navigator)
-        case .event: EventView()
+        case .event: event(with: navigator)
         }
     }
 }
@@ -31,5 +31,9 @@ extension ContentSceneFactory {
 
     func chat(with navigator: Navigator<ContentSceneFactory>) -> ChatView {
         ChatView(viewModel: ChatViewModel(navigator: navigator))
+    }
+
+    func event(with navigator: Navigator<ContentSceneFactory>) -> EventView {
+        EventView(viewModel: EventViewModel(navigator: navigator))
     }
 }
