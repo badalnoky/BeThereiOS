@@ -16,8 +16,8 @@ extension LoginView: View {
             TextField(text: $viewModel.password) {
                 Text(String.empty)
             }
-            Text(Str.registrateLabel)
-            Button(Str.signInLabel) {}
+            Button(Str.registrateLabel, action: viewModel.didTapRegistrate)
+            Button(Str.signInLabel, action: viewModel.didTapLogin)
         }
         .navigationTitle(Str.title)
     }
