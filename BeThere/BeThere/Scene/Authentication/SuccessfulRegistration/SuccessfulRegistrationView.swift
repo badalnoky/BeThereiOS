@@ -11,7 +11,7 @@ extension SuccessfulRegistrationView: View {
             Image.checkMark
                 .resizable()
                 .scaledToFit()
-            Button(Str.nextLabel) {}
+            Button(Str.nextLabel, action: viewModel.didTapNext)
         }
     }
 }
