@@ -9,10 +9,10 @@ extension MainView: View {
     var body: some View {
         VStack {
             HStack {
-                Image.signOut
+                IconButton(.signOut, action: viewModel.didTapSignOut)
                 Spacer()
-                Image.addFriends
-                Image.settings
+                IconButton(.addFriends, action: viewModel.didTapAddFriends)
+                IconButton(.settings, action: viewModel.didTapSettings)
             }
             HStack {
                 TextField(text: $viewModel.searchString) {
@@ -24,9 +24,12 @@ extension MainView: View {
             ScrollView {
                 ForEach(viewModel.events, id: \.self) { event in
                     Text(event)
+                        .onTapGesture {
+                            viewModel.didTapEvent()
+                        }
                 }
             }
-            Button(Str.createLabel) {}
+            Button(Str.createLabel, action: viewModel.didTapCreate)
         }
     }
 }

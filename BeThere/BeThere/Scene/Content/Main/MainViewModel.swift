@@ -10,3 +10,25 @@ final class MainViewModel: ObservableObject {
         self.navigator = navigator
     }
 }
+
+extension MainViewModel {
+    func didTapSignOut() {
+        navigator.finishFlow()
+    }
+
+    func didTapAddFriends() {
+        navigator.showSearch()
+    }
+
+    func didTapSettings() {
+        navigator.showSettings()
+    }
+
+    func didTapEvent() {
+        navigator.showChat()
+    }
+
+    func didTapCreate() {
+        navigator.showEvent()
+    }
+}
