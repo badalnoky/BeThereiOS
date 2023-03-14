@@ -7,3 +7,9 @@ final class SuccessfulRegistrationViewModel: ObservableObject {
         self.navigator = navigator
     }
 }
+
+extension SuccessfulRegistrationViewModel {
+    func didTapNext() {
+        navigator.finishFlow()
+    }
+}

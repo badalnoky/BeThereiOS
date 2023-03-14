@@ -10,3 +10,13 @@ final class LoginViewModel: ObservableObject {
         self.navigator = navigator
     }
 }
+
+extension LoginViewModel {
+    func didTapRegistrate() {
+        navigator.showRegistration()
+    }
+
+    func didTapLogin() {
+        navigator.finishFlow()
+    }
+}

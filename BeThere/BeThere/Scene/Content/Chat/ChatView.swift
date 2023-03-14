@@ -10,7 +10,7 @@ extension ChatView: View {
         VStack {
             HStack {
                 Spacer()
-                Image.edit
+                IconButton(.edit, action: viewModel.didTapEdit)
             }
             HStack {
                 Text(Str.dateLabel)

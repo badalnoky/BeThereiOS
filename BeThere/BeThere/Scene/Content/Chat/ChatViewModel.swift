@@ -13,3 +13,9 @@ final class ChatViewModel: ObservableObject {
         self.navigator = navigator
     }
 }
+
+extension ChatViewModel {
+    func didTapEdit() {
+        navigator.showEvent()
+    }
+}

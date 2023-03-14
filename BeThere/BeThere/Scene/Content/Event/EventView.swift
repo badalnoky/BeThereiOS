@@ -26,7 +26,7 @@ extension EventView: View {
             HStack {
                 Text(Str.membersLabel)
                 Spacer()
-                Image.addFriends
+                IconButton(.addFriends, action: viewModel.didTapAddFriends)
             }
             ScrollView {
                 ForEach(viewModel.members, id: \.self) { member in

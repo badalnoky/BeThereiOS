@@ -12,3 +12,9 @@ final class EventViewModel: ObservableObject {
         self.navigator = navigator
     }
 }
+
+extension EventViewModel {
+    func didTapAddFriends() {
+        navigator.showSearch()
+    }
+}

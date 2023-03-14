@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		112D7F5EE4519EE61062E6DF /* Pods_BeThere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A46FDF8AD0B5CB5B7F9A24B /* Pods_BeThere.framework */; };
+		791277F929C0E5CC0013173D /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791277F829C0E5CC0013173D /* IconButton.swift */; };
 		793A5A1229B78F09009A3D5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1129B78F09009A3D5B /* AppDelegate.swift */; };
 		793A5A1429B79369009A3D5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1329B79369009A3D5B /* AppCoordinator.swift */; };
 		793A5A1829B796CA009A3D5B /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1729B796CA009A3D5B /* AuthenticationCoordinator.swift */; };
@@ -85,6 +86,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		791277F829C0E5CC0013173D /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		793A5A1129B78F09009A3D5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		793A5A1329B79369009A3D5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		793A5A1729B796CA009A3D5B /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
@@ -178,6 +180,14 @@
 				B7A019FF2B4B235760874CD4 /* Pods-BeThere.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		791277F729C0E5B80013173D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				791277F829C0E5CC0013173D /* IconButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		793A5A1529B795EB009A3D5B /* Authentication */ = {
@@ -359,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				79DDA6B929B5095400B04E2A /* Assets */,
+				791277F729C0E5B80013173D /* Components */,
 				79EBF85F29B90CD900E83646 /* Extensions */,
 				79DDA6A629B5002000B04E2A /* Generated */,
 				79DDA6A829B5003700B04E2A /* Localizable */,
@@ -726,6 +737,7 @@
 				798048DC29BA5119006AE94C /* SettingsViewModel.swift in Sources */,
 				793A5A1A29B796E1009A3D5B /* AuthenticationScreen.swift in Sources */,
 				793A5A1229B78F09009A3D5B /* AppDelegate.swift in Sources */,
+				791277F929C0E5CC0013173D /* IconButton.swift in Sources */,
 				798048D829BA4D27006AE94C /* MainViewModel.swift in Sources */,
 				793A5A2129B79A00009A3D5B /* ContentSceneFactory.swift in Sources */,
 				79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */,
