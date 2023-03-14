@@ -13,3 +13,9 @@ final class RegistrationViewModel: ObservableObject {
         self.navigator = navigator
     }
 }
+
+extension RegistrationViewModel {
+    func didTapRegistrate() {
+        navigator.showSuccessfulRegistration()
+    }
+}

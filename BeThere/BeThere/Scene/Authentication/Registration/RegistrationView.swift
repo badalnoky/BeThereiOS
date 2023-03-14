@@ -30,7 +30,7 @@ extension RegistrationView: View {
                     Text(String.empty)
                 }
             }
-            Button(Str.registrateLabel) {}
+            Button(Str.registrateLabel, action: viewModel.didTapRegistrate)
         }
         .navigationTitle(Str.title)
     }

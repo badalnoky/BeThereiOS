@@ -6,4 +6,8 @@ public extension Navigator where Factory == AuthenticationSceneFactory {
     func showRegistration() {
         push(screen: .registration)
     }
+
+    func showSuccessfulRegistration() {
+        push(screen: .successfulRegistration)
+    }
 }
