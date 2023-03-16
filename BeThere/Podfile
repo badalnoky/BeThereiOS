@@ -3,6 +3,9 @@ platform :ios, '16.0'
 target 'BeThere' do
   use_frameworks!
 
+  pod 'FirebaseCore'
+  pod 'FirebaseAuth'
+  pod 'FirebaseStorage'
   pod 'SwiftLint'
   pod 'SwiftGen'
   pod 'Resolver'
