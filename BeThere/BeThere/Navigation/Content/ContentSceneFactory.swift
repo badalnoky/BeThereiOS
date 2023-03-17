@@ -1,4 +1,5 @@
 import BaseKit
+import Resolver
 import SwiftUI
 
 public final class ContentSceneFactory: SceneFactory {
@@ -18,7 +19,7 @@ public final class ContentSceneFactory: SceneFactory {
 
 extension ContentSceneFactory {
     func main(with navigator: Navigator<ContentSceneFactory>) -> MainView {
-        MainView(viewModel: MainViewModel(navigator: navigator))
+        MainView(viewModel: MainViewModel(navigator: navigator, authenticationService: Resolver.resolve()))
     }
 
     func settings(with navigator: Navigator<ContentSceneFactory>) -> SettingsView {

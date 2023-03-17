@@ -1,4 +1,5 @@
 import BaseKit
+import Resolver
 import SwiftUI
 
 public final class AuthenticationSceneFactory: SceneFactory {
@@ -16,11 +17,11 @@ public final class AuthenticationSceneFactory: SceneFactory {
 
 extension AuthenticationSceneFactory {
     func login(with navigator: Navigator<AuthenticationSceneFactory>) -> LoginView {
-        LoginView(viewModel: LoginViewModel(navigator: navigator))
+        LoginView(viewModel: LoginViewModel(navigator: navigator, authenticationService: Resolver.resolve()))
     }
 
     func registration(with navigator: Navigator<AuthenticationSceneFactory>) -> RegistrationView {
-        RegistrationView(viewModel: RegistrationViewModel(navigator: navigator))
+        RegistrationView(viewModel: RegistrationViewModel(navigator: navigator, authenticationService: Resolver.resolve()))
     }
 
     func successfulRegistration(with navigator: Navigator<AuthenticationSceneFactory>) -> SuccessfulRegistrationView {
