@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>599400542562-kalmuqfbioqvi15gfjf65na6jcdjkt97.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.599400542562-kalmuqfbioqvi15gfjf65na6jcdjkt97</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDeBJPsSIYP5cSDTLhh0mU1FSwD9lQV7O4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>599400542562</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>me.bercidalnoky.BeThere</string>
+	<key>PROJECT_ID</key>
+	<string>bethere-68108</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bethere-68108.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:599400542562:ios:7f094f552059e87c583c3b</string>
+</dict>
+</plist>
