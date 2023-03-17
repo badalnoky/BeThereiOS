@@ -21,7 +21,7 @@ extension AuthenticationSceneFactory {
     }
 
     func registration(with navigator: Navigator<AuthenticationSceneFactory>) -> RegistrationView {
-        RegistrationView(viewModel: RegistrationViewModel(navigator: navigator))
+        RegistrationView(viewModel: RegistrationViewModel(navigator: navigator, authenticationService: Resolver.resolve()))
     }
 
     func successfulRegistration(with navigator: Navigator<AuthenticationSceneFactory>) -> SuccessfulRegistrationView {
