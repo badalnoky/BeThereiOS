@@ -27,5 +27,11 @@ extension Resolver {
 }
 
 extension Resolver {
-    public static func registerServiceLayer() {}
+    public static func registerServiceLayer() {
+        register {
+            AuthenticatonService()
+        }
+        .implements(AuthenticationServiceInput.self)
+        .scope(.application)
+    }
 }
