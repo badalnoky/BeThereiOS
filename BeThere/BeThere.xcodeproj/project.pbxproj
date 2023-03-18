@@ -10,6 +10,7 @@
 		112D7F5EE4519EE61062E6DF /* Pods_BeThere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A46FDF8AD0B5CB5B7F9A24B /* Pods_BeThere.framework */; };
 		790BA70B29C39C94003C15DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 790BA70A29C39C94003C15DC /* GoogleService-Info.plist */; };
 		791277F929C0E5CC0013173D /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791277F829C0E5CC0013173D /* IconButton.swift */; };
+		79188CC229C6744500F47280 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79188CC129C6744500F47280 /* User.swift */; };
 		793A5A1229B78F09009A3D5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1129B78F09009A3D5B /* AppDelegate.swift */; };
 		793A5A1429B79369009A3D5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1329B79369009A3D5B /* AppCoordinator.swift */; };
 		793A5A1829B796CA009A3D5B /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1729B796CA009A3D5B /* AuthenticationCoordinator.swift */; };
@@ -91,6 +92,7 @@
 /* Begin PBXFileReference section */
 		790BA70A29C39C94003C15DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		791277F829C0E5CC0013173D /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		79188CC129C6744500F47280 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		793A5A1129B78F09009A3D5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		793A5A1329B79369009A3D5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		793A5A1729B796CA009A3D5B /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 		79890E4929C39B9500C270BF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				79188CC129C6744500F47280 /* User.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -777,6 +780,7 @@
 				793A5A2129B79A00009A3D5B /* ContentSceneFactory.swift in Sources */,
 				79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */,
 				79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */,
+				79188CC229C6744500F47280 /* User.swift in Sources */,
 				79EBF86129B90D1E00E83646 /* Image+Extensions.swift in Sources */,
 				7994CA2529BB3B5000EB90E0 /* SearchViewModel.swift in Sources */,
 				793A5A2329B79A0D009A3D5B /* ContentScreen.swift in Sources */,

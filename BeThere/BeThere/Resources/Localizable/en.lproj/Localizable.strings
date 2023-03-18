@@ -47,3 +47,7 @@
 "Icons.edit" = "pencil";
 "Icons.send" = "paperplane";
 "Icons.profilePicture" = "person.fill";
+
+/// MARK: Services
+
+"Authentication.userCollectionKey" = "user";
