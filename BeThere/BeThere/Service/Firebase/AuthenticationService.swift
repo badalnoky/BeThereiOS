@@ -37,17 +37,8 @@ extension AuthenticatonService: AuthenticationServiceInput {
             } else if let result = result {
                 self.createUserDocument(with: result.user.uid, name: name)
                     .sink(
-                        receiveCompletion: { completion in
-                            switch completion {
-                            case .failure(let error): print(error)
-                            default: break
-                            }
-                        },
-                        receiveValue: { created in
-                            if created {
-                                loggedIn.send(true)
-                            }
-                        }
+                        receiveValue: { if $0 { loggedIn.send(true) } },
+                        receiveError: { print($0) }
                     )
                     .store(in: &self.cancellables)
             }
