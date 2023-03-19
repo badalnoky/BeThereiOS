@@ -106,6 +106,18 @@ internal enum Txt {
     /// Successful registration
     internal static let title = Txt.tr("Localizable", "SuccessfulRegistration.title", fallback: "Successful registration")
   }
+  internal enum User {
+    /// events
+    internal static let events = Txt.tr("Localizable", "User.events", fallback: "events")
+    /// friends
+    internal static let friends = Txt.tr("Localizable", "User.friends", fallback: "friends")
+    /// id
+    internal static let id = Txt.tr("Localizable", "User.id", fallback: "id")
+    /// name
+    internal static let name = Txt.tr("Localizable", "User.name", fallback: "name")
+    /// photo
+    internal static let photo = Txt.tr("Localizable", "User.photo", fallback: "photo")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

@@ -1,4 +1,24 @@
-/// MARK: screens
+/// MARK: Domain
+
+"User.id" = "id";
+"User.name" = "name";
+"User.photo" = "photo";
+"User.friends" = "friends";
+"User.events" = "events";
+
+/// MARK: Resources
+
+"Icons.check" = "checkmark";
+"Icons.signOut" = "rectangle.portrait.and.arrow.right";
+"Icons.addFriends" = "person.fill.badge.plus";
+"Icons.settings" = "gear";
+"Icons.search" = "magnifyingglass";
+"Icons.plus" = "plus";
+"Icons.edit" = "pencil";
+"Icons.send" = "paperplane";
+"Icons.profilePicture" = "person.fill";
+
+/// MARK: Screens
 
 "Login.title" = "Sign in";
 "Login.emailLabel" = "Email";
@@ -35,18 +55,6 @@
 "Event.locationLabel" = "Location";
 "Event.membersLabel" = "Members";
 "Event.saveLabel" = "Save";
-
-/// MARK: Resources
-
-"Icons.check" = "checkmark";
-"Icons.signOut" = "rectangle.portrait.and.arrow.right";
-"Icons.addFriends" = "person.fill.badge.plus";
-"Icons.settings" = "gear";
-"Icons.search" = "magnifyingglass";
-"Icons.plus" = "plus";
-"Icons.edit" = "pencil";
-"Icons.send" = "paperplane";
-"Icons.profilePicture" = "person.fill";
 
 /// MARK: Services
 

@@ -15,6 +15,8 @@ final class MainViewModel: ObservableObject {
     ) {
         self.navigator = navigator
         self.authenticationService = authenticationService
+
+        registerUserBinding()
     }
 }
 
@@ -42,5 +44,15 @@ extension MainViewModel {
 
     func didTapCreate() {
         navigator.showEvent()
+    }
+}
+
+private extension MainViewModel {
+    func registerUserBinding() {
+        authenticationService.user
+            .sink { [weak self] in
+                if let user = $0 { self?.events = user.events }
+            }
+            .store(in: &cancellables)
     }
 }

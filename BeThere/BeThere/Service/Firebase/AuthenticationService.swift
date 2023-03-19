@@ -3,16 +3,20 @@ import FirebaseAuth
 import FirebaseFirestore
 
 public protocol AuthenticationServiceInput {
+    var user: CurrentValueSubject<User?, Never> { get }
+
     func signIn(email: String, password: String) -> CurrentValueSubject<Bool, Error>
     func registrate(email: String, password: String, name: String) -> CurrentValueSubject<Bool, Error>
     func signOut() -> CurrentValueSubject<Bool, Error>
 }
 
-final class AuthenticatonService: ObservableObject {
-    private typealias Str = Txt.Authentication
+public final class AuthenticatonService: ObservableObject {
+    private typealias Keys = Txt.Authentication
     private let authenticator = Auth.auth()
-    private let userCollection = Firestore.firestore().collection(Str.userCollectionKey)
+    private let userCollection = Firestore.firestore().collection(Keys.userCollectionKey)
     private var cancellables = Set<AnyCancellable>()
+
+    public var user = CurrentValueSubject<User?, Never>(nil)
 }
 
 extension AuthenticatonService: AuthenticationServiceInput {
@@ -37,7 +41,12 @@ extension AuthenticatonService: AuthenticationServiceInput {
             } else if let result = result {
                 self.createUserDocument(with: result.user.uid, name: name)
                     .sink(
-                        receiveValue: { if $0 { loggedIn.send(true) } },
+                        receiveValue: {
+                            if $0 {
+                                self.getUserData(for: result.user.uid)
+                                loggedIn.send(true)
+                            }
+                        },
                         receiveError: { print($0) }
                     )
                     .store(in: &self.cancellables)
@@ -74,5 +83,16 @@ private extension AuthenticatonService {
             }
 
         return created
+    }
+
+    func getUserData(for id: String) {
+        userCollection
+            .document(id)
+            .addSnapshotListener { [weak self] documentSnapshot, error in
+                guard let document = documentSnapshot else { return }
+                guard let data = document.data() else { return }
+                guard let user = User(fromDocument: data) else { return }
+                self?.user.send(user)
+            }
     }
 }
