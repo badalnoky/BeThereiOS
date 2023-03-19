@@ -13,7 +13,7 @@ extension SettingsView: View {
                 Text(String.empty)
             }
             Spacer()
-            Button(Str.saveLabel) {}
+            Button(Str.saveLabel, action: viewModel.didTapSave)
         }
     }
 }

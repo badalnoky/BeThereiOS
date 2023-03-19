@@ -1,7 +1,7 @@
 import BaseKit
 import Combine
 
-final class SettingsViewModel: ObservableObject {
+public final class SettingsViewModel: ObservableObject {
     private var navigator: Navigator<ContentSceneFactory>
     private var dataService: DataServiceInput
     private var cancellables = Set<AnyCancellable>()
@@ -16,6 +16,12 @@ final class SettingsViewModel: ObservableObject {
         self.dataService = dataService
 
         registerUserBinding()
+    }
+}
+
+public extension SettingsViewModel {
+    func didTapSave() {
+        dataService.updateUserName(to: name)
     }
 }
 

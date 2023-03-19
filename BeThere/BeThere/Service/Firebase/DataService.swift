@@ -7,11 +7,12 @@ public protocol DataServiceInput {
     func resetUser()
     func getUserData(for id: String)
     func createUserDocument(with id: String, name: String) -> CurrentValueSubject<Bool, Error>
+    func updateUserName(to name: String)
 }
 
 public final class DataService {
     private typealias Keys = Txt.Data
-    private let userCollection = Firestore.firestore().collection(Keys.userCollectionKey)
+    private let userCollection = Firestore.firestore().collection(Keys.userCollection)
 
     public var user = CurrentValueSubject<User?, Never>(nil)
 }
@@ -46,6 +47,15 @@ extension DataService: DataServiceInput {
                 guard let data = document.data() else { return }
                 guard let user = User(fromDocument: data) else { return }
                 self?.user.send(user)
+            }
+    }
+
+    public func updateUserName(to name: String) {
+        guard let user = self.user.value else { return }
+        userCollection
+            .document(user.id)
+            .updateData([Keys.name: name]) { error in
+                guard error == nil else { return }
             }
     }
 }

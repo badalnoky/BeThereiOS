@@ -10,4 +10,6 @@ final class DataServiceMock: ObservableObject, DataServiceInput {
     func createUserDocument(with id: String, name: String) -> CurrentValueSubject<Bool, Error> {
         CurrentValueSubject<Bool, Error>(false)
     }
+
+    func updateUserName(to name: String) {}
 }
