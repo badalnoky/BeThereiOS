@@ -1,4 +1,5 @@
 import Combine
+
 final class AuthenticatonServiceMock: ObservableObject, AuthenticationServiceInput {
     var user = CurrentValueSubject<User?, Never>(nil)
 

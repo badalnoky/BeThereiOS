@@ -11,7 +11,6 @@ class AppCoordinator: ObservableObject {
     private let authenticationCoordinator: AuthenticationCoordinator
     private let contentCoordinator: ContentCoordinator
 
-    var flow = CurrentValueSubject<AppFlow, Never>(.authentication)
     @Published var activeFlow: AppFlow = .authentication
 
     init(authenticationCoordinator: AuthenticationCoordinator, contentCoordinator: ContentCoordinator) {
