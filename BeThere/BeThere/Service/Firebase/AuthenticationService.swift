@@ -22,10 +22,12 @@ public final class AuthenticatonService: ObservableObject {
 extension AuthenticatonService: AuthenticationServiceInput {
     public func signIn(email: String, password: String) -> CurrentValueSubject<Bool, Error> {
         let loggedIn = CurrentValueSubject<Bool, Error>(false)
-        authenticator.signIn(withEmail: email, password: password) { result, error in
+        authenticator.signIn(withEmail: email, password: password) { [weak self] result, error in
+            guard let self = self else { return }
             if let error = error {
                 loggedIn.send(completion: .failure(error))
-            } else if result != nil {
+            } else if let result = result {
+                self.getUserData(for: result.user.uid)
                 loggedIn.send(true)
             }
         }
@@ -59,6 +61,7 @@ extension AuthenticatonService: AuthenticationServiceInput {
         let successfulSignOut = CurrentValueSubject<Bool, Error>(false)
         do {
             try authenticator.signOut()
+            self.user.value = nil
             successfulSignOut.send(true)
         } catch {
             successfulSignOut.send(completion: .failure(error))
