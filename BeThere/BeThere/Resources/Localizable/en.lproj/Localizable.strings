@@ -58,4 +58,4 @@
 
 /// MARK: Services
 
-"Authentication.userCollectionKey" = "user";
+"Data.userCollectionKey" = "user";

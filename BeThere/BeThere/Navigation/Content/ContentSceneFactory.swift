@@ -19,7 +19,13 @@ public final class ContentSceneFactory: SceneFactory {
 
 extension ContentSceneFactory {
     func main(with navigator: Navigator<ContentSceneFactory>) -> MainView {
-        MainView(viewModel: MainViewModel(navigator: navigator, authenticationService: Resolver.resolve()))
+        MainView(
+            viewModel: MainViewModel(
+                navigator: navigator,
+                authenticationService: Resolver.resolve(),
+                dataService: Resolver.resolve()
+            )
+        )
     }
 
     func settings(with navigator: Navigator<ContentSceneFactory>) -> SettingsView {
