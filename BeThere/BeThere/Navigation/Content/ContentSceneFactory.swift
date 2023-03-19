@@ -29,7 +29,12 @@ extension ContentSceneFactory {
     }
 
     func settings(with navigator: Navigator<ContentSceneFactory>) -> SettingsView {
-        SettingsView(viewModel: SettingsViewModel(navigator: navigator))
+        SettingsView(
+            viewModel: SettingsViewModel(
+                navigator: navigator,
+                dataService: Resolver.resolve()
+            )
+        )
     }
 
     func search(with navigator: Navigator<ContentSceneFactory>) -> SearchView {
