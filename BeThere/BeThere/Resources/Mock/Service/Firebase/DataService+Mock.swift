@@ -2,6 +2,7 @@ import Combine
 
 final class DataServiceMock: ObservableObject, DataServiceInput {
     var user = CurrentValueSubject<User?, Never>(nil)
+    var foundUsers = CurrentValueSubject<[User], Never>([])
 
     func resetUser() {}
 
@@ -12,4 +13,6 @@ final class DataServiceMock: ObservableObject, DataServiceInput {
     }
 
     func updateUserName(to name: String) {}
+
+    func fetchUsers(containing substring: String) {}
 }

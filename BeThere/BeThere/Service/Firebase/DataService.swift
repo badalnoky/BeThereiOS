@@ -3,11 +3,13 @@ import FirebaseFirestore
 
 public protocol DataServiceInput {
     var user: CurrentValueSubject<User?, Never> { get }
+    var foundUsers: CurrentValueSubject<[User], Never> { get }
 
     func resetUser()
     func getUserData(for id: String)
     func createUserDocument(with id: String, name: String) -> CurrentValueSubject<Bool, Error>
     func updateUserName(to name: String)
+    func fetchUsers(containing substring: String)
 }
 
 public final class DataService {
@@ -15,6 +17,7 @@ public final class DataService {
     private let userCollection = Firestore.firestore().collection(Keys.userCollection)
 
     public var user = CurrentValueSubject<User?, Never>(nil)
+    public var foundUsers = CurrentValueSubject<[User], Never>([])
 }
 
 extension DataService: DataServiceInput {
@@ -56,6 +59,27 @@ extension DataService: DataServiceInput {
             .document(user.id)
             .updateData([Keys.name: name]) { error in
                 guard error == nil else { return }
+            }
+    }
+
+    public func fetchUsers(containing substring: String) {
+        guard let user = self.user.value else { return }
+
+        var users: [User] = []
+        var query = userCollection.whereField(Keys.id, isNotEqualTo: user.id)
+        if !user.friends.isEmpty { query = query.whereField(Keys.id, notIn: user.friends) }
+
+        query
+            .getDocuments { [weak self] query, error in
+                guard error == nil else { return }
+                if let documents = query?.documents {
+                    for document in documents {
+                        if let user = User(fromDocument: document.data()), user.name.contains(substring) {
+                            users.append(user)
+                        }
+                    }
+                    self?.foundUsers.send(users)
+                }
             }
     }
 }

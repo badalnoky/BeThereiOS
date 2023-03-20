@@ -38,7 +38,12 @@ extension ContentSceneFactory {
     }
 
     func search(with navigator: Navigator<ContentSceneFactory>) -> SearchView {
-        SearchView(viewModel: SearchViewModel(navigator: navigator))
+        SearchView(
+            viewModel: SearchViewModel(
+                navigator: navigator,
+                dataService: Resolver.resolve()
+            )
+        )
     }
 
     func chat(with navigator: Navigator<ContentSceneFactory>) -> ChatView {

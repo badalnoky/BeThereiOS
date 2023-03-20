@@ -59,4 +59,5 @@
 /// MARK: Services
 
 "Data.userCollection" = "user";
+"Data.id" = "id";
 "Data.name" = "name";

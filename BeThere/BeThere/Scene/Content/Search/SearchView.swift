@@ -12,7 +12,7 @@ extension SearchView: View {
                 TextField(text: $viewModel.searchString) {
                     Text(Str.searchLabel)
                 }
-                Image.search
+                IconButton(.search, action: viewModel.didTapSearch)
             }
             ScrollView {
                 Divider()
@@ -22,8 +22,9 @@ extension SearchView: View {
                 }
                 Divider()
                 Text(Str.otherLabel)
-                ForEach(viewModel.otherUsers, id: \.self) { user in
-                    Text(user)
+                ForEach(viewModel.otherUsers.indices, id: \.self) { idx in
+                    let user = viewModel.otherUsers[idx]
+                    Text(user.name)
                 }
             }
         }
