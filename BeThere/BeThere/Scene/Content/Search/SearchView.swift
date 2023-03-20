@@ -17,8 +17,9 @@ extension SearchView: View {
             ScrollView {
                 Divider()
                 Text(Str.friendsLabel)
-                ForEach(viewModel.friends, id: \.self) { friend in
-                    Text(friend)
+                ForEach(viewModel.friends.indices, id: \.self) { idx in
+                    let friend = viewModel.friends[idx]
+                    Text(friend.name)
                 }
                 Divider()
                 Text(Str.otherLabel)
