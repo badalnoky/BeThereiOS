@@ -6,6 +6,17 @@
 "User.friends" = "friends";
 "User.events" = "events";
 
+"Event.id" = "id";
+"Event.name" = "name";
+"Event.location" = "location";
+"Event.date" = "date";
+"Event.users" = "users";
+"Event.messages" = "messages";
+
+"Message.id" = "id";
+"Message.sentBy" = "sentBy";
+"Message.text" = "text";
+
 /// MARK: Resources
 
 "Icons.check" = "checkmark";
@@ -66,3 +77,6 @@
 "Data.id" = "id";
 "Data.name" = "name";
 "Data.friends" = "friends";
+
+"EventData.eventCollection" = "event";
+"EventData.id" = "id";

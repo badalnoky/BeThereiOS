@@ -24,7 +24,8 @@ extension ContentSceneFactory {
             viewModel: MainViewModel(
                 navigator: navigator,
                 authenticationService: Resolver.resolve(),
-                dataService: Resolver.resolve()
+                dataService: Resolver.resolve(),
+                eventService: Resolver.resolve()
             )
         )
     }

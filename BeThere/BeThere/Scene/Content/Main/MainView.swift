@@ -18,15 +18,13 @@ extension MainView: View {
                 TextField(text: $viewModel.searchString) {
                     Text(Str.searchLabel)
                 }
-                Image.search
+                IconButton(.search, action: viewModel.didTapSearch)
             }
             Divider()
             ScrollView {
-                ForEach(viewModel.events, id: \.self) { event in
-                    Text(event)
-                        .onTapGesture {
-                            viewModel.didTapEvent()
-                        }
+                ForEach(viewModel.filteredEvents.indices, id: \.self) { idx in
+                    let event = viewModel.filteredEvents[idx]
+                    Button(event.name, action: viewModel.didTapEvent)
                 }
             }
             Button(Str.createLabel, action: viewModel.didTapCreate)

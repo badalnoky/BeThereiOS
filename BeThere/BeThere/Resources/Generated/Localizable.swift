@@ -37,16 +37,34 @@ internal enum Txt {
     internal static let userCollection = Txt.tr("Localizable", "Data.userCollection", fallback: "user")
   }
   internal enum Event {
+    /// date
+    internal static let date = Txt.tr("Localizable", "Event.date", fallback: "date")
     /// Time and Date
     internal static let dateLabel = Txt.tr("Localizable", "Event.dateLabel", fallback: "Time and Date")
+    /// id
+    internal static let id = Txt.tr("Localizable", "Event.id", fallback: "id")
+    /// location
+    internal static let location = Txt.tr("Localizable", "Event.location", fallback: "location")
     /// Location
     internal static let locationLabel = Txt.tr("Localizable", "Event.locationLabel", fallback: "Location")
     /// Members
     internal static let membersLabel = Txt.tr("Localizable", "Event.membersLabel", fallback: "Members")
+    /// messages
+    internal static let messages = Txt.tr("Localizable", "Event.messages", fallback: "messages")
+    /// name
+    internal static let name = Txt.tr("Localizable", "Event.name", fallback: "name")
     /// Name of event
     internal static let nameLabel = Txt.tr("Localizable", "Event.nameLabel", fallback: "Name of event")
     /// Save
     internal static let saveLabel = Txt.tr("Localizable", "Event.saveLabel", fallback: "Save")
+    /// users
+    internal static let users = Txt.tr("Localizable", "Event.users", fallback: "users")
+  }
+  internal enum EventData {
+    /// event
+    internal static let eventCollection = Txt.tr("Localizable", "EventData.eventCollection", fallback: "event")
+    /// id
+    internal static let id = Txt.tr("Localizable", "EventData.id", fallback: "id")
   }
   internal enum Icons {
     /// person.fill.badge.plus
@@ -85,6 +103,14 @@ internal enum Txt {
     internal static let createLabel = Txt.tr("Localizable", "Main.createLabel", fallback: "Create an event")
     /// Search
     internal static let searchLabel = Txt.tr("Localizable", "Main.searchLabel", fallback: "Search")
+  }
+  internal enum Message {
+    /// id
+    internal static let id = Txt.tr("Localizable", "Message.id", fallback: "id")
+    /// sentBy
+    internal static let sentBy = Txt.tr("Localizable", "Message.sentBy", fallback: "sentBy")
+    /// text
+    internal static let text = Txt.tr("Localizable", "Message.text", fallback: "text")
   }
   internal enum Registration {
     /// Email

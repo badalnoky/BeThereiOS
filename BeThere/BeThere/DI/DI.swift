@@ -39,5 +39,11 @@ extension Resolver {
         }
         .implements(DataServiceInput.self)
         .scope(.application)
+
+        register {
+            EventDataService()
+        }
+        .implements(EventDataServiceInput.self)
+        .scope(.application)
     }
 }
