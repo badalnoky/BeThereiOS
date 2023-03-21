@@ -18,7 +18,13 @@ extension SearchView: View {
             ScrollView {
                 ForEach(viewModel.otherUsers.indices, id: \.self) { idx in
                     let user = viewModel.otherUsers[idx]
-                    Text(user.name)
+                    HStack {
+                        Text(user.name)
+                        Spacer()
+                        IconButton(.plus) {
+                            viewModel.didTapAdd(friend: user)
+                        }
+                    }
                 }
             }
         }

@@ -65,3 +65,4 @@
 "Data.userCollection" = "user";
 "Data.id" = "id";
 "Data.name" = "name";
+"Data.friends" = "friends";

@@ -15,4 +15,6 @@ final class DataServiceMock: ObservableObject, DataServiceInput {
     func updateUserName(to name: String) {}
 
     func fetchUsers(containing substring: String) {}
+
+    func addFriend(_ friend: User) {}
 }

@@ -10,6 +10,7 @@ public protocol DataServiceInput {
     func createUserDocument(with id: String, name: String) -> CurrentValueSubject<Bool, Error>
     func updateUserName(to name: String)
     func fetchUsers(containing substring: String)
+    func addFriend(_ friend: User)
 }
 
 public final class DataService {
@@ -79,6 +80,18 @@ extension DataService: DataServiceInput {
                     }
                     self?.foundUsers.send(users)
                 }
+            }
+    }
+
+    public func addFriend(_ friend: User) {
+        guard let user = self.user.value else { return }
+
+        userCollection
+            .document(user.id)
+            .updateData([Keys.friends: FieldValue.arrayUnion([friend.id])]) { [weak self] error in
+                guard error == nil, var updatedUsers = self?.foundUsers.value else { return }
+                updatedUsers.removeAll { $0.id == friend.id }
+                self?.foundUsers.send(updatedUsers)
             }
     }
 }

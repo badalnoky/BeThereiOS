@@ -27,6 +27,8 @@ internal enum Txt {
     internal static let locationLabel = Txt.tr("Localizable", "Chat.locationLabel", fallback: "Location")
   }
   internal enum Data {
+    /// friends
+    internal static let friends = Txt.tr("Localizable", "Data.friends", fallback: "friends")
     /// id
     internal static let id = Txt.tr("Localizable", "Data.id", fallback: "id")
     /// name

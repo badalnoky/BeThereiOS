@@ -28,6 +28,10 @@ extension SearchViewModel {
             // TODO: show error message
         }
     }
+
+    func didTapAdd(friend: User) {
+        dataService.addFriend(friend)
+    }
 }
 
 private extension SearchViewModel {
