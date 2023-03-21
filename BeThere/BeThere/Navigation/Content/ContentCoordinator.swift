@@ -18,4 +18,8 @@ public extension Navigator where Factory == ContentSceneFactory {
     func showEvent() {
         push(screen: .event)
     }
+
+    func showAddMember() {
+        push(screen: .addMember)
+    }
 }

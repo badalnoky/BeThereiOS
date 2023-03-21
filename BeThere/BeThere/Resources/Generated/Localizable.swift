@@ -10,6 +10,16 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Txt {
+  internal enum AddMember {
+    /// Your Friends
+    internal static let friendsLabel = Txt.tr("Localizable", "AddMember.friendsLabel", fallback: "Your Friends")
+    /// Other users
+    internal static let otherLabel = Txt.tr("Localizable", "AddMember.otherLabel", fallback: "Other users")
+    /// Name of a person
+    internal static let searchLabel = Txt.tr("Localizable", "AddMember.searchLabel", fallback: "Name of a person")
+    /// Add people
+    internal static let title = Txt.tr("Localizable", "AddMember.title", fallback: "Add people")
+  }
   internal enum Chat {
     /// Time and Date
     internal static let dateLabel = Txt.tr("Localizable", "Chat.dateLabel", fallback: "Time and Date")
@@ -91,8 +101,6 @@ internal enum Txt {
     internal static let title = Txt.tr("Localizable", "Registration.title", fallback: "Registration")
   }
   internal enum Search {
-    /// Your friends
-    internal static let friendsLabel = Txt.tr("Localizable", "Search.friendsLabel", fallback: "Your friends")
     /// Other users
     internal static let otherLabel = Txt.tr("Localizable", "Search.otherLabel", fallback: "Other users")
     /// Name of a person

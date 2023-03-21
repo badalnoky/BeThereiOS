@@ -44,7 +44,6 @@
 
 "Search.title" = "Search";
 "Search.searchLabel" = "Name of a person";
-"Search.friendsLabel" = "Your friends";
 "Search.otherLabel" = "Other users";
 
 "Chat.dateLabel" = "Time and Date";
@@ -55,6 +54,11 @@
 "Event.locationLabel" = "Location";
 "Event.membersLabel" = "Members";
 "Event.saveLabel" = "Save";
+
+"AddMember.title" = "Add people";
+"AddMember.searchLabel" = "Name of a person";
+"AddMember.friendsLabel" = "Your Friends";
+"AddMember.otherLabel" = "Other users";
 
 /// MARK: Services
 

@@ -1,11 +1,11 @@
 import SwiftUI
 
-struct SearchView {
-    private typealias Str = Txt.Search
-    @StateObject var viewModel: SearchViewModel
+struct AddMemberView {
+    private typealias Str = Txt.AddMember
+    @StateObject var viewModel: AddMemberViewModel
 }
 
-extension SearchView: View {
+extension AddMemberView: View {
     var body: some View {
         VStack {
             HStack {
@@ -14,8 +14,15 @@ extension SearchView: View {
                 }
                 IconButton(.search, action: viewModel.didTapSearch)
             }
-            Divider()
             ScrollView {
+                Divider()
+                Text(Str.friendsLabel)
+                ForEach(viewModel.friends.indices, id: \.self) { idx in
+                    let friend = viewModel.friends[idx]
+                    Text(friend.name)
+                }
+                Divider()
+                Text(Str.otherLabel)
                 ForEach(viewModel.otherUsers.indices, id: \.self) { idx in
                     let user = viewModel.otherUsers[idx]
                     Text(user.name)
@@ -27,9 +34,9 @@ extension SearchView: View {
 }
 
 #if DEBUG
-struct SearchView_Previews: PreviewProvider {
+struct AddMemberView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView(viewModel: .mock)
+        AddMemberView(viewModel: .mock)
     }
 }
 #endif
