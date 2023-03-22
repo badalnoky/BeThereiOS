@@ -82,7 +82,7 @@ private extension MainViewModel {
         dataService.user
             .sink { [weak self] in
                 if let user = $0 {
-                    self?.eventService.getEvents(user.events)
+                    self?.eventService.getEvents(for: user)
                 }
             }
             .store(in: &cancellables)

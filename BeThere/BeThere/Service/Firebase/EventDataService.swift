@@ -4,7 +4,7 @@ import FirebaseFirestore
 public protocol EventDataServiceInput {
     var events: CurrentValueSubject<[Event], Never> { get }
 
-    func getEvents(_ id: [String])
+    func getEvents(for user: User)
 }
 
 public final class EventDataService {
@@ -15,11 +15,12 @@ public final class EventDataService {
 }
 
 extension EventDataService: EventDataServiceInput {
-    public func getEvents(_ ids: [String]) {
+    public func getEvents(for user: User) {
         var events: [Event] = []
 
-        eventCollecion
-            .whereField(Keys.id, in: ids)
+        let query = user.events.isEmpty ? eventCollecion.whereField(Keys.id, isEqualTo: user.id) : eventCollecion.whereField(Keys.id, in: user.events)
+
+        query
             .addSnapshotListener { query, error in
                 if error == nil, let documents = query?.documents {
                     events.removeAll()
