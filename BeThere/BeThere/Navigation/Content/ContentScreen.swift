@@ -5,6 +5,6 @@ public enum ContentScreen: Screen {
     case settings
     case search
     case chat
-    case event
+    case event(_: String)
     case addMember
 }

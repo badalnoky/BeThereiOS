@@ -29,6 +29,17 @@ public struct Event: Identifiable {
 extension Event {
     private typealias Keys = Txt.Event
 
+    var defaultDocumentValue: [String: Any] {
+        [
+            Keys.id: id,
+            Keys.name: name,
+            Keys.location: location,
+            Keys.date: date,
+            Keys.users: users,
+            Keys.messages: []
+        ]
+    }
+
     init?(fromDocument data: [String: Any]) {
         guard let id = data[Keys.id] as? String else { return nil }
         guard let name = data[Keys.name] as? String else { return nil }

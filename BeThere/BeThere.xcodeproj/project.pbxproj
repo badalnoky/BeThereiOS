@@ -57,6 +57,7 @@
 		79DDA6B229B5040E00B04E2A /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6B129B5040E00B04E2A /* DI.swift */; };
 		79DDA6E829B50FF000B04E2A /* BaseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DDA6E729B50FF000B04E2A /* BaseKit.framework */; };
 		79DDA6E929B50FF000B04E2A /* BaseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79DDA6E729B50FF000B04E2A /* BaseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79E4039F29CB701400935E83 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E4039E29CB701400935E83 /* EventModel.swift */; };
 		79EBF84F29B8F7EF00E83646 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBF84E29B8F7EF00E83646 /* LoginViewModel.swift */; };
 		79EBF85429B9000600E83646 /* LoginViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBF85329B9000600E83646 /* LoginViewModel+Mock.swift */; };
 		79EBF85729B901F400E83646 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBF85629B901F400E83646 /* RegistrationViewModel.swift */; };
@@ -151,6 +152,7 @@
 		79DDA6AF29B5017F00B04E2A /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		79DDA6B129B5040E00B04E2A /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		79DDA6E729B50FF000B04E2A /* BaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79E4039E29CB701400935E83 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		79EBF84E29B8F7EF00E83646 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		79EBF85329B9000600E83646 /* LoginViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Mock.swift"; sourceTree = "<group>"; };
 		79EBF85629B901F400E83646 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 		793A5A2D29B79FE6009A3D5B /* Event */ = {
 			isa = PBXGroup;
 			children = (
+				79E4039E29CB701400935E83 /* EventModel.swift */,
 				793A5A3629B7A0BF009A3D5B /* EventView.swift */,
 				79F645F329BB6F31004B761D /* EventViewModel.swift */,
 			);
@@ -812,6 +815,7 @@
 				79EBF85B29B907E300E83646 /* SuccessfulRegistrationViewModel.swift in Sources */,
 				79D6CF2629C4741F0022656C /* AuthenticationService.swift in Sources */,
 				793A5A3529B7A0B6009A3D5B /* ChatView.swift in Sources */,
+				79E4039F29CB701400935E83 /* EventModel.swift in Sources */,
 				7994CA2B29BB402D00EB90E0 /* ChatViewModel+Mock.swift in Sources */,
 				793A5A3129B7A09C009A3D5B /* RegistrationView.swift in Sources */,
 				79DDA6B029B5017F00B04E2A /* Localizable.swift in Sources */,

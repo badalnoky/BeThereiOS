@@ -3,6 +3,7 @@ import BaseKit
 final class ChatViewModel: ObservableObject {
     private var navigator: Navigator<ContentSceneFactory>
 
+    var eventId: String = "this is the id of an event"
     var event: String = .empty
     var date: Date = .now
     var location: String = .empty
@@ -16,6 +17,6 @@ final class ChatViewModel: ObservableObject {
 
 extension ChatViewModel {
     func didTapEdit() {
-        navigator.showEvent()
+        navigator.showEvent(for: eventId)
     }
 }

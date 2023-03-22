@@ -39,24 +39,14 @@ internal enum Txt {
   internal enum Event {
     /// date
     internal static let date = Txt.tr("Localizable", "Event.date", fallback: "date")
-    /// Time and Date
-    internal static let dateLabel = Txt.tr("Localizable", "Event.dateLabel", fallback: "Time and Date")
     /// id
     internal static let id = Txt.tr("Localizable", "Event.id", fallback: "id")
     /// location
     internal static let location = Txt.tr("Localizable", "Event.location", fallback: "location")
-    /// Location
-    internal static let locationLabel = Txt.tr("Localizable", "Event.locationLabel", fallback: "Location")
-    /// Members
-    internal static let membersLabel = Txt.tr("Localizable", "Event.membersLabel", fallback: "Members")
     /// messages
     internal static let messages = Txt.tr("Localizable", "Event.messages", fallback: "messages")
     /// name
     internal static let name = Txt.tr("Localizable", "Event.name", fallback: "name")
-    /// Name of event
-    internal static let nameLabel = Txt.tr("Localizable", "Event.nameLabel", fallback: "Name of event")
-    /// Save
-    internal static let saveLabel = Txt.tr("Localizable", "Event.saveLabel", fallback: "Save")
     /// users
     internal static let users = Txt.tr("Localizable", "Event.users", fallback: "users")
   }
@@ -65,6 +55,18 @@ internal enum Txt {
     internal static let eventCollection = Txt.tr("Localizable", "EventData.eventCollection", fallback: "event")
     /// id
     internal static let id = Txt.tr("Localizable", "EventData.id", fallback: "id")
+  }
+  internal enum EventScreen {
+    /// Time and Date:
+    internal static let dateLabel = Txt.tr("Localizable", "EventScreen.dateLabel", fallback: "Time and Date:")
+    /// Location:
+    internal static let locationLabel = Txt.tr("Localizable", "EventScreen.locationLabel", fallback: "Location:")
+    /// Members
+    internal static let membersLabel = Txt.tr("Localizable", "EventScreen.membersLabel", fallback: "Members")
+    /// Name of event:
+    internal static let nameLabel = Txt.tr("Localizable", "EventScreen.nameLabel", fallback: "Name of event:")
+    /// Save
+    internal static let saveLabel = Txt.tr("Localizable", "EventScreen.saveLabel", fallback: "Save")
   }
   internal enum Icons {
     /// person.fill.badge.plus

@@ -89,7 +89,7 @@ private extension MainViewModel {
     }
 
     func registerEventsBinding() {
-        eventService.events
+        eventService.userEvents
             .sink { [weak self] in
                 self?.allEvents = $0
             }

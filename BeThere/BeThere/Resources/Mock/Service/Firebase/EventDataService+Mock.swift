@@ -1,7 +1,8 @@
 import Combine
 
 final class EventDataServiceMock: EventDataServiceInput {
-    var events = CurrentValueSubject<[Event], Never>([])
+    var userEvents = CurrentValueSubject<[Event], Never>([])
 
     func getEvents(for user: User) {}
+    func createEvent(_ event: Event) {}
 }

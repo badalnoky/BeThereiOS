@@ -2,16 +2,17 @@ import Combine
 import FirebaseFirestore
 
 public protocol EventDataServiceInput {
-    var events: CurrentValueSubject<[Event], Never> { get }
+    var userEvents: CurrentValueSubject<[Event], Never> { get }
 
     func getEvents(for user: User)
+    func createEvent(_ event: Event)
 }
 
 public final class EventDataService {
     private typealias Keys = Txt.EventData
     private let eventCollection = Firestore.firestore().collection(Keys.eventCollection)
 
-    public var events = CurrentValueSubject<[Event], Never>([])
+    public var userEvents = CurrentValueSubject<[Event], Never>([])
 }
 
 extension EventDataService: EventDataServiceInput {
@@ -29,7 +30,19 @@ extension EventDataService: EventDataServiceInput {
                             events.append(event)
                         }
                     }
-                    self.events.send(events)
+                    self.userEvents.send(events)
+                }
+            }
+    }
+
+    public func createEvent(_ event: Event) {
+        eventCollection
+            .document(event.id)
+            .setData(event.defaultDocumentValue) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    // TODO: Add event to users
                 }
             }
     }

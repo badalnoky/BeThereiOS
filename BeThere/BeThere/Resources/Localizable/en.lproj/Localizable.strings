@@ -1,4 +1,4 @@
-/// MARK: Domain
+// MARK: Domain
 
 "User.id" = "id";
 "User.name" = "name";
@@ -17,7 +17,7 @@
 "Message.sentBy" = "sentBy";
 "Message.text" = "text";
 
-/// MARK: Resources
+// MARK: Resources
 
 "Icons.check" = "checkmark";
 "Icons.signOut" = "rectangle.portrait.and.arrow.right";
@@ -29,7 +29,7 @@
 "Icons.send" = "paperplane";
 "Icons.profilePicture" = "person.fill";
 
-/// MARK: Screens
+// MARK: Screens
 
 "Login.title" = "Sign in";
 "Login.emailLabel" = "Email";
@@ -60,18 +60,18 @@
 "Chat.dateLabel" = "Time and Date";
 "Chat.locationLabel" = "Location";
 
-"Event.nameLabel" = "Name of event";
-"Event.dateLabel" = "Time and Date";
-"Event.locationLabel" = "Location";
-"Event.membersLabel" = "Members";
-"Event.saveLabel" = "Save";
+"EventScreen.nameLabel" = "Name of event:";
+"EventScreen.dateLabel" = "Time and Date:";
+"EventScreen.locationLabel" = "Location:";
+"EventScreen.membersLabel" = "Members";
+"EventScreen.saveLabel" = "Save";
 
 "AddMember.title" = "Add people";
 "AddMember.searchLabel" = "Name of a person";
 "AddMember.friendsLabel" = "Your Friends";
 "AddMember.otherLabel" = "Other users";
 
-/// MARK: Services
+// MARK: Services
 
 "Data.userCollection" = "user";
 "Data.id" = "id";
