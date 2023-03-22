@@ -71,7 +71,7 @@ extension DataService: DataServiceInput {
 
         userCollection
             .whereField(Keys.id, notIn: filterArray)
-            .getDocuments { [weak self] query, error in
+            .addSnapshotListener { [weak self] query, error in
                 if error == nil, let documents = query?.documents {
                     for document in documents {
                         if let addedUser = User(fromDocument: document.data()), addedUser.name.contains(substring) {
