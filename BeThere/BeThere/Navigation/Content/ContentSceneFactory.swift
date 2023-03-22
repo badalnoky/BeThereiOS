@@ -54,9 +54,21 @@ extension ContentSceneFactory {
 
     func event(with navigator: Navigator<ContentSceneFactory>, eventId: String) -> EventView {
         if eventId.isEmpty {
-            return EventView(viewModel: EventViewModel(navigator: navigator, evetService: Resolver.resolve()))
+            return EventView(
+                viewModel: EventViewModel(
+                    navigator: navigator,
+                    evetService: Resolver.resolve(),
+                    dataService: Resolver.resolve()
+                )
+            )
         } else {
-            return EventView(viewModel: EventViewModel(navigator: navigator, evetService: Resolver.resolve(), eventId: eventId))
+            return EventView(
+                viewModel: EventViewModel(
+                    navigator: navigator,
+                    evetService: Resolver.resolve(),
+                    dataService: Resolver.resolve(),
+                    eventId: eventId)
+            )
         }
     }
 

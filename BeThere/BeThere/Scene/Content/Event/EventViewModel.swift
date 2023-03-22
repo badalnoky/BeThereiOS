@@ -1,11 +1,13 @@
 import BaseKit
+import Combine
 
 final class EventViewModel: ObservableObject {
     private var navigator: Navigator<ContentSceneFactory>
     private var eventService: EventDataServiceInput
+    private var dataService: DataServiceInput
+    private var cancellables = Set<AnyCancellable>()
     private var state: EventState
     private var eventId: String
-    private var userId: String = .empty
 
     @Published var name: String = .empty
     @Published var date: Date = .now
@@ -13,19 +15,33 @@ final class EventViewModel: ObservableObject {
     @Published var members: [User] = []
     @Published var isChoosingDate = false
 
-    init(navigator: Navigator<ContentSceneFactory>, evetService: EventDataServiceInput) {
+    init(
+        navigator: Navigator<ContentSceneFactory>,
+        evetService: EventDataServiceInput,
+        dataService: DataServiceInput
+    ) {
         self.navigator = navigator
         self.eventService = evetService
+        self.dataService = dataService
         self.state = .creation
         self.eventId = UUID().uuidString
+
+        registerUserBinding()
     }
 
-    init(navigator: Navigator<ContentSceneFactory>, evetService: EventDataServiceInput, eventId: String) {
+    init(
+        navigator: Navigator<ContentSceneFactory>,
+        evetService: EventDataServiceInput,
+        dataService: DataServiceInput,
+        eventId: String
+    ) {
         self.navigator = navigator
         self.eventService = evetService
+        self.dataService = dataService
         self.state = .modification
         self.eventId = eventId
 
+        registerUserBinding()
         registerEventBinding()
     }
 }
@@ -45,6 +61,19 @@ extension EventViewModel {
         } else {
             // TODO: handle non compliant field values
         }
+    }
+}
+
+// MARK: Common
+private extension EventViewModel {
+    func registerUserBinding() {
+        dataService.user
+            .sink { [weak self] in
+                if let user = $0 {
+                    self?.members.append(user)
+                }
+            }
+            .store(in: &cancellables)
     }
 }
 
