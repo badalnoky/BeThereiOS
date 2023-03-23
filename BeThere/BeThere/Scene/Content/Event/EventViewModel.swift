@@ -69,7 +69,7 @@ private extension EventViewModel {
     func registerUserBinding() {
         userDataService.user
             .sink { [weak self] in
-                if let user = $0 {
+                if let user = $0, let added = self?.members.contains(where: { $0.id == user.id }), !added {
                     self?.members.append(user)
                 }
             }

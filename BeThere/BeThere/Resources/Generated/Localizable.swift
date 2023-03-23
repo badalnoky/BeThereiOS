@@ -53,8 +53,12 @@ internal enum Txt {
   internal enum EventData {
     /// event
     internal static let eventCollection = Txt.tr("Localizable", "EventData.eventCollection", fallback: "event")
+    /// events
+    internal static let events = Txt.tr("Localizable", "EventData.events", fallback: "events")
     /// id
     internal static let id = Txt.tr("Localizable", "EventData.id", fallback: "id")
+    /// user
+    internal static let userCollection = Txt.tr("Localizable", "EventData.userCollection", fallback: "user")
   }
   internal enum EventScreen {
     /// Time and Date:

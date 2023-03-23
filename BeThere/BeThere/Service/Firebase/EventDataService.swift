@@ -11,6 +11,7 @@ public protocol EventDataServiceInput {
 public final class EventDataService {
     private typealias Keys = Txt.EventData
     private let eventCollection = Firestore.firestore().collection(Keys.eventCollection)
+    private let userCollection = Firestore.firestore().collection(Keys.userCollection)
 
     public var userEvents = CurrentValueSubject<[Event], Never>([])
 }
@@ -38,12 +39,28 @@ extension EventDataService: EventDataServiceInput {
     public func createEvent(_ event: Event) {
         eventCollection
             .document(event.id)
-            .setData(event.defaultDocumentValue) { error in
+            .setData(event.defaultDocumentValue) { [weak self] error in
                 if let error = error {
                     print(error.localizedDescription)
                 } else {
-                    // TODO: Add event to users
+                    self?.addEvent(to: event.users, eventId: event.id)
                 }
             }
+    }
+}
+
+private extension EventDataService {
+    func addEvent(to usersIds: [String], eventId: String) {
+        let batch = Firestore.firestore().batch()
+
+        for id in usersIds {
+            batch.updateData([Keys.events: FieldValue.arrayUnion([eventId])], forDocument: userCollection.document(id))
+        }
+
+        batch.commit { error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
     }
 }

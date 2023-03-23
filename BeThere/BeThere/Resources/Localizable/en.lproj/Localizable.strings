@@ -79,4 +79,6 @@
 "Data.friends" = "friends";
 
 "EventData.eventCollection" = "event";
+"EventData.userCollection" = "user";
 "EventData.id" = "id";
+"EventData.events" = "events";
