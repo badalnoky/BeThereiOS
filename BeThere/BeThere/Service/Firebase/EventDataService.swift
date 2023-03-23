@@ -7,6 +7,7 @@ public protocol EventDataServiceInput {
 
     func getEvents(for user: User)
     func createEvent(_ event: Event)
+    func updateEvent(with id: String, difference: [String: Any]) -> CurrentValueSubject<Bool, Never>
     func getEventData(for id: String)
 }
 
@@ -49,6 +50,18 @@ extension EventDataService: EventDataServiceInput {
                     self?.addEvent(to: event.users, eventId: event.id)
                 }
             }
+    }
+
+    public func updateEvent(with id: String, difference: [String: Any]) -> CurrentValueSubject<Bool, Never> {
+        let successfulUpdate = CurrentValueSubject<Bool, Never>(false)
+
+        eventCollection
+            .document(id)
+            .updateData(difference) { error in
+                guard error == nil else { return }
+            }
+
+        return successfulUpdate
     }
 
     public func getEventData(for id: String) {

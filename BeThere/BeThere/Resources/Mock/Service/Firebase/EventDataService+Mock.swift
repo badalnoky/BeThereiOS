@@ -6,5 +6,10 @@ final class EventDataServiceMock: EventDataServiceInput {
 
     func getEvents(for user: User) {}
     func createEvent(_ event: Event) {}
+
+    func updateEvent(with id: String, difference: [String: Any]) -> CurrentValueSubject<Bool, Never> {
+        CurrentValueSubject<Bool, Never>(false)
+    }
+
     func getEventData(for id: String) {}
 }

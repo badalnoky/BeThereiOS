@@ -59,4 +59,16 @@ extension Event {
         self.users = users
         self.messages = Message.fromDocument(wrappedMessages)
     }
+
+    func getDifference(from event: Event) -> [String: Any] {
+        var difference: [String: Any] = [:]
+
+        if self.name != event.name { difference[Keys.name] = event.name }
+        if self.location != event.location { difference[Keys.location] = event.location }
+        if self.date != event.date { difference[Keys.date] = event.date }
+        let newUsers = event.users.filter { !self.users.contains($0) }
+        if !newUsers.isEmpty { difference[Keys.users] = newUsers }
+
+        return difference
+    }
 }

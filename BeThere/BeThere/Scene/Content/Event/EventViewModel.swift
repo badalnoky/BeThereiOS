@@ -6,8 +6,10 @@ final class EventViewModel: ObservableObject {
     private var eventService: EventDataServiceInput
     private var userDataService: UserDataServiceInput
     private var cancellables = Set<AnyCancellable>()
+
     private var state: EventState
     private var eventId: String
+    private var memento: Event = .mock
 
     @Published var name: String = .empty
     @Published var date: Date = .now
@@ -98,6 +100,14 @@ private extension EventViewModel {
                 self.date = event.date
                 self.location = event.location
                 self.userDataService.fetchMembers(event.users)
+                self.memento = Event(
+                    id: self.eventId,
+                    name: event.name,
+                    location: event.location,
+                    date: event.date,
+                    users: event.users,
+                    messages: []
+                )
             }
             .store(in: &cancellables)
     }
@@ -111,5 +121,13 @@ private extension EventViewModel {
             .store(in: &cancellables)
     }
 
-    func modifyEvent() {}
+    func modifyEvent() {
+        let users = members.map { $0.id }
+        let newEvent = Event(id: eventId, name: name, location: location, date: date, users: users, messages: [])
+        eventService.updateEvent(with: eventId, difference: memento.getDifference(from: newEvent))
+            .sink { [weak self] in
+                if $0 { self?.memento = newEvent}
+            }
+            .store(in: &cancellables)
+    }
 }
