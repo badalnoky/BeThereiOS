@@ -10,10 +10,10 @@ public protocol AuthenticationServiceInput {
 public final class AuthenticatonService: ObservableObject {
     private let authenticator = Auth.auth()
     private var cancellables = Set<AnyCancellable>()
-    private var dataService: DataServiceInput
+    private var userDataService: UserDataServiceInput
 
-    init(dataService: DataServiceInput) {
-        self.dataService = dataService
+    init(userDataService: UserDataServiceInput) {
+        self.userDataService = userDataService
     }
 }
 
@@ -25,7 +25,7 @@ extension AuthenticatonService: AuthenticationServiceInput {
             if let error = error {
                 loggedIn.send(completion: .failure(error))
             } else if let result = result {
-                self.dataService.getUserData(for: result.user.uid)
+                self.userDataService.getUserData(for: result.user.uid)
                 loggedIn.send(true)
             }
         }
@@ -39,11 +39,11 @@ extension AuthenticatonService: AuthenticationServiceInput {
             if let error = error {
                 loggedIn.send(completion: .failure(error))
             } else if let result = result {
-                self.dataService.createUserDocument(with: result.user.uid, name: name)
+                self.userDataService.createUserDocument(with: result.user.uid, name: name)
                     .sink(
                         receiveValue: {
                             if $0 {
-                                self.dataService.getUserData(for: result.user.uid)
+                                self.userDataService.getUserData(for: result.user.uid)
                                 loggedIn.send(true)
                             }
                         },
@@ -59,7 +59,7 @@ extension AuthenticatonService: AuthenticationServiceInput {
         let successfulSignOut = CurrentValueSubject<Bool, Error>(false)
         do {
             try authenticator.signOut()
-            self.dataService.resetUser()
+            self.userDataService.resetUser()
             successfulSignOut.send(true)
         } catch {
             successfulSignOut.send(completion: .failure(error))

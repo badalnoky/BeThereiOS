@@ -24,7 +24,7 @@ extension ContentSceneFactory {
             viewModel: MainViewModel(
                 navigator: navigator,
                 authenticationService: Resolver.resolve(),
-                dataService: Resolver.resolve(),
+                userDataService: Resolver.resolve(),
                 eventService: Resolver.resolve()
             )
         )
@@ -34,7 +34,7 @@ extension ContentSceneFactory {
         SettingsView(
             viewModel: SettingsViewModel(
                 navigator: navigator,
-                dataService: Resolver.resolve()
+                userDataService: Resolver.resolve()
             )
         )
     }
@@ -43,7 +43,7 @@ extension ContentSceneFactory {
         SearchView(
             viewModel: SearchViewModel(
                 navigator: navigator,
-                dataService: Resolver.resolve()
+                userDataService: Resolver.resolve()
             )
         )
     }
@@ -58,7 +58,7 @@ extension ContentSceneFactory {
                 viewModel: EventViewModel(
                     navigator: navigator,
                     evetService: Resolver.resolve(),
-                    dataService: Resolver.resolve()
+                    userDataService: Resolver.resolve()
                 )
             )
         } else {
@@ -66,7 +66,7 @@ extension ContentSceneFactory {
                 viewModel: EventViewModel(
                     navigator: navigator,
                     evetService: Resolver.resolve(),
-                    dataService: Resolver.resolve(),
+                    userDataService: Resolver.resolve(),
                     eventId: eventId)
             )
         }

@@ -3,7 +3,7 @@ extension EventViewModel {
         EventViewModel(
             navigator: .init(sceneFactory: ContentSceneFactory(), root: .main),
             evetService: EventDataServiceMock(),
-            dataService: DataServiceMock()
+            userDataService: UserDataServiceMock()
         )
     }
 }

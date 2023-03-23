@@ -1,7 +1,7 @@
 import Combine
 import FirebaseFirestore
 
-public protocol DataServiceInput {
+public protocol UserDataServiceInput {
     var user: CurrentValueSubject<User?, Never> { get }
     var foundUsers: CurrentValueSubject<[User], Never> { get }
 
@@ -13,7 +13,7 @@ public protocol DataServiceInput {
     func addFriend(_ friend: User)
 }
 
-public final class DataService {
+public final class UserDataService {
     private typealias Keys = Txt.Data
     private let userCollection = Firestore.firestore().collection(Keys.userCollection)
 
@@ -21,7 +21,7 @@ public final class DataService {
     public var foundUsers = CurrentValueSubject<[User], Never>([])
 }
 
-extension DataService: DataServiceInput {
+extension UserDataService: UserDataServiceInput {
     public func resetUser() {
         user.value = nil
     }

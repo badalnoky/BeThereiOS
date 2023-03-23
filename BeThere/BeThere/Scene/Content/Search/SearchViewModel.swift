@@ -3,7 +3,7 @@ import Combine
 
 public final class SearchViewModel: ObservableObject {
     private var navigator: Navigator<ContentSceneFactory>
-    private var dataService: DataServiceInput
+    private var userDataService: UserDataServiceInput
     private var cancellables = Set<AnyCancellable>()
 
     @Published var searchString: String = .empty
@@ -11,10 +11,10 @@ public final class SearchViewModel: ObservableObject {
 
     init(
         navigator: Navigator<ContentSceneFactory>,
-        dataService: DataServiceInput
+        userDataService: UserDataServiceInput
     ) {
         self.navigator = navigator
-        self.dataService = dataService
+        self.userDataService = userDataService
 
         registerBindings()
     }
@@ -23,20 +23,20 @@ public final class SearchViewModel: ObservableObject {
 extension SearchViewModel {
     func didTapSearch() {
         if searchString.count > 2 {
-            dataService.fetchUsers(containing: searchString)
+            userDataService.fetchUsers(containing: searchString)
         } else {
             // TODO: show error message
         }
     }
 
     func didTapAdd(friend: User) {
-        dataService.addFriend(friend)
+        userDataService.addFriend(friend)
     }
 }
 
 private extension SearchViewModel {
     func registerBindings() {
-        dataService.foundUsers
+        userDataService.foundUsers
             .sink { [weak self] users in
                 self?.otherUsers = users
             }

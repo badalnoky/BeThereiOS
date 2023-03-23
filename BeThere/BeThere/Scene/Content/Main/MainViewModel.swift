@@ -4,7 +4,7 @@ import Combine
 final class MainViewModel: ObservableObject {
     private var navigator: Navigator<ContentSceneFactory>
     private var authenticationService: AuthenticationServiceInput
-    private var dataService: DataServiceInput
+    private var userDataService: UserDataServiceInput
     private var eventService: EventDataServiceInput
     private var cancellables = Set<AnyCancellable>()
 
@@ -24,12 +24,12 @@ final class MainViewModel: ObservableObject {
     init(
         navigator: Navigator<ContentSceneFactory>,
         authenticationService: AuthenticationServiceInput,
-        dataService: DataServiceInput,
+        userDataService: UserDataServiceInput,
         eventService: EventDataServiceInput
     ) {
         self.navigator = navigator
         self.authenticationService = authenticationService
-        self.dataService = dataService
+        self.userDataService = userDataService
         self.eventService = eventService
 
         registerBindings()
@@ -79,7 +79,7 @@ private extension MainViewModel {
     }
 
     func registerUserBinding() {
-        dataService.user
+        userDataService.user
             .sink { [weak self] in
                 if let user = $0 {
                     self?.eventService.getEvents(for: user)

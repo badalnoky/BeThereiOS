@@ -4,7 +4,7 @@ import Combine
 final class EventViewModel: ObservableObject {
     private var navigator: Navigator<ContentSceneFactory>
     private var eventService: EventDataServiceInput
-    private var dataService: DataServiceInput
+    private var userDataService: UserDataServiceInput
     private var cancellables = Set<AnyCancellable>()
     private var state: EventState
     private var eventId: String
@@ -18,11 +18,11 @@ final class EventViewModel: ObservableObject {
     init(
         navigator: Navigator<ContentSceneFactory>,
         evetService: EventDataServiceInput,
-        dataService: DataServiceInput
+        userDataService: UserDataServiceInput
     ) {
         self.navigator = navigator
         self.eventService = evetService
-        self.dataService = dataService
+        self.userDataService = userDataService
         self.state = .creation
         self.eventId = UUID().uuidString
 
@@ -32,12 +32,12 @@ final class EventViewModel: ObservableObject {
     init(
         navigator: Navigator<ContentSceneFactory>,
         evetService: EventDataServiceInput,
-        dataService: DataServiceInput,
+        userDataService: UserDataServiceInput,
         eventId: String
     ) {
         self.navigator = navigator
         self.eventService = evetService
-        self.dataService = dataService
+        self.userDataService = userDataService
         self.state = .modification
         self.eventId = eventId
 
@@ -67,7 +67,7 @@ extension EventViewModel {
 // MARK: Common
 private extension EventViewModel {
     func registerUserBinding() {
-        dataService.user
+        userDataService.user
             .sink { [weak self] in
                 if let user = $0 {
                     self?.members.append(user)

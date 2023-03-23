@@ -3,7 +3,7 @@ extension MainViewModel {
         MainViewModel(
             navigator: .init(sceneFactory: ContentSceneFactory(), root: .main),
             authenticationService: AuthenticatonServiceMock(),
-            dataService: DataServiceMock(),
+            userDataService: UserDataServiceMock(),
             eventService: EventDataServiceMock()
         )
     }

@@ -1,6 +1,6 @@
 import Combine
 
-final class DataServiceMock: ObservableObject, DataServiceInput {
+final class UserDataServiceMock: ObservableObject, UserDataServiceInput {
     var user = CurrentValueSubject<User?, Never>(nil)
     var foundUsers = CurrentValueSubject<[User], Never>([])
 
