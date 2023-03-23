@@ -6,5 +6,5 @@ public enum ContentScreen: Screen {
     case search
     case chat(_: String)
     case event(_: String)
-    case addMember
+    case addMember(_: String)
 }

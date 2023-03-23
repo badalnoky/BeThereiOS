@@ -13,7 +13,7 @@ public final class ContentSceneFactory: SceneFactory {
         case .search: search(with: navigator)
         case .chat(let eventId): chat(with: navigator, eventId: eventId)
         case .event(let eventId): event(with: navigator, eventId: eventId)
-        case .addMember: addMember(with: navigator)
+        case .addMember(let eventId): addMember(with: navigator, eventId: eventId)
         }
     }
 }
@@ -72,7 +72,14 @@ extension ContentSceneFactory {
         }
     }
 
-    func addMember(with navigator: Navigator<ContentSceneFactory>) -> AddMemberView {
-        AddMemberView(viewModel: AddMemberViewModel(navigator: navigator))
+    func addMember(with navigator: Navigator<ContentSceneFactory>, eventId: String) -> AddMemberView {
+        AddMemberView(
+            viewModel: AddMemberViewModel(
+                navigator: navigator,
+                userDataService: Resolver.resolve(),
+                eventService: Resolver.resolve(),
+                eventId: eventId
+            )
+        )
     }
 }

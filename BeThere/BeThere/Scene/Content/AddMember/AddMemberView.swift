@@ -19,13 +19,25 @@ extension AddMemberView: View {
                 Text(Str.friendsLabel)
                 ForEach(viewModel.friends.indices, id: \.self) { idx in
                     let friend = viewModel.friends[idx]
-                    Text(friend.name)
+                    HStack {
+                        Text(friend.name)
+                        Spacer()
+                        IconButton(.plus) {
+                            viewModel.didTapAdd(user: friend)
+                        }
+                    }
                 }
                 Divider()
                 Text(Str.otherLabel)
                 ForEach(viewModel.otherUsers.indices, id: \.self) { idx in
                     let user = viewModel.otherUsers[idx]
-                    Text(user.name)
+                    HStack {
+                        Text(user.name)
+                        Spacer()
+                        IconButton(.plus) {
+                            viewModel.didTapAdd(user: user)
+                        }
+                    }
                 }
             }
         }

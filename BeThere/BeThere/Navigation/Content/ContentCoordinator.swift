@@ -19,7 +19,7 @@ public extension Navigator where Factory == ContentSceneFactory {
         push(screen: .event(id))
     }
 
-    func showAddMember() {
-        push(screen: .addMember)
+    func showAddMember(eventId: String) {
+        push(screen: .addMember(eventId))
     }
 }

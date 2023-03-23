@@ -49,7 +49,7 @@ final class EventViewModel: ObservableObject {
 
 extension EventViewModel {
     func didTapAddFriends() {
-        navigator.showAddMember()
+        navigator.showAddMember(eventId: eventId)
     }
 
     func didTapSave() {
