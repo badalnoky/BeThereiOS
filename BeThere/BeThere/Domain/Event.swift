@@ -29,6 +29,10 @@ public struct Event: Identifiable {
 extension Event {
     private typealias Keys = Txt.Event
 
+    static var mock: Event {
+        Event(id: .empty, name: .empty, location: .empty, date: .now, users: [], messages: [])
+    }
+
     var defaultDocumentValue: [String: Any] {
         [
             Keys.id: id,

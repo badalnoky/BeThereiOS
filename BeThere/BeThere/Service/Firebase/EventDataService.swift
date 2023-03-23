@@ -3,9 +3,11 @@ import FirebaseFirestore
 
 public protocol EventDataServiceInput {
     var userEvents: CurrentValueSubject<[Event], Never> { get }
+    var currentEvent: CurrentValueSubject<Event, Never> { get }
 
     func getEvents(for user: User)
     func createEvent(_ event: Event)
+    func getEventData(for id: String)
 }
 
 public final class EventDataService {
@@ -14,6 +16,7 @@ public final class EventDataService {
     private let userCollection = Firestore.firestore().collection(Keys.userCollection)
 
     public var userEvents = CurrentValueSubject<[Event], Never>([])
+    public var currentEvent = CurrentValueSubject<Event, Never>(.mock)
 }
 
 extension EventDataService: EventDataServiceInput {
@@ -45,6 +48,18 @@ extension EventDataService: EventDataServiceInput {
                 } else {
                     self?.addEvent(to: event.users, eventId: event.id)
                 }
+            }
+    }
+
+    public func getEventData(for id: String) {
+        print(id)
+        eventCollection
+            .document(id)
+            .addSnapshotListener { [weak self] documentSnapshot, error in
+                guard let document = documentSnapshot else { return }
+                guard let data = document.data() else { return }
+                guard let event = Event(fromDocument: data) else { return }
+                self?.currentEvent.send(event)
             }
     }
 }

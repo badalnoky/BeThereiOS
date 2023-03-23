@@ -54,8 +54,8 @@ extension MainViewModel {
         navigator.showSettings()
     }
 
-    func didTapEvent() {
-        navigator.showChat()
+    func didTapEvent(id: String) {
+        navigator.showChat(for: id)
     }
 
     func didTapCreate() {

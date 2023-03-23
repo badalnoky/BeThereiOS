@@ -41,8 +41,7 @@ final class EventViewModel: ObservableObject {
         self.state = .modification
         self.eventId = eventId
 
-        registerUserBinding()
-        registerEventBinding()
+        registerModificiationBindings()
     }
 }
 
@@ -64,7 +63,7 @@ extension EventViewModel {
     }
 }
 
-// MARK: Common
+// MARK: Creation
 private extension EventViewModel {
     func registerUserBinding() {
         userDataService.user
@@ -75,18 +74,42 @@ private extension EventViewModel {
             }
             .store(in: &cancellables)
     }
-}
 
-// MARK: Creation
-private extension EventViewModel {
     func createEvent() {
         let users = members.map { $0.id }
         eventService.createEvent(Event(id: eventId, name: name, location: location, date: date, users: users, messages: []))
+        navigator.pop()
     }
 }
 
 // MARK: Modification
 private extension EventViewModel {
+    func registerModificiationBindings() {
+        registerEventBinding()
+        registerMembersBinding()
+    }
+
+    func registerEventBinding() {
+        eventService.getEventData(for: eventId)
+        eventService.currentEvent
+            .sink { [weak self] event in
+                guard let self = self else { return }
+                self.name = event.name
+                self.date = event.date
+                self.location = event.location
+                self.userDataService.fetchMembers(event.users)
+            }
+            .store(in: &cancellables)
+    }
+
+    func registerMembersBinding() {
+        userDataService.eventMembers
+            .sink { [weak self] users in
+                guard let self = self else { return }
+                self.members = users
+            }
+            .store(in: &cancellables)
+    }
+
     func modifyEvent() {}
-    func registerEventBinding() {}
 }

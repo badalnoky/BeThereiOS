@@ -3,6 +3,7 @@ import Combine
 final class UserDataServiceMock: ObservableObject, UserDataServiceInput {
     var user = CurrentValueSubject<User?, Never>(nil)
     var foundUsers = CurrentValueSubject<[User], Never>([])
+    var eventMembers = CurrentValueSubject<[User], Never>([])
 
     func resetUser() {}
 
@@ -17,4 +18,6 @@ final class UserDataServiceMock: ObservableObject, UserDataServiceInput {
     func fetchUsers(containing substring: String) {}
 
     func addFriend(_ friend: User) {}
+
+    func fetchMembers(_ ids: [String]) {}
 }

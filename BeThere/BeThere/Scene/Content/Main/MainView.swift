@@ -24,7 +24,9 @@ extension MainView: View {
             ScrollView {
                 ForEach(viewModel.filteredEvents.indices, id: \.self) { idx in
                     let event = viewModel.filteredEvents[idx]
-                    Button(event.name, action: viewModel.didTapEvent)
+                    Button(event.name) {
+                        viewModel.didTapEvent(id: event.id)
+                    }
                 }
             }
             Button(Str.createLabel, action: viewModel.didTapCreate)

@@ -4,6 +4,7 @@ import FirebaseFirestore
 public protocol UserDataServiceInput {
     var user: CurrentValueSubject<User?, Never> { get }
     var foundUsers: CurrentValueSubject<[User], Never> { get }
+    var eventMembers: CurrentValueSubject<[User], Never> { get }
 
     func resetUser()
     func getUserData(for id: String)
@@ -11,6 +12,7 @@ public protocol UserDataServiceInput {
     func updateUserName(to name: String)
     func fetchUsers(containing substring: String)
     func addFriend(_ friend: User)
+    func fetchMembers(_ ids: [String])
 }
 
 public final class UserDataService {
@@ -19,6 +21,7 @@ public final class UserDataService {
 
     public var user = CurrentValueSubject<User?, Never>(nil)
     public var foundUsers = CurrentValueSubject<[User], Never>([])
+    public var eventMembers = CurrentValueSubject<[User], Never>([])
 }
 
 extension UserDataService: UserDataServiceInput {
@@ -92,6 +95,25 @@ extension UserDataService: UserDataServiceInput {
                 guard error == nil, var updatedUsers = self?.foundUsers.value else { return }
                 updatedUsers.removeAll { $0.id == friend.id }
                 self?.foundUsers.send(updatedUsers)
+            }
+    }
+
+    public func fetchMembers(_ ids: [String]) {
+        guard !ids.isEmpty else { return }
+        var users: [User] = []
+
+        userCollection
+            .whereField(Keys.id, in: ids)
+            .addSnapshotListener { [weak self] query, error in
+                if error == nil, let documents = query?.documents {
+                    users.removeAll()
+                    for document in documents {
+                        if let user = User(fromDocument: document.data()) {
+                            users.append(user)
+                        }
+                    }
+                    self?.eventMembers.send(users)
+                }
             }
     }
 }

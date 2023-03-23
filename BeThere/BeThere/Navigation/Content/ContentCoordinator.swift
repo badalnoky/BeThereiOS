@@ -11,8 +11,8 @@ public extension Navigator where Factory == ContentSceneFactory {
         push(screen: .search)
     }
 
-    func showChat() {
-        push(screen: .chat)
+    func showChat(for eventId: String) {
+        push(screen: .chat(eventId))
     }
 
     func showEvent(for id: String = .empty) {
