@@ -52,7 +52,6 @@ extension EventDataService: EventDataServiceInput {
     }
 
     public func getEventData(for id: String) {
-        print(id)
         eventCollection
             .document(id)
             .addSnapshotListener { [weak self] documentSnapshot, error in
