@@ -23,7 +23,7 @@ public final class SearchViewModel: ObservableObject {
 extension SearchViewModel {
     func didTapSearch() {
         if searchString.count > 2 {
-            userDataService.fetchUsers(containing: searchString, searchForFriends: false)
+            userDataService.fetchUsers(containing: searchString)
         } else {
             // TODO: show error message
         }
@@ -36,7 +36,8 @@ extension SearchViewModel {
 
 private extension SearchViewModel {
     func registerBindings() {
-        userDataService.foundUsers
+        userDataService.fetchUsers(containing: searchString)
+        userDataService.searchedUsers
             .sink { [weak self] users in
                 self?.otherUsers = users
             }

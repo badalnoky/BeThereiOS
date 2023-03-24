@@ -31,12 +31,14 @@ public final class AddMemberViewModel: ObservableObject {
 extension AddMemberViewModel {
     func didTapSearch() {
         if searchString.count > 2 {
-            userDataService.fetchUsers(containing: searchString, searchForFriends: true)
+            userDataService.fetchSearchedUsers(containing: searchString, isInitialFetch: false)
         } else {
             // TODO: show error message
         }
     }
-    func didTapAdd(user: User) {}
+    func didTapAdd(user: User) {
+        // add members to list
+    }
 }
 
 private extension AddMemberViewModel {
@@ -46,7 +48,8 @@ private extension AddMemberViewModel {
     }
 
     func registerFriendBinding() {
-        userDataService.foundFriends
+        userDataService.fetchSearchedUsers(containing: .empty, isInitialFetch: true)
+        userDataService.searchedFriendMembers
             .sink { [weak self] users in
                 self?.friends = users
             }
@@ -54,7 +57,7 @@ private extension AddMemberViewModel {
     }
 
     func registerOtherUserBinding() {
-        userDataService.foundUsers
+        userDataService.searchedOtherMembers
             .sink { [weak self] users in
                 self?.otherUsers = users
             }

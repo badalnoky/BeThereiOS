@@ -3,15 +3,17 @@ import FirebaseFirestore
 
 public protocol UserDataServiceInput {
     var user: CurrentValueSubject<User?, Never> { get }
-    var foundUsers: CurrentValueSubject<[User], Never> { get }
-    var foundFriends: CurrentValueSubject<[User], Never> { get }
+    var searchedUsers: CurrentValueSubject<[User], Never> { get }
+    var searchedOtherMembers: CurrentValueSubject<[User], Never> { get }
+    var searchedFriendMembers: CurrentValueSubject<[User], Never> { get }
     var eventMembers: CurrentValueSubject<[User], Never> { get }
 
     func resetUser()
-    func getUserData(for id: String)
     func createUserDocument(with id: String, name: String) -> CurrentValueSubject<Bool, Error>
+    func getUserData(for id: String)
     func updateUserName(to name: String)
-    func fetchUsers(containing substring: String, searchForFriends: Bool)
+    func fetchUsers(containing substring: String)
+    func fetchSearchedUsers(containing substring: String, isInitialFetch: Bool)
     func addFriend(_ friend: User)
     func fetchMembers(_ ids: [String])
 }
@@ -21,8 +23,9 @@ public final class UserDataService {
     private let userCollection = Firestore.firestore().collection(Keys.userCollection)
 
     public var user = CurrentValueSubject<User?, Never>(nil)
-    public var foundUsers = CurrentValueSubject<[User], Never>([])
-    public var foundFriends = CurrentValueSubject<[User], Never>([])
+    public var searchedUsers = CurrentValueSubject<[User], Never>([])
+    public var searchedOtherMembers = CurrentValueSubject<[User], Never>([])
+    public var searchedFriendMembers = CurrentValueSubject<[User], Never>([])
     public var eventMembers = CurrentValueSubject<[User], Never>([])
 }
 
@@ -68,14 +71,34 @@ extension UserDataService: UserDataServiceInput {
             }
     }
 
-    public func fetchUsers(containing substring: String, searchForFriends: Bool) {
+    public func fetchUsers(containing substring: String) {
+        guard let user = self.user.value else { return }
+
+        var otherUsers: [User] = []
+        let filter = user.friends.isEmpty ? [user.id] : user.friends + [user.id]
+
+        userCollection
+            .whereField(Keys.id, notIn: filter)
+            .addSnapshotListener { [weak self] query, error in
+                if error == nil, let documents = query?.documents {
+                    otherUsers.removeAll()
+                    for document in documents {
+                        if let addedUser = User(fromDocument: document.data()), addedUser.name.contains(substring) {
+                            otherUsers.append(addedUser)
+                        }
+                    }
+                    self?.searchedUsers.send(otherUsers)
+                }
+            }
+    }
+
+    public func fetchSearchedUsers(containing substring: String, isInitialFetch: Bool) {
         guard let user = self.user.value else { return }
 
         var otherUsers: [User] = []
         var friends: [User] = []
 
-        let withoutFriendsArray = user.friends.isEmpty ? [user.id] : user.friends + [user.id]
-        let filter = searchForFriends ? [user.id] : withoutFriendsArray
+        let filter = [user.id] + eventMembers.value.map { $0.id }
 
         userCollection
             .whereField(Keys.id, notIn: filter)
@@ -84,18 +107,16 @@ extension UserDataService: UserDataServiceInput {
                     otherUsers.removeAll()
                     friends.removeAll()
                     for document in documents {
-                        if let addedUser = User(fromDocument: document.data()), addedUser.name.contains(substring) {
-                            if searchForFriends, user.friends.contains(addedUser.id) {
+                        if let addedUser = User(fromDocument: document.data()) {
+                            if (isInitialFetch || addedUser.name.contains(substring)) && user.friends.contains(addedUser.id) {
                                 friends.append(addedUser)
-                            } else {
+                            } else if !isInitialFetch, !user.friends.contains(addedUser.id), addedUser.name.contains(substring) {
                                 otherUsers.append(addedUser)
                             }
                         }
                     }
-                    self?.foundUsers.send(otherUsers)
-                    if searchForFriends {
-                        self?.foundFriends.send(friends)
-                    }
+                    self?.searchedOtherMembers.send(otherUsers)
+                    self?.searchedFriendMembers.send(friends)
                 }
             }
     }
@@ -106,9 +127,9 @@ extension UserDataService: UserDataServiceInput {
         userCollection
             .document(user.id)
             .updateData([Keys.friends: FieldValue.arrayUnion([friend.id])]) { [weak self] error in
-                guard error == nil, var updatedUsers = self?.foundUsers.value else { return }
+                guard error == nil, var updatedUsers = self?.searchedUsers.value else { return }
                 updatedUsers.removeAll { $0.id == friend.id }
-                self?.foundUsers.send(updatedUsers)
+                self?.searchedUsers.send(updatedUsers)
             }
     }
 
