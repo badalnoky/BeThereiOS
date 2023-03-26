@@ -3,6 +3,7 @@ import Combine
 final class EventDataServiceMock: EventDataServiceInput {
     var userEvents = CurrentValueSubject<[Event], Never>([])
     var currentEvent = CurrentValueSubject<Event, Never>(.mock)
+    var provisionalMembers = CurrentValueSubject<[User], Never>([])
 
     func getEvents(for user: User) {}
     func createEvent(_ event: Event) {}
@@ -12,4 +13,6 @@ final class EventDataServiceMock: EventDataServiceInput {
     }
 
     func getEventData(for id: String) {}
+
+    func provisionallyAdd(user: User) {}
 }

@@ -19,7 +19,7 @@ final class UserDataServiceMock: ObservableObject, UserDataServiceInput {
 
     func fetchUsers(containing substring: String) {}
 
-    func fetchSearchedUsers(containing substring: String, isInitialFetch: Bool) {}
+    func fetchSearchedUsers(containing substring: String, isInitialFetch: Bool, filtering: [User]) {}
 
     func addFriend(_ friend: User) {}
 

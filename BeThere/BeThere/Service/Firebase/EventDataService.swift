@@ -4,11 +4,13 @@ import FirebaseFirestore
 public protocol EventDataServiceInput {
     var userEvents: CurrentValueSubject<[Event], Never> { get }
     var currentEvent: CurrentValueSubject<Event, Never> { get }
+    var provisionalMembers: CurrentValueSubject<[User], Never> { get }
 
     func getEvents(for user: User)
     func createEvent(_ event: Event)
     func updateEvent(with id: String, difference: [String: Any]) -> CurrentValueSubject<Bool, Never>
     func getEventData(for id: String)
+    func provisionallyAdd(user: User)
 }
 
 public final class EventDataService {
@@ -18,6 +20,7 @@ public final class EventDataService {
 
     public var userEvents = CurrentValueSubject<[Event], Never>([])
     public var currentEvent = CurrentValueSubject<Event, Never>(.mock)
+    public var provisionalMembers = CurrentValueSubject<[User], Never>([])
 }
 
 extension EventDataService: EventDataServiceInput {
@@ -48,6 +51,7 @@ extension EventDataService: EventDataServiceInput {
                     print(error.localizedDescription)
                 } else {
                     self?.addEvent(to: event.users, eventId: event.id)
+                    self?.provisionalMembers.send([])
                 }
             }
     }
@@ -57,8 +61,9 @@ extension EventDataService: EventDataServiceInput {
 
         eventCollection
             .document(id)
-            .updateData(difference) { error in
+            .updateData(difference) { [weak self] error in
                 guard error == nil else { return }
+                self?.provisionalMembers.send([])
             }
 
         return successfulUpdate
@@ -73,6 +78,11 @@ extension EventDataService: EventDataServiceInput {
                 guard let event = Event(fromDocument: data) else { return }
                 self?.currentEvent.send(event)
             }
+    }
+
+    public func provisionallyAdd(user: User) {
+        let newArray = provisionalMembers.value + [user]
+        provisionalMembers.send(newArray)
     }
 }
 

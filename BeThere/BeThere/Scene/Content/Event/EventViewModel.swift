@@ -29,6 +29,7 @@ final class EventViewModel: ObservableObject {
         self.eventId = UUID().uuidString
 
         registerUserBinding()
+        registerProvisionalUsersBinding()
     }
 
     init(
@@ -44,6 +45,7 @@ final class EventViewModel: ObservableObject {
         self.eventId = eventId
 
         registerModificiationBindings()
+        registerProvisionalUsersBinding()
     }
 }
 
@@ -62,6 +64,19 @@ extension EventViewModel {
         } else {
             // TODO: handle non compliant field values
         }
+    }
+}
+
+// MARK: Common
+private extension EventViewModel {
+    func registerProvisionalUsersBinding() {
+        eventService.provisionalMembers
+            .sink { [weak self] users in
+                guard let self = self else { return }
+                let filtered = users.filter { user in !self.members.contains { $0.id == user.id } }
+                self.members.append(contentsOf: filtered)
+            }
+            .store(in: &cancellables)
     }
 }
 

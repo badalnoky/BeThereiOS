@@ -67,7 +67,7 @@ extension Event {
         if self.location != event.location { difference[Keys.location] = event.location }
         if self.date != event.date { difference[Keys.date] = event.date }
         let newUsers = event.users.filter { !self.users.contains($0) }
-        if !newUsers.isEmpty { difference[Keys.users] = newUsers }
+        if !newUsers.isEmpty { difference[Keys.users] = FieldValue.arrayUnion(newUsers) }
 
         return difference
     }

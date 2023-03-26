@@ -13,7 +13,7 @@ public protocol UserDataServiceInput {
     func getUserData(for id: String)
     func updateUserName(to name: String)
     func fetchUsers(containing substring: String)
-    func fetchSearchedUsers(containing substring: String, isInitialFetch: Bool)
+    func fetchSearchedUsers(containing substring: String, isInitialFetch: Bool, filtering: [User])
     func addFriend(_ friend: User)
     func fetchMembers(_ ids: [String])
 }
@@ -92,13 +92,13 @@ extension UserDataService: UserDataServiceInput {
             }
     }
 
-    public func fetchSearchedUsers(containing substring: String, isInitialFetch: Bool) {
+    public func fetchSearchedUsers(containing substring: String, isInitialFetch: Bool, filtering: [User]) {
         guard let user = self.user.value else { return }
 
         var otherUsers: [User] = []
         var friends: [User] = []
 
-        let filter = [user.id] + eventMembers.value.map { $0.id }
+        let filter = [user.id] + eventMembers.value.map { $0.id } + filtering.map { $0.id }
 
         userCollection
             .whereField(Keys.id, notIn: filter)
