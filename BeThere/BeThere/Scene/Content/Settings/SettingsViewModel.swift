@@ -6,6 +6,7 @@ public final class SettingsViewModel: ObservableObject {
     private var userDataService: UserDataServiceInput
     private var cancellables = Set<AnyCancellable>()
 
+    private var nameMemento: String = .empty
     @Published var name: String = .empty
 
     init(
@@ -21,7 +22,17 @@ public final class SettingsViewModel: ObservableObject {
 
 public extension SettingsViewModel {
     func didTapSave() {
-        userDataService.updateUserName(to: name)
+        if nameMemento != name, name.count > 2 {
+            userDataService.updateUserName(to: name)
+        } else {
+            // TODO: show error message
+        }
+
+        if let image = image {
+            userDataService.upload(image: image)
+        } else {
+            // TODO: show error message
+        }
     }
 }
 
@@ -29,7 +40,10 @@ private extension SettingsViewModel {
     func registerUserBinding() {
         userDataService.user
             .sink { [weak self] in
-                if let user = $0 { self?.name = user.name}
+                if let user = $0 {
+                    self?.name = user.name
+                    self?.nameMemento = user.name
+                }
             }
             .store(in: &cancellables)
     }

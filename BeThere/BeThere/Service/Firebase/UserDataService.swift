@@ -1,5 +1,6 @@
 import Combine
 import FirebaseFirestore
+import FirebaseStorage
 
 public protocol UserDataServiceInput {
     var user: CurrentValueSubject<User?, Never> { get }
@@ -16,11 +17,13 @@ public protocol UserDataServiceInput {
     func fetchSearchedUsers(containing substring: String, isInitialFetch: Bool, filtering: [User])
     func addFriend(_ friend: User)
     func fetchMembers(_ ids: [String])
+    func upload(image: UIImage) -> CurrentValueSubject<Bool, Error>
 }
 
 public final class UserDataService {
     private typealias Keys = Txt.Data
     private let userCollection = Firestore.firestore().collection(Keys.userCollection)
+    private let folderReference = Storage.storage().reference().child(Keys.defaultImagePath)
 
     public var user = CurrentValueSubject<User?, Never>(nil)
     public var searchedUsers = CurrentValueSubject<[User], Never>([])
@@ -149,6 +152,41 @@ extension UserDataService: UserDataServiceInput {
                     }
                     self?.eventMembers.send(users)
                 }
+            }
+    }
+
+    public func upload(image: UIImage) -> CurrentValueSubject<Bool, Error> {
+        let successfullUpload = CurrentValueSubject<Bool, Error>(false)
+        guard let user = self.user.value else { return successfullUpload }
+        guard let data = image.jpegData(compressionQuality: .defaultCompressionQuality) else { return successfullUpload }
+        let imageReference = folderReference.child(user.id)
+        let metadata = StorageMetadata()
+        metadata.contentType = Keys.defaultImageType
+
+        imageReference.putData(data, metadata: metadata) { metadata, error in
+            guard error == nil else { return }
+
+            imageReference.downloadURL { [weak self] url, error in
+                guard error == nil else { return }
+                if let url = url {
+                    self?.updateUrlOf(url: url.absoluteString, completion: successfullUpload)
+                }
+            }
+        }
+
+        return successfullUpload
+    }
+}
+
+private extension UserDataService {
+    func updateUrlOf(url: String, completion: CurrentValueSubject<Bool, Error>) {
+        guard let user = self.user.value else { return }
+
+        userCollection
+            .document(user.id)
+            .updateData([Keys.photo: url]) { error in
+                guard error == nil else { return }
+                completion.send(true)
             }
     }
 }

@@ -11,7 +11,6 @@
 		790BA70B29C39C94003C15DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 790BA70A29C39C94003C15DC /* GoogleService-Info.plist */; };
 		791277F929C0E5CC0013173D /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791277F829C0E5CC0013173D /* IconButton.swift */; };
 		79188CC229C6744500F47280 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79188CC129C6744500F47280 /* User.swift */; };
-		79188CC429C67D6400F47280 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79188CC329C67D6400F47280 /* Publisher+Extensions.swift */; };
 		793A5A1229B78F09009A3D5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1129B78F09009A3D5B /* AppDelegate.swift */; };
 		793A5A1429B79369009A3D5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1329B79369009A3D5B /* AppCoordinator.swift */; };
 		793A5A1829B796CA009A3D5B /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1729B796CA009A3D5B /* AuthenticationCoordinator.swift */; };
@@ -28,6 +27,7 @@
 		793A5A3929B7A0CC009A3D5B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A3829B7A0CC009A3D5B /* MainView.swift */; };
 		793A5A3B29B7A0DD009A3D5B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A3A29B7A0DD009A3D5B /* SearchView.swift */; };
 		793A5A3D29B7A0E6009A3D5B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A3C29B7A0E6009A3D5B /* SettingsView.swift */; };
+		793C052229D2493100939923 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C052129D2493100939923 /* Publisher+Extensions.swift */; };
 		798048D829BA4D27006AE94C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798048D729BA4D27006AE94C /* MainViewModel.swift */; };
 		798048DA29BA4DBE006AE94C /* MainViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798048D929BA4DBE006AE94C /* MainViewModel+Mock.swift */; };
 		798048DC29BA5119006AE94C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798048DB29BA5119006AE94C /* SettingsViewModel.swift */; };
@@ -44,7 +44,7 @@
 		7994CA2929BB3F6D00EB90E0 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2829BB3F6D00EB90E0 /* ChatViewModel.swift */; };
 		7994CA2B29BB402D00EB90E0 /* ChatViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2A29BB402D00EB90E0 /* ChatViewModel+Mock.swift */; };
 		79C235C029C76D6000B9C497 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C235BF29C76D6000B9C497 /* UserDataService.swift */; };
-		79C235C229C7709100B9C497 /* DataService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C235C129C7709100B9C497 /* DataService+Mock.swift */; };
+		79C235C229C7709100B9C497 /* UserDataService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C235C129C7709100B9C497 /* UserDataService+Mock.swift */; };
 		79D6CF2629C4741F0022656C /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2529C4741F0022656C /* AuthenticationService.swift */; };
 		79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */; };
 		79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */; };
@@ -58,6 +58,7 @@
 		79DDA6E829B50FF000B04E2A /* BaseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DDA6E729B50FF000B04E2A /* BaseKit.framework */; };
 		79DDA6E929B50FF000B04E2A /* BaseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79DDA6E729B50FF000B04E2A /* BaseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79E4039F29CB701400935E83 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E4039E29CB701400935E83 /* EventModel.swift */; };
+		79EAA1B529D1E62300E0AC1D /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAA1B429D1E62300E0AC1D /* CGFloat+Extensions.swift */; };
 		79EBF84F29B8F7EF00E83646 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBF84E29B8F7EF00E83646 /* LoginViewModel.swift */; };
 		79EBF85429B9000600E83646 /* LoginViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBF85329B9000600E83646 /* LoginViewModel+Mock.swift */; };
 		79EBF85729B901F400E83646 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBF85629B901F400E83646 /* RegistrationViewModel.swift */; };
@@ -67,6 +68,7 @@
 		79EBF86129B90D1E00E83646 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBF86029B90D1E00E83646 /* Image+Extensions.swift */; };
 		79F645F429BB6F31004B761D /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F645F329BB6F31004B761D /* EventViewModel.swift */; };
 		79F645F629BB6F62004B761D /* EventViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F645F529BB6F62004B761D /* EventViewModel+Mock.swift */; };
+		A4006CCED997397A56516499 /* libPods-BeThereTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EC6FABCBB05042FA96EF57 /* libPods-BeThereTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,10 +103,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		352C0FEF851DD906B3401A70 /* Pods-BeThereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThereTests.release.xcconfig"; path = "Target Support Files/Pods-BeThereTests/Pods-BeThereTests.release.xcconfig"; sourceTree = "<group>"; };
+		4FB2F596789E0BBF1AA6C198 /* Pods-BeThereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThereTests.debug.xcconfig"; path = "Target Support Files/Pods-BeThereTests/Pods-BeThereTests.debug.xcconfig"; sourceTree = "<group>"; };
+		57EC6FABCBB05042FA96EF57 /* libPods-BeThereTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeThereTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		790BA70A29C39C94003C15DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		791277F829C0E5CC0013173D /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		79188CC129C6744500F47280 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		79188CC329C67D6400F47280 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		793A5A1129B78F09009A3D5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		793A5A1329B79369009A3D5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		793A5A1729B796CA009A3D5B /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		793A5A3829B7A0CC009A3D5B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		793A5A3A29B7A0DD009A3D5B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		793A5A3C29B7A0E6009A3D5B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		793C052129D2493100939923 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		798048D729BA4D27006AE94C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		798048D929BA4DBE006AE94C /* MainViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewModel+Mock.swift"; sourceTree = "<group>"; };
 		798048DB29BA5119006AE94C /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -137,7 +142,7 @@
 		7994CA2829BB3F6D00EB90E0 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		7994CA2A29BB402D00EB90E0 /* ChatViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatViewModel+Mock.swift"; sourceTree = "<group>"; };
 		79C235BF29C76D6000B9C497 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
-		79C235C129C7709100B9C497 /* DataService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataService+Mock.swift"; sourceTree = "<group>"; };
+		79C235C129C7709100B9C497 /* UserDataService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDataService+Mock.swift"; sourceTree = "<group>"; };
 		79D6CF2529C4741F0022656C /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationService+Mock.swift"; sourceTree = "<group>"; };
 		79DDA67729B4FB6F00B04E2A /* BeThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +158,7 @@
 		79DDA6B129B5040E00B04E2A /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
 		79DDA6E729B50FF000B04E2A /* BaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E4039E29CB701400935E83 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		79EAA1B429D1E62300E0AC1D /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		79EBF84E29B8F7EF00E83646 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		79EBF85329B9000600E83646 /* LoginViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewModel+Mock.swift"; sourceTree = "<group>"; };
 		79EBF85629B901F400E83646 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4006CCED997397A56516499 /* libPods-BeThereTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +206,7 @@
 			children = (
 				79DDA6E729B50FF000B04E2A /* BaseKit.framework */,
 				9A46FDF8AD0B5CB5B7F9A24B /* Pods_BeThere.framework */,
+				57EC6FABCBB05042FA96EF57 /* libPods-BeThereTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -208,6 +216,8 @@
 			children = (
 				CF35A98EBE118096C5AF97E8 /* Pods-BeThere.debug.xcconfig */,
 				B7A019FF2B4B235760874CD4 /* Pods-BeThere.release.xcconfig */,
+				4FB2F596789E0BBF1AA6C198 /* Pods-BeThereTests.debug.xcconfig */,
+				352C0FEF851DD906B3401A70 /* Pods-BeThereTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -385,7 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */,
-				79C235C129C7709100B9C497 /* DataService+Mock.swift */,
+				79C235C129C7709100B9C497 /* UserDataService+Mock.swift */,
 				798F3F1529CA1DF30022AECC /* EventDataService+Mock.swift */,
 			);
 			path = Firebase;
@@ -570,8 +580,9 @@
 		79EBF85F29B90CD900E83646 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				79EAA1B429D1E62300E0AC1D /* CGFloat+Extensions.swift */,
 				79EBF86029B90D1E00E83646 /* Image+Extensions.swift */,
-				79188CC329C67D6400F47280 /* Publisher+Extensions.swift */,
+				793C052129D2493100939923 /* Publisher+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -605,6 +616,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79DDA69E29B4FB7000B04E2A /* Build configuration list for PBXNativeTarget "BeThereTests" */;
 			buildPhases = (
+				C9E9E1159E5E109A3380FF30 /* [CP] Check Pods Manifest.lock */,
 				79DDA68329B4FB7000B04E2A /* Sources */,
 				79DDA68429B4FB7000B04E2A /* Frameworks */,
 				79DDA68529B4FB7000B04E2A /* Resources */,
@@ -786,6 +798,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C9E9E1159E5E109A3380FF30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeThereTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -793,7 +827,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79188CC429C67D6400F47280 /* Publisher+Extensions.swift in Sources */,
 				793A5A1429B79369009A3D5B /* AppCoordinator.swift in Sources */,
 				798048DE29BA512F006AE94C /* SettingsViewModel+Mock.swift in Sources */,
 				79EBF85729B901F400E83646 /* RegistrationViewModel.swift in Sources */,
@@ -807,11 +840,13 @@
 				793A5A3D29B7A0E6009A3D5B /* SettingsView.swift in Sources */,
 				793A5A3729B7A0BF009A3D5B /* EventView.swift in Sources */,
 				79DDA6B229B5040E00B04E2A /* DI.swift in Sources */,
+				79EAA1B529D1E62300E0AC1D /* CGFloat+Extensions.swift in Sources */,
 				798048DA29BA4DBE006AE94C /* MainViewModel+Mock.swift in Sources */,
 				79EBF85929B9020D00E83646 /* RegistrationViewModel+Mock.swift in Sources */,
 				7994CA2729BB3C0900EB90E0 /* SearchViewModel+Mock.swift in Sources */,
 				79EBF84F29B8F7EF00E83646 /* LoginViewModel.swift in Sources */,
 				79C235C029C76D6000B9C497 /* UserDataService.swift in Sources */,
+				793C052229D2493100939923 /* Publisher+Extensions.swift in Sources */,
 				79EBF85B29B907E300E83646 /* SuccessfulRegistrationViewModel.swift in Sources */,
 				79D6CF2629C4741F0022656C /* AuthenticationService.swift in Sources */,
 				793A5A3529B7A0B6009A3D5B /* ChatView.swift in Sources */,
@@ -838,7 +873,7 @@
 				79EBF85E29B9081E00E83646 /* SuccesfulRegistrationViewModel+Mock.swift in Sources */,
 				79EBF85429B9000600E83646 /* LoginViewModel+Mock.swift in Sources */,
 				79F645F629BB6F62004B761D /* EventViewModel+Mock.swift in Sources */,
-				79C235C229C7709100B9C497 /* DataService+Mock.swift in Sources */,
+				79C235C229C7709100B9C497 /* UserDataService+Mock.swift in Sources */,
 				793A5A1E29B79908009A3D5B /* ContentCoordinator.swift in Sources */,
 				798F3F0A29C9FCDF0022AECC /* AddMemberViewModel.swift in Sources */,
 				7994CA2929BB3F6D00EB90E0 /* ChatViewModel.swift in Sources */,
@@ -1074,6 +1109,7 @@
 		};
 		79DDA69F29B4FB7000B04E2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FB2F596789E0BBF1AA6C198 /* Pods-BeThereTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1094,6 +1130,7 @@
 		};
 		79DDA6A029B4FB7000B04E2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 352C0FEF851DD906B3401A70 /* Pods-BeThereTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

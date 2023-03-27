@@ -8,11 +8,3 @@ public extension PassthroughSubject where Output == Bool, Failure == Never {
             .eraseToAnyPublisher()
     }
 }
-
-public extension Double {
-    static let one: Double = 1
-}
-
-public extension String {
-    static var empty: String = ""
-}

@@ -1,3 +1,4 @@
+import BaseKit
 import SwiftUI
 
 struct SettingsView {
@@ -8,7 +9,7 @@ struct SettingsView {
 extension SettingsView: View {
     var body: some View {
         VStack {
-            Image.profilePicture
+            ImagePicker(size: .defaultImageSize, image: $viewModel.image)
             TextField(text: $viewModel.name) {
                 Text(String.empty)
             }

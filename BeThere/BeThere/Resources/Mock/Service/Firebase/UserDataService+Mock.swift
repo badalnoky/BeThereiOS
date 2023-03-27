@@ -1,4 +1,5 @@
 import Combine
+import UIKit
 
 final class UserDataServiceMock: ObservableObject, UserDataServiceInput {
     var user = CurrentValueSubject<User?, Never>(nil)
@@ -24,4 +25,8 @@ final class UserDataServiceMock: ObservableObject, UserDataServiceInput {
     func addFriend(_ friend: User) {}
 
     func fetchMembers(_ ids: [String]) {}
+
+    func upload(image: UIImage) -> CurrentValueSubject<Bool, Error> {
+        CurrentValueSubject<Bool, Error>(false)
+    }
 }
