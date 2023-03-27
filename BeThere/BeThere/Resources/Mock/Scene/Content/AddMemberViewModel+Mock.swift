@@ -1,9 +1,9 @@
-extension ChatViewModel {
-    static var mock: ChatViewModel {
-        ChatViewModel(
+extension AddMemberViewModel {
+    static var mock: AddMemberViewModel {
+        AddMemberViewModel(
             navigator: .init(sceneFactory: ContentSceneFactory(), root: .main),
-            evetService: EventDataServiceMock(),
             userDataService: UserDataServiceMock(),
+            eventService: EventDataServiceMock(),
             eventId: .empty
         )
     }

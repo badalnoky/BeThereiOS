@@ -1,4 +1,35 @@
-/// MARK: screens
+// MARK: Domain
+
+"User.id" = "id";
+"User.name" = "name";
+"User.photo" = "photo";
+"User.friends" = "friends";
+"User.events" = "events";
+
+"Event.id" = "id";
+"Event.name" = "name";
+"Event.location" = "location";
+"Event.date" = "date";
+"Event.users" = "users";
+"Event.messages" = "messages";
+
+"Message.id" = "id";
+"Message.sentBy" = "sentBy";
+"Message.text" = "text";
+
+// MARK: Resources
+
+"Icons.check" = "checkmark";
+"Icons.signOut" = "rectangle.portrait.and.arrow.right";
+"Icons.addFriends" = "person.fill.badge.plus";
+"Icons.settings" = "gear";
+"Icons.search" = "magnifyingglass";
+"Icons.plus" = "plus";
+"Icons.edit" = "pencil";
+"Icons.send" = "paperplane";
+"Icons.profilePicture" = "person.fill";
+
+// MARK: Screens
 
 "Login.title" = "Sign in";
 "Login.emailLabel" = "Email";
@@ -24,26 +55,32 @@
 
 "Search.title" = "Search";
 "Search.searchLabel" = "Name of a person";
-"Search.friendsLabel" = "Your friends";
 "Search.otherLabel" = "Other users";
 
 "Chat.dateLabel" = "Time and Date";
 "Chat.locationLabel" = "Location";
 
-"Event.nameLabel" = "Name of event";
-"Event.dateLabel" = "Time and Date";
-"Event.locationLabel" = "Location";
-"Event.membersLabel" = "Members";
-"Event.saveLabel" = "Save";
+"EventScreen.nameLabel" = "Name of event:";
+"EventScreen.dateLabel" = "Time and Date:";
+"EventScreen.locationLabel" = "Location:";
+"EventScreen.membersLabel" = "Members";
+"EventScreen.saveLabel" = "Save";
 
-/// MARK: Resources
+"AddMember.title" = "Add people";
+"AddMember.searchLabel" = "Name of a person";
+"AddMember.friendsLabel" = "Your Friends";
+"AddMember.otherLabel" = "Other users";
 
-"Icons.check" = "checkmark";
-"Icons.signOut" = "rectangle.portrait.and.arrow.right";
-"Icons.addFriends" = "person.fill.badge.plus";
-"Icons.settings" = "gear";
-"Icons.search" = "magnifyingglass";
-"Icons.plus" = "plus";
-"Icons.edit" = "pencil";
-"Icons.send" = "paperplane";
-"Icons.profilePicture" = "person.fill";
+// MARK: Services
+
+"Data.userCollection" = "user";
+"Data.id" = "id";
+"Data.name" = "name";
+"Data.friends" = "friends";
+
+"EventData.eventCollection" = "event";
+"EventData.userCollection" = "user";
+"EventData.id" = "id";
+"EventData.events" = "events";
+"EventData.users" = "users";
+"EventData.messages" = "messages";

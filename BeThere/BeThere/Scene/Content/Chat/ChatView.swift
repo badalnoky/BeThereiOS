@@ -8,6 +8,7 @@ struct ChatView {
 extension ChatView: View {
     var body: some View {
         VStack {
+            Text(viewModel.event.name)
             HStack {
                 Spacer()
                 IconButton(.edit, action: viewModel.didTapEdit)
@@ -15,27 +16,28 @@ extension ChatView: View {
             HStack {
                 Text(Str.dateLabel)
                 Spacer()
-                Text(viewModel.date, format: .dateTime.month().day().hour().minute())
+                Text(viewModel.event.date, format: .dateTime.month().day().hour().minute())
             }
             HStack {
                 Text(Str.locationLabel)
                 Spacer()
-                Text(viewModel.location)
+                Text(viewModel.event.location)
             }
             Divider()
             ScrollView {
-                ForEach(viewModel.messages, id: \.self) { message in
-                    Text(message)
+                ForEach(viewModel.event.messages.indices, id: \.self) { idx in
+                    let message = viewModel.event.messages[idx]
+                    Text(message.text)
                 }
             }
             HStack {
                 TextField(text: $viewModel.currentMessage) {
                     Text(String.empty)
                 }
-                Image.send
+                IconButton(.send, action: viewModel.didTapSend)
             }
         }
-        .navigationTitle(viewModel.event)
+        .navigationTitle(viewModel.event.name)
     }
 }
 

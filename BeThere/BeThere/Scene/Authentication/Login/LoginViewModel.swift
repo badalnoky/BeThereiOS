@@ -26,17 +26,8 @@ extension LoginViewModel {
     func didTapLogin() {
         authenticationService.signIn(email: email, password: password)
             .sink(
-                receiveCompletion: { completion in
-                    switch completion {
-                    case .failure(let error): print(error)
-                    default: break
-                    }
-                },
-                receiveValue: { [weak self] signedIn in
-                    if signedIn {
-                        self?.navigator.finishFlow()
-                    }
-                }
+                receiveValue: { [weak self] in if $0 { self?.navigator.finishFlow() } },
+                receiveError: { print($0) }
             )
             .store(in: &cancellables)
     }

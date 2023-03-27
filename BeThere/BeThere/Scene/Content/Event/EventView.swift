@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct EventView {
-    private typealias Str = Txt.Event
+    private typealias Str = Txt.EventScreen
     @StateObject var viewModel: EventViewModel
 }
 
@@ -10,18 +10,20 @@ extension EventView: View {
         VStack {
             HStack {
                 Text(Str.nameLabel)
-                Spacer()
-                Text(viewModel.event)
+                TextField(String.empty, text: $viewModel.name)
             }
             HStack {
                 Text(Str.dateLabel)
                 Spacer()
-                Text(viewModel.date, format: .dateTime.month().day().hour().minute())
+                Button {
+                    viewModel.isChoosingDate = true
+                } label: {
+                    Text(viewModel.date, format: .dateTime.month().day().hour().minute())
+                }
             }
             HStack {
                 Text(Str.locationLabel)
-                Spacer()
-                Text(viewModel.location)
+                TextField(String.empty, text: $viewModel.location)
             }
             HStack {
                 Text(Str.membersLabel)
@@ -29,11 +31,17 @@ extension EventView: View {
                 IconButton(.addFriends, action: viewModel.didTapAddFriends)
             }
             ScrollView {
-                ForEach(viewModel.members, id: \.self) { member in
-                    Text(member)
+                ForEach(viewModel.members.indices, id: \.self) { idx in
+                    let member = viewModel.members[idx]
+                    Text(member.name)
                 }
             }
-            Button(Str.saveLabel) {}
+            Button(Str.saveLabel, action: viewModel.didTapSave)
+        }
+        .sheet(isPresented: $viewModel.isChoosingDate) {
+            DatePicker(String.empty, selection: $viewModel.date, in: Date.now...)
+                .datePickerStyle(.graphical)
+                .presentationDetents([.medium])
         }
     }
 }

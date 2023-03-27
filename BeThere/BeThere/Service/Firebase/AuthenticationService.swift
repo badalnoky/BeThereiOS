@@ -7,17 +7,25 @@ public protocol AuthenticationServiceInput {
     func signOut() -> CurrentValueSubject<Bool, Error>
 }
 
-final class AuthenticatonService: ObservableObject {
+public final class AuthenticatonService: ObservableObject {
     private let authenticator = Auth.auth()
+    private var cancellables = Set<AnyCancellable>()
+    private var userDataService: UserDataServiceInput
+
+    init(userDataService: UserDataServiceInput) {
+        self.userDataService = userDataService
+    }
 }
 
 extension AuthenticatonService: AuthenticationServiceInput {
     public func signIn(email: String, password: String) -> CurrentValueSubject<Bool, Error> {
         let loggedIn = CurrentValueSubject<Bool, Error>(false)
-        authenticator.signIn(withEmail: email, password: password) { result, error in
+        authenticator.signIn(withEmail: email, password: password) { [weak self] result, error in
+            guard let self = self else { return }
             if let error = error {
                 loggedIn.send(completion: .failure(error))
-            } else if result != nil {
+            } else if let result = result {
+                self.userDataService.getUserData(for: result.user.uid)
                 loggedIn.send(true)
             }
         }
@@ -26,11 +34,22 @@ extension AuthenticatonService: AuthenticationServiceInput {
 
     public func registrate(email: String, password: String, name: String) -> CurrentValueSubject<Bool, Error> {
         let loggedIn = CurrentValueSubject<Bool, Error>(false)
-        authenticator.createUser(withEmail: email, password: password) { result, error in
+        authenticator.createUser(withEmail: email, password: password) { [weak self] result, error in
+            guard let self = self else { return }
             if let error = error {
                 loggedIn.send(completion: .failure(error))
-            } else if result != nil {
-                loggedIn.send(true)
+            } else if let result = result {
+                self.userDataService.createUserDocument(with: result.user.uid, name: name)
+                    .sink(
+                        receiveValue: {
+                            if $0 {
+                                self.userDataService.getUserData(for: result.user.uid)
+                                loggedIn.send(true)
+                            }
+                        },
+                        receiveError: { print($0) }
+                    )
+                    .store(in: &self.cancellables)
             }
         }
         return loggedIn
@@ -40,6 +59,7 @@ extension AuthenticatonService: AuthenticationServiceInput {
         let successfulSignOut = CurrentValueSubject<Bool, Error>(false)
         do {
             try authenticator.signOut()
+            self.userDataService.resetUser()
             successfulSignOut.send(true)
         } catch {
             successfulSignOut.send(completion: .failure(error))

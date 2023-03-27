@@ -12,18 +12,19 @@ extension SearchView: View {
                 TextField(text: $viewModel.searchString) {
                     Text(Str.searchLabel)
                 }
-                Image.search
+                IconButton(.search, action: viewModel.didTapSearch)
             }
+            Divider()
             ScrollView {
-                Divider()
-                Text(Str.friendsLabel)
-                ForEach(viewModel.friends, id: \.self) { friend in
-                    Text(friend)
-                }
-                Divider()
-                Text(Str.otherLabel)
-                ForEach(viewModel.otherUsers, id: \.self) { user in
-                    Text(user)
+                ForEach(viewModel.otherUsers.indices, id: \.self) { idx in
+                    let user = viewModel.otherUsers[idx]
+                    HStack {
+                        Text(user.name)
+                        Spacer()
+                        IconButton(.plus) {
+                            viewModel.didTapAdd(friend: user)
+                        }
+                    }
                 }
             }
         }

@@ -11,11 +11,15 @@ public extension Navigator where Factory == ContentSceneFactory {
         push(screen: .search)
     }
 
-    func showChat() {
-        push(screen: .chat)
+    func showChat(for eventId: String) {
+        push(screen: .chat(eventId))
     }
 
-    func showEvent() {
-        push(screen: .event)
+    func showEvent(for id: String = .empty) {
+        push(screen: .event(id))
+    }
+
+    func showAddMember(eventId: String) {
+        push(screen: .addMember(eventId))
     }
 }

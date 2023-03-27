@@ -27,17 +27,8 @@ extension RegistrationViewModel {
     func didTapRegistrate() {
         authenticationService.registrate(email: email, password: password, name: name)
             .sink(
-                receiveCompletion: { completion in
-                    switch completion {
-                    case .failure(let error): print(error)
-                    default: break
-                    }
-                },
-                receiveValue: { [weak self] signedIn in
-                    if signedIn {
-                        self?.navigator.showSuccessfulRegistration()
-                    }
-                }
+                receiveValue: { [weak self] in if $0 { self?.navigator.showSuccessfulRegistration() } },
+                receiveError: { print($0) }
             )
             .store(in: &cancellables)
     }

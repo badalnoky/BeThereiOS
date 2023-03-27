@@ -1,5 +1,9 @@
 extension EventViewModel {
     static var mock: EventViewModel {
-        EventViewModel(navigator: .init(sceneFactory: ContentSceneFactory(), root: .main))
+        EventViewModel(
+            navigator: .init(sceneFactory: ContentSceneFactory(), root: .main),
+            evetService: EventDataServiceMock(),
+            userDataService: UserDataServiceMock()
+        )
     }
 }

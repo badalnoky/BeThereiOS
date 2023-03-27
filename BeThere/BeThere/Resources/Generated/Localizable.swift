@@ -10,23 +10,71 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Txt {
+  internal enum AddMember {
+    /// Your Friends
+    internal static let friendsLabel = Txt.tr("Localizable", "AddMember.friendsLabel", fallback: "Your Friends")
+    /// Other users
+    internal static let otherLabel = Txt.tr("Localizable", "AddMember.otherLabel", fallback: "Other users")
+    /// Name of a person
+    internal static let searchLabel = Txt.tr("Localizable", "AddMember.searchLabel", fallback: "Name of a person")
+    /// Add people
+    internal static let title = Txt.tr("Localizable", "AddMember.title", fallback: "Add people")
+  }
   internal enum Chat {
     /// Time and Date
     internal static let dateLabel = Txt.tr("Localizable", "Chat.dateLabel", fallback: "Time and Date")
     /// Location
     internal static let locationLabel = Txt.tr("Localizable", "Chat.locationLabel", fallback: "Location")
   }
+  internal enum Data {
+    /// friends
+    internal static let friends = Txt.tr("Localizable", "Data.friends", fallback: "friends")
+    /// id
+    internal static let id = Txt.tr("Localizable", "Data.id", fallback: "id")
+    /// name
+    internal static let name = Txt.tr("Localizable", "Data.name", fallback: "name")
+    /// user
+    internal static let userCollection = Txt.tr("Localizable", "Data.userCollection", fallback: "user")
+  }
   internal enum Event {
-    /// Time and Date
-    internal static let dateLabel = Txt.tr("Localizable", "Event.dateLabel", fallback: "Time and Date")
-    /// Location
-    internal static let locationLabel = Txt.tr("Localizable", "Event.locationLabel", fallback: "Location")
+    /// date
+    internal static let date = Txt.tr("Localizable", "Event.date", fallback: "date")
+    /// id
+    internal static let id = Txt.tr("Localizable", "Event.id", fallback: "id")
+    /// location
+    internal static let location = Txt.tr("Localizable", "Event.location", fallback: "location")
+    /// messages
+    internal static let messages = Txt.tr("Localizable", "Event.messages", fallback: "messages")
+    /// name
+    internal static let name = Txt.tr("Localizable", "Event.name", fallback: "name")
+    /// users
+    internal static let users = Txt.tr("Localizable", "Event.users", fallback: "users")
+  }
+  internal enum EventData {
+    /// event
+    internal static let eventCollection = Txt.tr("Localizable", "EventData.eventCollection", fallback: "event")
+    /// events
+    internal static let events = Txt.tr("Localizable", "EventData.events", fallback: "events")
+    /// id
+    internal static let id = Txt.tr("Localizable", "EventData.id", fallback: "id")
+    /// messages
+    internal static let messages = Txt.tr("Localizable", "EventData.messages", fallback: "messages")
+    /// user
+    internal static let userCollection = Txt.tr("Localizable", "EventData.userCollection", fallback: "user")
+    /// users
+    internal static let users = Txt.tr("Localizable", "EventData.users", fallback: "users")
+  }
+  internal enum EventScreen {
+    /// Time and Date:
+    internal static let dateLabel = Txt.tr("Localizable", "EventScreen.dateLabel", fallback: "Time and Date:")
+    /// Location:
+    internal static let locationLabel = Txt.tr("Localizable", "EventScreen.locationLabel", fallback: "Location:")
     /// Members
-    internal static let membersLabel = Txt.tr("Localizable", "Event.membersLabel", fallback: "Members")
-    /// Name of event
-    internal static let nameLabel = Txt.tr("Localizable", "Event.nameLabel", fallback: "Name of event")
+    internal static let membersLabel = Txt.tr("Localizable", "EventScreen.membersLabel", fallback: "Members")
+    /// Name of event:
+    internal static let nameLabel = Txt.tr("Localizable", "EventScreen.nameLabel", fallback: "Name of event:")
     /// Save
-    internal static let saveLabel = Txt.tr("Localizable", "Event.saveLabel", fallback: "Save")
+    internal static let saveLabel = Txt.tr("Localizable", "EventScreen.saveLabel", fallback: "Save")
   }
   internal enum Icons {
     /// person.fill.badge.plus
@@ -66,6 +114,14 @@ internal enum Txt {
     /// Search
     internal static let searchLabel = Txt.tr("Localizable", "Main.searchLabel", fallback: "Search")
   }
+  internal enum Message {
+    /// id
+    internal static let id = Txt.tr("Localizable", "Message.id", fallback: "id")
+    /// sentBy
+    internal static let sentBy = Txt.tr("Localizable", "Message.sentBy", fallback: "sentBy")
+    /// text
+    internal static let text = Txt.tr("Localizable", "Message.text", fallback: "text")
+  }
   internal enum Registration {
     /// Email
     internal static let emailLabel = Txt.tr("Localizable", "Registration.emailLabel", fallback: "Email")
@@ -83,8 +139,6 @@ internal enum Txt {
     internal static let title = Txt.tr("Localizable", "Registration.title", fallback: "Registration")
   }
   internal enum Search {
-    /// Your friends
-    internal static let friendsLabel = Txt.tr("Localizable", "Search.friendsLabel", fallback: "Your friends")
     /// Other users
     internal static let otherLabel = Txt.tr("Localizable", "Search.otherLabel", fallback: "Other users")
     /// Name of a person
@@ -101,6 +155,18 @@ internal enum Txt {
     internal static let nextLabel = Txt.tr("Localizable", "SuccessfulRegistration.nextLabel", fallback: "Next")
     /// Successful registration
     internal static let title = Txt.tr("Localizable", "SuccessfulRegistration.title", fallback: "Successful registration")
+  }
+  internal enum User {
+    /// events
+    internal static let events = Txt.tr("Localizable", "User.events", fallback: "events")
+    /// friends
+    internal static let friends = Txt.tr("Localizable", "User.friends", fallback: "friends")
+    /// id
+    internal static let id = Txt.tr("Localizable", "User.id", fallback: "id")
+    /// name
+    internal static let name = Txt.tr("Localizable", "User.name", fallback: "name")
+    /// photo
+    internal static let photo = Txt.tr("Localizable", "User.photo", fallback: "photo")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
