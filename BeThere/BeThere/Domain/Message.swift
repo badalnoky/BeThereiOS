@@ -17,6 +17,14 @@ public struct Message {
 extension Message {
     private typealias Keys = Txt.Message
 
+    var defaultDocumentValue: [String: Any] {
+        [
+            Keys.id: id,
+            Keys.sentBy: sentBy,
+            Keys.text: text
+        ]
+    }
+
     init?(fromDocument data: [String: Any]) {
         guard let id = data[Keys.id] as? String else { return nil }
         guard let sentBy = data[Keys.sentBy] as? String else { return nil }

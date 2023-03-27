@@ -34,7 +34,7 @@ extension ChatView: View {
                 TextField(text: $viewModel.currentMessage) {
                     Text(String.empty)
                 }
-                Image.send
+                IconButton(.send, action: viewModel.didTapSend)
             }
         }
         .navigationTitle(viewModel.event.name)

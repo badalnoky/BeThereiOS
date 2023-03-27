@@ -83,3 +83,4 @@
 "EventData.id" = "id";
 "EventData.events" = "events";
 "EventData.users" = "users";
+"EventData.messages" = "messages";

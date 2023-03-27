@@ -11,6 +11,7 @@ public protocol EventDataServiceInput {
     func updateEvent(with id: String, difference: [String: Any]) -> CurrentValueSubject<Bool, Never>
     func getEventData(for id: String)
     func provisionallyAdd(user: User)
+    func send(_ message: Message, to eventId: String)
 }
 
 public final class EventDataService {
@@ -83,6 +84,14 @@ extension EventDataService: EventDataServiceInput {
     public func provisionallyAdd(user: User) {
         let newArray = provisionalMembers.value + [user]
         provisionalMembers.send(newArray)
+    }
+
+    public func send(_ message: Message, to eventId: String) {
+        eventCollection
+            .document(eventId)
+            .updateData([Keys.messages: FieldValue.arrayUnion([message.defaultDocumentValue])]) { error in
+                guard error == nil else { return }
+            }
     }
 }
 

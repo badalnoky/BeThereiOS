@@ -15,4 +15,6 @@ final class EventDataServiceMock: EventDataServiceInput {
     func getEventData(for id: String) {}
 
     func provisionallyAdd(user: User) {}
+
+    func send(_ message: Message, to eventId: String) {}
 }
