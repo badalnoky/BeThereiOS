@@ -49,7 +49,14 @@ extension ContentSceneFactory {
     }
 
     func chat(with navigator: Navigator<ContentSceneFactory>, eventId: String) -> ChatView {
-        ChatView(viewModel: ChatViewModel(navigator: navigator, eventId: eventId))
+        ChatView(
+            viewModel: ChatViewModel(
+                navigator: navigator,
+                evetService: Resolver.resolve(),
+                userDataService: Resolver.resolve(),
+                eventId: eventId
+            )
+        )
     }
 
     func event(with navigator: Navigator<ContentSceneFactory>, eventId: String) -> EventView {
