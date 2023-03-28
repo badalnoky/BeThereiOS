@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		793C051529D2369F00939923 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C051429D2369F00939923 /* ImagePicker.swift */; };
+		793C051529D2369F00939923 /* AsyncImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C051429D2369F00939923 /* AsyncImagePicker.swift */; };
 		793C051A29D2482700939923 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C051929D2482700939923 /* String+Extensions.swift */; };
 		793C051C29D2485800939923 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C051B29D2485800939923 /* Image+Extensions.swift */; };
 		793C051E29D2488500939923 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C051D29D2488400939923 /* Double+Extensions.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		793C051429D2369F00939923 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		793C051429D2369F00939923 /* AsyncImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImagePicker.swift; sourceTree = "<group>"; };
 		793C051929D2482700939923 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		793C051B29D2485800939923 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		793C051D29D2488400939923 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		793C051329D2367200939923 /* ImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				793C051429D2369F00939923 /* ImagePicker.swift */,
+				793C051429D2369F00939923 /* AsyncImagePicker.swift */,
 			);
 			path = ImagePicker;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 				79DDA6DC29B50B2700B04E2A /* SceneFactory.swift in Sources */,
 				79DDA6DD29B50B2700B04E2A /* Coordinator.swift in Sources */,
 				793C051E29D2488500939923 /* Double+Extensions.swift in Sources */,
-				793C051529D2369F00939923 /* ImagePicker.swift in Sources */,
+				793C051529D2369F00939923 /* AsyncImagePicker.swift in Sources */,
 				793C051A29D2482700939923 /* String+Extensions.swift in Sources */,
 				79DDA6DA29B50B2700B04E2A /* PassthroughSubject+Extensions.swift in Sources */,
 				79DDA6D329B50B1D00B04E2A /* NetworkMonitor.swift in Sources */,

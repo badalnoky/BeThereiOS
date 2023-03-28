@@ -9,7 +9,7 @@ struct SettingsView {
 extension SettingsView: View {
     var body: some View {
         VStack {
-            ImagePicker(size: .defaultImageSize, image: $viewModel.image)
+            AsyncImagePicker(url: viewModel.urlString, size: .defaultImageSize, image: $viewModel.image, hasChanged: $viewModel.hasImageChanged)
             TextField(text: $viewModel.name) {
                 Text(String.empty)
             }

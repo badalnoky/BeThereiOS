@@ -1,5 +1,6 @@
 import BaseKit
 import Combine
+import SwiftUI
 
 public final class SettingsViewModel: ObservableObject {
     private var navigator: Navigator<ContentSceneFactory>
@@ -7,7 +8,11 @@ public final class SettingsViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
 
     private var nameMemento: String = .empty
+
+    @Published var urlString: String = .empty
     @Published var name: String = .empty
+    @Published var image: UIImage?
+    @Published var hasImageChanged = false
 
     init(
         navigator: Navigator<ContentSceneFactory>,
@@ -28,8 +33,14 @@ public extension SettingsViewModel {
             // TODO: show error message
         }
 
-        if let image = image {
-            userDataService.upload(image: image)
+        if let uiImage = image, hasImageChanged {
+            userDataService.upload(image: uiImage)
+                .sink { success in
+                    // TODO: handle succes
+                } receiveError: { error in
+                    // TODO: Handle error
+                }
+                .store(in: &cancellables)
         } else {
             // TODO: show error message
         }
@@ -43,6 +54,7 @@ private extension SettingsViewModel {
                 if let user = $0 {
                     self?.name = user.name
                     self?.nameMemento = user.name
+                    self?.urlString = user.photo
                 }
             }
             .store(in: &cancellables)
