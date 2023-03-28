@@ -35,7 +35,8 @@ public extension SettingsViewModel {
 
         if let uiImage = image, hasImageChanged {
             userDataService.upload(image: uiImage)
-                .sink { success in
+                .sink { [weak self] success in
+                    self?.hasImageChanged = false
                     // TODO: handle succes
                 } receiveError: { error in
                     // TODO: Handle error
