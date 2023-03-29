@@ -27,12 +27,18 @@ internal enum Txt {
     internal static let locationLabel = Txt.tr("Localizable", "Chat.locationLabel", fallback: "Location")
   }
   internal enum Data {
+    /// profilePicture
+    internal static let defaultImagePath = Txt.tr("Localizable", "Data.defaultImagePath", fallback: "profilePicture")
+    /// image/jpeg
+    internal static let defaultImageType = Txt.tr("Localizable", "Data.defaultImageType", fallback: "image/jpeg")
     /// friends
     internal static let friends = Txt.tr("Localizable", "Data.friends", fallback: "friends")
     /// id
     internal static let id = Txt.tr("Localizable", "Data.id", fallback: "id")
     /// name
     internal static let name = Txt.tr("Localizable", "Data.name", fallback: "name")
+    /// photo
+    internal static let photo = Txt.tr("Localizable", "Data.photo", fallback: "photo")
     /// user
     internal static let userCollection = Txt.tr("Localizable", "Data.userCollection", fallback: "user")
   }
