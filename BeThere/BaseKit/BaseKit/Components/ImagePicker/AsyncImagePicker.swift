@@ -15,14 +15,7 @@ public struct AsyncImagePicker: View {
                 Image(uiImage: image)
                     .circularFittedToSize(size)
             } else {
-                AsyncImage(url: URL(string: url)) { image in
-                    image
-                        .circularFittedToSize(size)
-                } placeholder: {
-                    Image(systemName: .person)
-                        .circularFittedToSize(size)
-                }
-                .frame(width: size, height: size)
+                CachedAsyncImage(urlString: url, size: size)
             }
         }
         .onChange(of: selectedItem) { newItem in

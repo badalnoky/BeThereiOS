@@ -11,6 +11,9 @@
 		793C051A29D2482700939923 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C051929D2482700939923 /* String+Extensions.swift */; };
 		793C051C29D2485800939923 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C051B29D2485800939923 /* Image+Extensions.swift */; };
 		793C051E29D2488500939923 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C051D29D2488400939923 /* Double+Extensions.swift */; };
+		79502F9129D4806700B1DD37 /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79502F9029D4806700B1DD37 /* CachedAsyncImage.swift */; };
+		79502F9329D4808C00B1DD37 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79502F9229D4808C00B1DD37 /* ImageCacheService.swift */; };
+		79502F9529D4848E00B1DD37 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79502F9429D4848E00B1DD37 /* Int+Extensions.swift */; };
 		79DDA6C929B50AEF00B04E2A /* BaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79DDA6C829B50AEF00B04E2A /* BaseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79DDA6D329B50B1D00B04E2A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6D129B50B1D00B04E2A /* NetworkMonitor.swift */; };
 		79DDA6DA29B50B2700B04E2A /* PassthroughSubject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6D529B50B2700B04E2A /* PassthroughSubject+Extensions.swift */; };
@@ -25,6 +28,9 @@
 		793C051929D2482700939923 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		793C051B29D2485800939923 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		793C051D29D2488400939923 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		79502F9029D4806700B1DD37 /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
+		79502F9229D4808C00B1DD37 /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
+		79502F9429D4848E00B1DD37 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		79DDA6C529B50AEF00B04E2A /* BaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA6C829B50AEF00B04E2A /* BaseKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseKit.h; sourceTree = "<group>"; };
 		79DDA6D129B50B1D00B04E2A /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
@@ -49,6 +55,7 @@
 		793C051229D2364E00939923 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				79502F8F29D4803C00B1DD37 /* CachedAsyncImage */,
 				793C051329D2367200939923 /* ImagePicker */,
 			);
 			path = Components;
@@ -67,10 +74,19 @@
 			children = (
 				793C051D29D2488400939923 /* Double+Extensions.swift */,
 				793C051B29D2485800939923 /* Image+Extensions.swift */,
+				79502F9429D4848E00B1DD37 /* Int+Extensions.swift */,
 				79DDA6D529B50B2700B04E2A /* PassthroughSubject+Extensions.swift */,
 				793C051929D2482700939923 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		79502F8F29D4803C00B1DD37 /* CachedAsyncImage */ = {
+			isa = PBXGroup;
+			children = (
+				79502F9029D4806700B1DD37 /* CachedAsyncImage.swift */,
+			);
+			path = CachedAsyncImage;
 			sourceTree = "<group>";
 		};
 		79DDA6BB29B50AEF00B04E2A = {
@@ -104,6 +120,7 @@
 		79DDA6CF29B50B1D00B04E2A /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				79502F9229D4808C00B1DD37 /* ImageCacheService.swift */,
 				79DDA6D129B50B1D00B04E2A /* NetworkMonitor.swift */,
 			);
 			path = Utility;
@@ -201,10 +218,13 @@
 			files = (
 				793C051C29D2485800939923 /* Image+Extensions.swift in Sources */,
 				79DDA6DE29B50B2700B04E2A /* Navigator.swift in Sources */,
+				79502F9329D4808C00B1DD37 /* ImageCacheService.swift in Sources */,
 				79DDA6DC29B50B2700B04E2A /* SceneFactory.swift in Sources */,
 				79DDA6DD29B50B2700B04E2A /* Coordinator.swift in Sources */,
+				79502F9529D4848E00B1DD37 /* Int+Extensions.swift in Sources */,
 				793C051E29D2488500939923 /* Double+Extensions.swift in Sources */,
 				793C051529D2369F00939923 /* AsyncImagePicker.swift in Sources */,
+				79502F9129D4806700B1DD37 /* CachedAsyncImage.swift in Sources */,
 				793C051A29D2482700939923 /* String+Extensions.swift in Sources */,
 				79DDA6DA29B50B2700B04E2A /* PassthroughSubject+Extensions.swift in Sources */,
 				79DDA6D329B50B1D00B04E2A /* NetworkMonitor.swift in Sources */,
