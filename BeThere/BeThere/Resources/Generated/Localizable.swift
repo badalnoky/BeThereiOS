@@ -85,6 +85,8 @@ internal enum Txt {
   internal enum Icons {
     /// person.fill.badge.plus
     internal static let addFriends = Txt.tr("Localizable", "Icons.addFriends", fallback: "person.fill.badge.plus")
+    /// chevron.left
+    internal static let back = Txt.tr("Localizable", "Icons.back", fallback: "chevron.left")
     /// checkmark
     internal static let check = Txt.tr("Localizable", "Icons.check", fallback: "checkmark")
     /// pencil

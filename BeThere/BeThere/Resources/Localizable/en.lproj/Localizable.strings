@@ -28,6 +28,7 @@
 "Icons.edit" = "pencil";
 "Icons.send" = "paperplane";
 "Icons.profilePicture" = "person.fill";
+"Icons.back" = "chevron.left";
 
 // MARK: Screens
 

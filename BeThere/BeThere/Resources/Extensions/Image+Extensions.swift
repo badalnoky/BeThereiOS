@@ -12,4 +12,14 @@ extension Image {
     static var edit = Image(systemName: Icons.edit)
     static var send = Image(systemName: Icons.send)
     static var profilePicture = Image(systemName: Icons.profilePicture)
+    static var back = Image(systemName: Icons.back)
+}
+
+extension Image {
+    func fittedToSize(_ size: CGFloat) -> some View {
+        self
+            .resizable()
+            .scaledToFit()
+            .frame(width: size, height: size)
+    }
 }

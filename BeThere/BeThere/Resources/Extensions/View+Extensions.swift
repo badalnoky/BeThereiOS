@@ -7,3 +7,9 @@ extension View {
             .foregroundColor(style.color)
     }
 }
+
+extension View {
+    func defaultNavigationBar(title: String, isNavigatable: Bool = true) -> some View {
+        modifier(DefaultNavigationBarModifier(title: title, isNavigatable: isNavigatable))
+    }
+}
