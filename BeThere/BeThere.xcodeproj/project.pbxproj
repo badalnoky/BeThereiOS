@@ -48,6 +48,9 @@
 		79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */; };
 		79D922D729D5ED94006F4732 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D922D629D5ED94006F4732 /* Colors.xcassets */; };
 		79D922D929D5F05B006F4732 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922D829D5F05B006F4732 /* Colors.swift */; };
+		79D922F329D60654006F4732 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 79D922F129D60654006F4732 /* ProximaNova-Bold.otf */; };
+		79D922F429D60654006F4732 /* ProximaNova-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 79D922F229D60654006F4732 /* ProximaNova-Medium.otf */; };
+		79D922F729D60755006F4732 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922F629D60755006F4732 /* Fonts.swift */; };
 		79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */; };
 		79DDA67F29B4FB7000B04E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA67E29B4FB7000B04E2A /* Assets.xcassets */; };
 		79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA68129B4FB7000B04E2A /* Preview Assets.xcassets */; };
@@ -147,6 +150,10 @@
 		79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationService+Mock.swift"; sourceTree = "<group>"; };
 		79D922D629D5ED94006F4732 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		79D922D829D5F05B006F4732 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		79D922F129D60654006F4732 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		79D922F229D60654006F4732 /* ProximaNova-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Medium.otf"; sourceTree = "<group>"; };
+		79D922F529D60678006F4732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		79D922F629D60755006F4732 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		79DDA67729B4FB6F00B04E2A /* BeThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereApp.swift; sourceTree = "<group>"; };
 		79DDA67E29B4FB7000B04E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -403,6 +410,15 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
+		79D922F029D60654006F4732 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				79D922F129D60654006F4732 /* ProximaNova-Bold.otf */,
+				79D922F229D60654006F4732 /* ProximaNova-Medium.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		79DDA66E29B4FB6F00B04E2A = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +444,7 @@
 		79DDA67929B4FB6F00B04E2A /* BeThere */ = {
 			isa = PBXGroup;
 			children = (
+				79D922F529D60678006F4732 /* Info.plist */,
 				79DDA6B329B508EF00B04E2A /* App */,
 				79DDA6B429B508F600B04E2A /* DI */,
 				79890E4929C39B9500C270BF /* Domain */,
@@ -480,6 +497,7 @@
 		79DDA6A629B5002000B04E2A /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				79D922F629D60755006F4732 /* Fonts.swift */,
 				79D922D829D5F05B006F4732 /* Colors.swift */,
 				79DDA6AF29B5017F00B04E2A /* Localizable.swift */,
 			);
@@ -536,6 +554,7 @@
 			children = (
 				79DDA67E29B4FB7000B04E2A /* Assets.xcassets */,
 				79D922D629D5ED94006F4732 /* Colors.xcassets */,
+				79D922F029D60654006F4732 /* Fonts */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -700,9 +719,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D922F429D60654006F4732 /* ProximaNova-Medium.otf in Resources */,
 				79D922D729D5ED94006F4732 /* Colors.xcassets in Resources */,
 				79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */,
 				790BA70B29C39C94003C15DC /* GoogleService-Info.plist in Resources */,
+				79D922F329D60654006F4732 /* ProximaNova-Bold.otf in Resources */,
 				79DDA6AB29B5006400B04E2A /* Localizable.strings in Resources */,
 				79DDA67F29B4FB7000B04E2A /* Assets.xcassets in Resources */,
 			);
@@ -856,6 +877,7 @@
 				793A5A3529B7A0B6009A3D5B /* ChatView.swift in Sources */,
 				79E4039F29CB701400935E83 /* EventModel.swift in Sources */,
 				7994CA2B29BB402D00EB90E0 /* ChatViewModel+Mock.swift in Sources */,
+				79D922F729D60755006F4732 /* Fonts.swift in Sources */,
 				793A5A3129B7A09C009A3D5B /* RegistrationView.swift in Sources */,
 				79DDA6B029B5017F00B04E2A /* Localizable.swift in Sources */,
 				798048DC29BA5119006AE94C /* SettingsViewModel.swift in Sources */,
@@ -1055,6 +1077,7 @@
 				DEVELOPMENT_TEAM = 2D3N9A382G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeThere/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1089,6 +1112,7 @@
 				DEVELOPMENT_TEAM = 2D3N9A382G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeThere/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
