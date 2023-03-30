@@ -54,6 +54,7 @@
 		79D922FA29D608F3006F4732 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922F929D608F3006F4732 /* TextStyle.swift */; };
 		79D922FC29D60C27006F4732 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922FB29D60C27006F4732 /* View+Extensions.swift */; };
 		79D922FF29D60F25006F4732 /* DefaultNavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922FE29D60F25006F4732 /* DefaultNavigationBarModifier.swift */; };
+		79D9230129D61737006F4732 /* MainNavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D9230029D61737006F4732 /* MainNavigationBarModifier.swift */; };
 		79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */; };
 		79DDA67F29B4FB7000B04E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA67E29B4FB7000B04E2A /* Assets.xcassets */; };
 		79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA68129B4FB7000B04E2A /* Preview Assets.xcassets */; };
@@ -160,6 +161,7 @@
 		79D922F929D608F3006F4732 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		79D922FB29D60C27006F4732 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		79D922FE29D60F25006F4732 /* DefaultNavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationBarModifier.swift; sourceTree = "<group>"; };
+		79D9230029D61737006F4732 /* MainNavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationBarModifier.swift; sourceTree = "<group>"; };
 		79DDA67729B4FB6F00B04E2A /* BeThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereApp.swift; sourceTree = "<group>"; };
 		79DDA67E29B4FB7000B04E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				79D922FE29D60F25006F4732 /* DefaultNavigationBarModifier.swift */,
+				79D9230029D61737006F4732 /* MainNavigationBarModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -882,6 +885,7 @@
 				798048DE29BA512F006AE94C /* SettingsViewModel+Mock.swift in Sources */,
 				79EBF85729B901F400E83646 /* RegistrationViewModel.swift in Sources */,
 				798F3F1629CA1DF30022AECC /* EventDataService+Mock.swift in Sources */,
+				79D9230129D61737006F4732 /* MainNavigationBarModifier.swift in Sources */,
 				798F3F0E29C9FF3E0022AECC /* AddMemberViewModel+Mock.swift in Sources */,
 				793A5A3B29B7A0DD009A3D5B /* SearchView.swift in Sources */,
 				793A5A3929B7A0CC009A3D5B /* MainView.swift in Sources */,
