@@ -51,6 +51,8 @@
 		79D922F329D60654006F4732 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 79D922F129D60654006F4732 /* ProximaNova-Bold.otf */; };
 		79D922F429D60654006F4732 /* ProximaNova-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 79D922F229D60654006F4732 /* ProximaNova-Medium.otf */; };
 		79D922F729D60755006F4732 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922F629D60755006F4732 /* Fonts.swift */; };
+		79D922FA29D608F3006F4732 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922F929D608F3006F4732 /* TextStyle.swift */; };
+		79D922FC29D60C27006F4732 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922FB29D60C27006F4732 /* View+Extensions.swift */; };
 		79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */; };
 		79DDA67F29B4FB7000B04E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA67E29B4FB7000B04E2A /* Assets.xcassets */; };
 		79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA68129B4FB7000B04E2A /* Preview Assets.xcassets */; };
@@ -154,6 +156,8 @@
 		79D922F229D60654006F4732 /* ProximaNova-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Medium.otf"; sourceTree = "<group>"; };
 		79D922F529D60678006F4732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		79D922F629D60755006F4732 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		79D922F929D608F3006F4732 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
+		79D922FB29D60C27006F4732 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		79DDA67729B4FB6F00B04E2A /* BeThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereApp.swift; sourceTree = "<group>"; };
 		79DDA67E29B4FB7000B04E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -419,6 +423,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		79D922F829D608C6006F4732 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				79D922F929D608F3006F4732 /* TextStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		79DDA66E29B4FB6F00B04E2A = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +502,7 @@
 				79DDA6A629B5002000B04E2A /* Generated */,
 				79DDA6A829B5003700B04E2A /* Localizable */,
 				79EBF85029B8FFB600E83646 /* Mock */,
+				79D922F829D608C6006F4732 /* Styles */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -605,6 +618,7 @@
 			children = (
 				79EAA1B429D1E62300E0AC1D /* CGFloat+Extensions.swift */,
 				79EBF86029B90D1E00E83646 /* Image+Extensions.swift */,
+				79D922FB29D60C27006F4732 /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -852,6 +866,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D922FA29D608F3006F4732 /* TextStyle.swift in Sources */,
 				793A5A1429B79369009A3D5B /* AppCoordinator.swift in Sources */,
 				798048DE29BA512F006AE94C /* SettingsViewModel+Mock.swift in Sources */,
 				79EBF85729B901F400E83646 /* RegistrationViewModel.swift in Sources */,
@@ -864,6 +879,7 @@
 				793A5A3329B7A0AE009A3D5B /* SuccessfulRegistrationView.swift in Sources */,
 				793A5A3D29B7A0E6009A3D5B /* SettingsView.swift in Sources */,
 				793A5A3729B7A0BF009A3D5B /* EventView.swift in Sources */,
+				79D922FC29D60C27006F4732 /* View+Extensions.swift in Sources */,
 				79DDA6B229B5040E00B04E2A /* DI.swift in Sources */,
 				79EAA1B529D1E62300E0AC1D /* CGFloat+Extensions.swift in Sources */,
 				798048DA29BA4DBE006AE94C /* MainViewModel+Mock.swift in Sources */,
