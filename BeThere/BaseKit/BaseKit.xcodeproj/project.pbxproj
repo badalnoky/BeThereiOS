@@ -14,6 +14,7 @@
 		79502F9129D4806700B1DD37 /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79502F9029D4806700B1DD37 /* CachedAsyncImage.swift */; };
 		79502F9329D4808C00B1DD37 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79502F9229D4808C00B1DD37 /* ImageCacheService.swift */; };
 		79502F9529D4848E00B1DD37 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79502F9429D4848E00B1DD37 /* Int+Extensions.swift */; };
+		79D922EF29D60548006F4732 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922EE29D60548006F4732 /* Publisher+Extensions.swift */; };
 		79DDA6C929B50AEF00B04E2A /* BaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79DDA6C829B50AEF00B04E2A /* BaseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79DDA6D329B50B1D00B04E2A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6D129B50B1D00B04E2A /* NetworkMonitor.swift */; };
 		79DDA6DA29B50B2700B04E2A /* PassthroughSubject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6D529B50B2700B04E2A /* PassthroughSubject+Extensions.swift */; };
@@ -31,6 +32,7 @@
 		79502F9029D4806700B1DD37 /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		79502F9229D4808C00B1DD37 /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
 		79502F9429D4848E00B1DD37 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		79D922EE29D60548006F4732 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		79DDA6C529B50AEF00B04E2A /* BaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA6C829B50AEF00B04E2A /* BaseKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseKit.h; sourceTree = "<group>"; };
 		79DDA6D129B50B1D00B04E2A /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				793C051B29D2485800939923 /* Image+Extensions.swift */,
 				79502F9429D4848E00B1DD37 /* Int+Extensions.swift */,
 				79DDA6D529B50B2700B04E2A /* PassthroughSubject+Extensions.swift */,
+				79D922EE29D60548006F4732 /* Publisher+Extensions.swift */,
 				793C051929D2482700939923 /* String+Extensions.swift */,
 			);
 			path = Extensions;
@@ -218,6 +221,7 @@
 			files = (
 				793C051C29D2485800939923 /* Image+Extensions.swift in Sources */,
 				79DDA6DE29B50B2700B04E2A /* Navigator.swift in Sources */,
+				79D922EF29D60548006F4732 /* Publisher+Extensions.swift in Sources */,
 				79502F9329D4808C00B1DD37 /* ImageCacheService.swift in Sources */,
 				79DDA6DC29B50B2700B04E2A /* SceneFactory.swift in Sources */,
 				79DDA6DD29B50B2700B04E2A /* Coordinator.swift in Sources */,

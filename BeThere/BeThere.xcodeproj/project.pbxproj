@@ -27,7 +27,6 @@
 		793A5A3929B7A0CC009A3D5B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A3829B7A0CC009A3D5B /* MainView.swift */; };
 		793A5A3B29B7A0DD009A3D5B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A3A29B7A0DD009A3D5B /* SearchView.swift */; };
 		793A5A3D29B7A0E6009A3D5B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A3C29B7A0E6009A3D5B /* SettingsView.swift */; };
-		793C052229D2493100939923 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C052129D2493100939923 /* Publisher+Extensions.swift */; };
 		798048D829BA4D27006AE94C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798048D729BA4D27006AE94C /* MainViewModel.swift */; };
 		798048DA29BA4DBE006AE94C /* MainViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798048D929BA4DBE006AE94C /* MainViewModel+Mock.swift */; };
 		798048DC29BA5119006AE94C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798048DB29BA5119006AE94C /* SettingsViewModel.swift */; };
@@ -127,7 +126,6 @@
 		793A5A3829B7A0CC009A3D5B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		793A5A3A29B7A0DD009A3D5B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		793A5A3C29B7A0E6009A3D5B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		793C052129D2493100939923 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		798048D729BA4D27006AE94C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		798048D929BA4DBE006AE94C /* MainViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewModel+Mock.swift"; sourceTree = "<group>"; };
 		798048DB29BA5119006AE94C /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -588,7 +586,6 @@
 			children = (
 				79EAA1B429D1E62300E0AC1D /* CGFloat+Extensions.swift */,
 				79EBF86029B90D1E00E83646 /* Image+Extensions.swift */,
-				793C052129D2493100939923 /* Publisher+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -854,7 +851,6 @@
 				7994CA2729BB3C0900EB90E0 /* SearchViewModel+Mock.swift in Sources */,
 				79EBF84F29B8F7EF00E83646 /* LoginViewModel.swift in Sources */,
 				79C235C029C76D6000B9C497 /* UserDataService.swift in Sources */,
-				793C052229D2493100939923 /* Publisher+Extensions.swift in Sources */,
 				79EBF85B29B907E300E83646 /* SuccessfulRegistrationViewModel.swift in Sources */,
 				79D6CF2629C4741F0022656C /* AuthenticationService.swift in Sources */,
 				793A5A3529B7A0B6009A3D5B /* ChatView.swift in Sources */,

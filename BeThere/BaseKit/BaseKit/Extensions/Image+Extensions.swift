@@ -1,6 +1,6 @@
 import SwiftUI
 
-extension Image {
+public extension Image {
     func circularFittedToSize(_ size: Double) -> some View {
         self
             .resizable()
