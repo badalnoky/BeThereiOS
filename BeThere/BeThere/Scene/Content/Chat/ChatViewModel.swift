@@ -74,7 +74,6 @@ private extension ChatViewModel {
             .sink { [weak self] in
                 if let user = $0 {
                     self?.userId = user.id
-                    print(user.id)
                 }
             }
             .store(in: &cancellables)
