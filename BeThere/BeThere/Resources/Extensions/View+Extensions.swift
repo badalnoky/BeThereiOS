@@ -26,4 +26,8 @@ extension View {
             )
         )
     }
+
+    func eventNavigationBar(title: String, editAction: @escaping () -> Void) -> some View {
+        modifier(EventNavigationBarModifier(title: title, editAction: editAction))
+    }
 }

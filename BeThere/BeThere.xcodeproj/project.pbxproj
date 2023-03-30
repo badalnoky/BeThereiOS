@@ -55,6 +55,7 @@
 		79D922FC29D60C27006F4732 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922FB29D60C27006F4732 /* View+Extensions.swift */; };
 		79D922FF29D60F25006F4732 /* DefaultNavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922FE29D60F25006F4732 /* DefaultNavigationBarModifier.swift */; };
 		79D9230129D61737006F4732 /* MainNavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D9230029D61737006F4732 /* MainNavigationBarModifier.swift */; };
+		79D9230329D61A8B006F4732 /* EventNavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D9230229D61A8B006F4732 /* EventNavigationBarModifier.swift */; };
 		79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */; };
 		79DDA67F29B4FB7000B04E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA67E29B4FB7000B04E2A /* Assets.xcassets */; };
 		79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA68129B4FB7000B04E2A /* Preview Assets.xcassets */; };
@@ -162,6 +163,7 @@
 		79D922FB29D60C27006F4732 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		79D922FE29D60F25006F4732 /* DefaultNavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationBarModifier.swift; sourceTree = "<group>"; };
 		79D9230029D61737006F4732 /* MainNavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationBarModifier.swift; sourceTree = "<group>"; };
+		79D9230229D61A8B006F4732 /* EventNavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventNavigationBarModifier.swift; sourceTree = "<group>"; };
 		79DDA67729B4FB6F00B04E2A /* BeThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereApp.swift; sourceTree = "<group>"; };
 		79DDA67E29B4FB7000B04E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				79D922FE29D60F25006F4732 /* DefaultNavigationBarModifier.swift */,
+				79D9230229D61A8B006F4732 /* EventNavigationBarModifier.swift */,
 				79D9230029D61737006F4732 /* MainNavigationBarModifier.swift */,
 			);
 			path = Modifiers;
@@ -922,6 +925,7 @@
 				79D922FF29D60F25006F4732 /* DefaultNavigationBarModifier.swift in Sources */,
 				79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */,
 				79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */,
+				79D9230329D61A8B006F4732 /* EventNavigationBarModifier.swift in Sources */,
 				79188CC229C6744500F47280 /* User.swift in Sources */,
 				798F3F1229CA10980022AECC /* EventDataService.swift in Sources */,
 				79EBF86129B90D1E00E83646 /* Image+Extensions.swift in Sources */,
