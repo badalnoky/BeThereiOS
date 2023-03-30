@@ -47,6 +47,8 @@
 		79C235C229C7709100B9C497 /* UserDataService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C235C129C7709100B9C497 /* UserDataService+Mock.swift */; };
 		79D6CF2629C4741F0022656C /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2529C4741F0022656C /* AuthenticationService.swift */; };
 		79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */; };
+		79D922D729D5ED94006F4732 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D922D629D5ED94006F4732 /* Colors.xcassets */; };
+		79D922D929D5F05B006F4732 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922D829D5F05B006F4732 /* Colors.swift */; };
 		79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */; };
 		79DDA67F29B4FB7000B04E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA67E29B4FB7000B04E2A /* Assets.xcassets */; };
 		79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA68129B4FB7000B04E2A /* Preview Assets.xcassets */; };
@@ -145,6 +147,8 @@
 		79C235C129C7709100B9C497 /* UserDataService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDataService+Mock.swift"; sourceTree = "<group>"; };
 		79D6CF2529C4741F0022656C /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationService+Mock.swift"; sourceTree = "<group>"; };
+		79D922D629D5ED94006F4732 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		79D922D829D5F05B006F4732 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		79DDA67729B4FB6F00B04E2A /* BeThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA67A29B4FB6F00B04E2A /* BeThereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereApp.swift; sourceTree = "<group>"; };
 		79DDA67E29B4FB7000B04E2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -478,6 +482,7 @@
 		79DDA6A629B5002000B04E2A /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				79D922D829D5F05B006F4732 /* Colors.swift */,
 				79DDA6AF29B5017F00B04E2A /* Localizable.swift */,
 			);
 			path = Generated;
@@ -532,6 +537,7 @@
 			isa = PBXGroup;
 			children = (
 				79DDA67E29B4FB7000B04E2A /* Assets.xcassets */,
+				79D922D629D5ED94006F4732 /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -697,6 +703,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D922D729D5ED94006F4732 /* Colors.xcassets in Resources */,
 				79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */,
 				790BA70B29C39C94003C15DC /* GoogleService-Info.plist in Resources */,
 				79DDA6AB29B5006400B04E2A /* Localizable.strings in Resources */,
@@ -842,6 +849,7 @@
 				79DDA6B229B5040E00B04E2A /* DI.swift in Sources */,
 				79EAA1B529D1E62300E0AC1D /* CGFloat+Extensions.swift in Sources */,
 				798048DA29BA4DBE006AE94C /* MainViewModel+Mock.swift in Sources */,
+				79D922D929D5F05B006F4732 /* Colors.swift in Sources */,
 				79EBF85929B9020D00E83646 /* RegistrationViewModel+Mock.swift in Sources */,
 				7994CA2729BB3C0900EB90E0 /* SearchViewModel+Mock.swift in Sources */,
 				79EBF84F29B8F7EF00E83646 /* LoginViewModel.swift in Sources */,
