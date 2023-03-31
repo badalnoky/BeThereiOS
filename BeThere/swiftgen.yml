@@ -15,6 +15,13 @@ xcassets:
       templatePath: Templates/colors-simplified.stencil
       output: BeThere/Resources/Generated/Colors.swift
 
+  - inputs: BeThere/Resources/Assets/Animations.xcassets
+    outputs:
+      params:
+        enumName: Animations
+      templatePath: Templates/lottie-simplified.stencil
+      output: BeThere/Resources/Generated/Animations.swift
+
 fonts:
   inputs:
     - BeThere/Resources/Assets/Fonts

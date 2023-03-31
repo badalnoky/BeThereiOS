@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		112D7F5EE4519EE61062E6DF /* Pods_BeThere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A46FDF8AD0B5CB5B7F9A24B /* Pods_BeThere.framework */; };
 		790BA70B29C39C94003C15DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 790BA70A29C39C94003C15DC /* GoogleService-Info.plist */; };
+		7916D4A629D755C400CF8016 /* Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916D4A529D755C400CF8016 /* Lottie.swift */; };
+		7916D4AA29D75F2B00CF8016 /* Animations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7916D4A929D75F2B00CF8016 /* Animations.xcassets */; };
+		7916D4AC29D7600E00CF8016 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916D4AB29D7600D00CF8016 /* Animations.swift */; };
 		79188CC229C6744500F47280 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79188CC129C6744500F47280 /* User.swift */; };
 		7936AC1629D73877000B4467 /* Guideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936AC1529D73877000B4467 /* Guideline.swift */; };
 		7936AC1829D7387E000B4467 /* Guidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936AC1729D7387E000B4467 /* Guidelines.swift */; };
@@ -121,6 +124,9 @@
 		4FB2F596789E0BBF1AA6C198 /* Pods-BeThereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThereTests.debug.xcconfig"; path = "Target Support Files/Pods-BeThereTests/Pods-BeThereTests.debug.xcconfig"; sourceTree = "<group>"; };
 		57EC6FABCBB05042FA96EF57 /* libPods-BeThereTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeThereTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		790BA70A29C39C94003C15DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7916D4A529D755C400CF8016 /* Lottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottie.swift; sourceTree = "<group>"; };
+		7916D4A929D75F2B00CF8016 /* Animations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Animations.xcassets; sourceTree = "<group>"; };
+		7916D4AB29D7600D00CF8016 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		79188CC129C6744500F47280 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7936AC1529D73877000B4467 /* Guideline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guideline.swift; sourceTree = "<group>"; };
 		7936AC1729D7387E000B4467 /* Guidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guidelines.swift; sourceTree = "<group>"; };
@@ -262,9 +268,18 @@
 		791277F729C0E5B80013173D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7916D4A429D7557E00CF8016 /* Lottie */,
 				7936AC1429D73860000B4467 /* Guidelines */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7916D4A429D7557E00CF8016 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				7916D4A529D755C400CF8016 /* Lottie.swift */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		7936AC1429D73860000B4467 /* Guidelines */ = {
@@ -549,8 +564,9 @@
 		79DDA6A629B5002000B04E2A /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				79D922F629D60755006F4732 /* Fonts.swift */,
+				7916D4AB29D7600D00CF8016 /* Animations.swift */,
 				79D922D829D5F05B006F4732 /* Colors.swift */,
+				79D922F629D60755006F4732 /* Fonts.swift */,
 				79DDA6AF29B5017F00B04E2A /* Localizable.swift */,
 			);
 			path = Generated;
@@ -604,6 +620,7 @@
 		79DDA6B929B5095400B04E2A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				7916D4A929D75F2B00CF8016 /* Animations.xcassets */,
 				79DDA67E29B4FB7000B04E2A /* Assets.xcassets */,
 				79D922D629D5ED94006F4732 /* Colors.xcassets */,
 				79D922F029D60654006F4732 /* Fonts */,
@@ -775,6 +792,7 @@
 			files = (
 				79D922F429D60654006F4732 /* ProximaNova-Medium.otf in Resources */,
 				79D922D729D5ED94006F4732 /* Colors.xcassets in Resources */,
+				7916D4AA29D75F2B00CF8016 /* Animations.xcassets in Resources */,
 				79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */,
 				790BA70B29C39C94003C15DC /* GoogleService-Info.plist in Resources */,
 				79D922F329D60654006F4732 /* ProximaNova-Bold.otf in Resources */,
@@ -930,6 +948,7 @@
 				79EBF85929B9020D00E83646 /* RegistrationViewModel+Mock.swift in Sources */,
 				79E7CA4A29D720BF00558265 /* BaseButtonStyle.swift in Sources */,
 				7994CA2729BB3C0900EB90E0 /* SearchViewModel+Mock.swift in Sources */,
+				7916D4A629D755C400CF8016 /* Lottie.swift in Sources */,
 				79E7CA4C29D720D400558265 /* TextButtonStyle.swift in Sources */,
 				79EBF84F29B8F7EF00E83646 /* LoginViewModel.swift in Sources */,
 				79C235C029C76D6000B9C497 /* UserDataService.swift in Sources */,
@@ -951,6 +970,7 @@
 				793A5A2129B79A00009A3D5B /* ContentSceneFactory.swift in Sources */,
 				79D922FF29D60F25006F4732 /* DefaultNavigationBarModifier.swift in Sources */,
 				79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */,
+				7916D4AC29D7600E00CF8016 /* Animations.swift in Sources */,
 				7936AC1A29D73889000B4467 /* GuidelinesModel.swift in Sources */,
 				79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */,
 				79D9230329D61A8B006F4732 /* EventNavigationBarModifier.swift in Sources */,
