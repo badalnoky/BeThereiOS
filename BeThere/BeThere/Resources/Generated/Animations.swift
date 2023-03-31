@@ -5,5 +5,4 @@ import SwiftUI
 
 public enum Lotties {
     static let succesfulRegistration = "succesfulRegistration"
-
 }

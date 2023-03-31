@@ -5,8 +5,8 @@
     {% for asset in assets %}
     {% if asset.type == "data" %}
     static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = "{{asset.value}}"
-
     {% elif asset.items %}
+
     enum {{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
         {% filter indent:4 %}{% call casesBlock asset.items %}{% endfilter %}
     }
