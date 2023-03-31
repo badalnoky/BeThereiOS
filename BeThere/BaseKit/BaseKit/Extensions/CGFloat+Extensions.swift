@@ -6,8 +6,12 @@ public extension CGFloat {
 }
 
 public extension CGFloat {
+    /// 2 pt
+    static let borderWidth: CGFloat = 2
     /// 8 pt
     static let padding8: CGFloat = 8
+    /// 12 pt
+    static let cornerRadius: CGFloat = 12
     /// 16 pt
     static let padding16: CGFloat = 16
     /// 24 pt
