@@ -82,6 +82,18 @@ internal enum Txt {
     /// Save
     internal static let saveLabel = Txt.tr("Localizable", "EventScreen.saveLabel", fallback: "Save")
   }
+  internal enum Guidelines {
+    /// At least 8 charachters long
+    internal static let length = Txt.tr("Localizable", "Guidelines.length", fallback: "At least 8 charachters long")
+    /// Contain an lowercase letter
+    internal static let lowerCase = Txt.tr("Localizable", "Guidelines.lowerCase", fallback: "Contain an lowercase letter")
+    /// Contain a number
+    internal static let numeric = Txt.tr("Localizable", "Guidelines.numeric", fallback: "Contain a number")
+    /// Password has to contain:
+    internal static let title = Txt.tr("Localizable", "Guidelines.title", fallback: "Password has to contain:")
+    /// Contain an uppercase letter
+    internal static let upperCase = Txt.tr("Localizable", "Guidelines.upperCase", fallback: "Contain an uppercase letter")
+  }
   internal enum Icons {
     /// person.fill.badge.plus
     internal static let addFriends = Txt.tr("Localizable", "Icons.addFriends", fallback: "person.fill.badge.plus")
@@ -91,6 +103,8 @@ internal enum Txt {
     internal static let check = Txt.tr("Localizable", "Icons.check", fallback: "checkmark")
     /// pencil
     internal static let edit = Txt.tr("Localizable", "Icons.edit", fallback: "pencil")
+    /// checkmark.circle.fill
+    internal static let obeyedGuideline = Txt.tr("Localizable", "Icons.obeyedGuideline", fallback: "checkmark.circle.fill")
     /// plus
     internal static let plus = Txt.tr("Localizable", "Icons.plus", fallback: "plus")
     /// person.fill
@@ -103,6 +117,8 @@ internal enum Txt {
     internal static let settings = Txt.tr("Localizable", "Icons.settings", fallback: "gear")
     /// rectangle.portrait.and.arrow.right
     internal static let signOut = Txt.tr("Localizable", "Icons.signOut", fallback: "rectangle.portrait.and.arrow.right")
+    /// x.circle.fill
+    internal static let violatedGuideline = Txt.tr("Localizable", "Icons.violatedGuideline", fallback: "x.circle.fill")
   }
   internal enum Login {
     /// Email

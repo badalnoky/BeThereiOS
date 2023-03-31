@@ -29,6 +29,14 @@
 "Icons.send" = "paperplane";
 "Icons.profilePicture" = "person.fill";
 "Icons.back" = "chevron.left";
+"Icons.obeyedGuideline" = "checkmark.circle.fill";
+"Icons.violatedGuideline" = "x.circle.fill";
+
+"Guidelines.title" = "Password has to contain:";
+"Guidelines.length" = "At least 8 charachters long";
+"Guidelines.numeric" = "Contain a number";
+"Guidelines.upperCase" = "Contain an uppercase letter";
+"Guidelines.lowerCase" = "Contain an lowercase letter";
 
 // MARK: Screens
 

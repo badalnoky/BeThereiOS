@@ -10,6 +10,9 @@
 		112D7F5EE4519EE61062E6DF /* Pods_BeThere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A46FDF8AD0B5CB5B7F9A24B /* Pods_BeThere.framework */; };
 		790BA70B29C39C94003C15DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 790BA70A29C39C94003C15DC /* GoogleService-Info.plist */; };
 		79188CC229C6744500F47280 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79188CC129C6744500F47280 /* User.swift */; };
+		7936AC1629D73877000B4467 /* Guideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936AC1529D73877000B4467 /* Guideline.swift */; };
+		7936AC1829D7387E000B4467 /* Guidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936AC1729D7387E000B4467 /* Guidelines.swift */; };
+		7936AC1A29D73889000B4467 /* GuidelinesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936AC1929D73889000B4467 /* GuidelinesModel.swift */; };
 		793A5A1229B78F09009A3D5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1129B78F09009A3D5B /* AppDelegate.swift */; };
 		793A5A1429B79369009A3D5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1329B79369009A3D5B /* AppCoordinator.swift */; };
 		793A5A1829B796CA009A3D5B /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A5A1729B796CA009A3D5B /* AuthenticationCoordinator.swift */; };
@@ -116,6 +119,9 @@
 		57EC6FABCBB05042FA96EF57 /* libPods-BeThereTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeThereTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		790BA70A29C39C94003C15DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		79188CC129C6744500F47280 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7936AC1529D73877000B4467 /* Guideline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guideline.swift; sourceTree = "<group>"; };
+		7936AC1729D7387E000B4467 /* Guidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guidelines.swift; sourceTree = "<group>"; };
+		7936AC1929D73889000B4467 /* GuidelinesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesModel.swift; sourceTree = "<group>"; };
 		793A5A1129B78F09009A3D5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		793A5A1329B79369009A3D5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		793A5A1729B796CA009A3D5B /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
@@ -250,8 +256,19 @@
 		791277F729C0E5B80013173D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7936AC1429D73860000B4467 /* Guidelines */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		7936AC1429D73860000B4467 /* Guidelines */ = {
+			isa = PBXGroup;
+			children = (
+				7936AC1529D73877000B4467 /* Guideline.swift */,
+				7936AC1729D7387E000B4467 /* Guidelines.swift */,
+				7936AC1929D73889000B4467 /* GuidelinesModel.swift */,
+			);
+			path = Guidelines;
 			sourceTree = "<group>";
 		};
 		793A5A1529B795EB009A3D5B /* Authentication */ = {
@@ -883,6 +900,7 @@
 				79D922FA29D608F3006F4732 /* TextStyle.swift in Sources */,
 				793A5A1429B79369009A3D5B /* AppCoordinator.swift in Sources */,
 				798048DE29BA512F006AE94C /* SettingsViewModel+Mock.swift in Sources */,
+				7936AC1829D7387E000B4467 /* Guidelines.swift in Sources */,
 				79EBF85729B901F400E83646 /* RegistrationViewModel.swift in Sources */,
 				798F3F1629CA1DF30022AECC /* EventDataService+Mock.swift in Sources */,
 				79D9230129D61737006F4732 /* MainNavigationBarModifier.swift in Sources */,
@@ -898,6 +916,7 @@
 				79DDA6B229B5040E00B04E2A /* DI.swift in Sources */,
 				79EAA1B529D1E62300E0AC1D /* CGFloat+Extensions.swift in Sources */,
 				798048DA29BA4DBE006AE94C /* MainViewModel+Mock.swift in Sources */,
+				7936AC1629D73877000B4467 /* Guideline.swift in Sources */,
 				79D922D929D5F05B006F4732 /* Colors.swift in Sources */,
 				79EBF85929B9020D00E83646 /* RegistrationViewModel+Mock.swift in Sources */,
 				7994CA2729BB3C0900EB90E0 /* SearchViewModel+Mock.swift in Sources */,
@@ -920,6 +939,7 @@
 				793A5A2129B79A00009A3D5B /* ContentSceneFactory.swift in Sources */,
 				79D922FF29D60F25006F4732 /* DefaultNavigationBarModifier.swift in Sources */,
 				79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */,
+				7936AC1A29D73889000B4467 /* GuidelinesModel.swift in Sources */,
 				79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */,
 				79D9230329D61A8B006F4732 /* EventNavigationBarModifier.swift in Sources */,
 				79188CC229C6744500F47280 /* User.swift in Sources */,

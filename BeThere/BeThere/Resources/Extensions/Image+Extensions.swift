@@ -13,4 +13,6 @@ extension Image {
     static var send = Image(systemName: Icons.send)
     static var profilePicture = Image(systemName: Icons.profilePicture)
     static var back = Image(systemName: Icons.back)
+    static var obeyed = Image(systemName: Icons.obeyedGuideline)
+    static var violated = Image(systemName: Icons.violatedGuideline)
 }
