@@ -21,7 +21,7 @@ public struct IconButton: View {
 #if DEBUG
 struct IconButton_Previews: PreviewProvider {
     static var previews: some View {
-        IconButton(.settings) {}
+        IconButton(Image(systemName: .person)) {}
             .padding()
             .previewLayout(.sizeThatFits)
     }
