@@ -5,6 +5,19 @@ public struct MainNavigationBarModifier: ViewModifier {
     let searchAction: () -> Void
     let settingsAction: () -> Void
 
+    init(signOutAction: @escaping () -> Void, searchAction: @escaping () -> Void, settingsAction: @escaping () -> Void) {
+        self.signOutAction = signOutAction
+        self.searchAction = searchAction
+        self.settingsAction = settingsAction
+
+        let coloredAppearance = UINavigationBarAppearance()
+        coloredAppearance.configureWithTransparentBackground()
+        coloredAppearance.backgroundColor = UIColor(.appBackground)
+        UINavigationBar.appearance().standardAppearance = coloredAppearance
+        UINavigationBar.appearance().compactAppearance = coloredAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+    }
+
     public func body(content: Content) -> some View {
         content
             .navigationBarTitleDisplayMode(.inline)
@@ -19,23 +32,14 @@ public struct MainNavigationBarModifier: ViewModifier {
 
 extension MainNavigationBarModifier {
     @ViewBuilder var signOutButton: some View {
-        Button(action: signOutAction) {
-            Image.signOut
-                .fittedToSize(.defaultIconSize)
-        }
+        IconButton(.signOut, action: signOutAction)
     }
 
     @ViewBuilder var searchButton: some View {
-        Button(action: searchAction) {
-            Image.addFriends
-                .fittedToSize(.defaultIconSize)
-        }
+        IconButton(.addFriends, action: searchAction)
     }
 
     @ViewBuilder var settingsButton: some View {
-        Button(action: settingsAction) {
-            Image.settings
-                .fittedToSize(.defaultIconSize)
-        }
+        IconButton(.settings, action: settingsAction)
     }
 }

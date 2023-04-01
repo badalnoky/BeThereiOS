@@ -6,6 +6,18 @@ public struct DefaultNavigationBarModifier: ViewModifier {
     var title: String
     var isNavigatable: Bool
 
+    init(title: String, isNavigatable: Bool) {
+        self.title = title
+        self.isNavigatable = isNavigatable
+
+        let coloredAppearance = UINavigationBarAppearance()
+        coloredAppearance.configureWithTransparentBackground()
+        coloredAppearance.backgroundColor = UIColor(.appBackground)
+        UINavigationBar.appearance().standardAppearance = coloredAppearance
+        UINavigationBar.appearance().compactAppearance = coloredAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+    }
+
     public func body(content: Content) -> some View {
         content
             .navigationBarTitleDisplayMode(.inline)
@@ -23,11 +35,8 @@ public struct DefaultNavigationBarModifier: ViewModifier {
 
 extension DefaultNavigationBarModifier {
     @ViewBuilder var backButton: some View {
-        Button {
+        IconButton(.back) {
             presentationMode.wrappedValue.dismiss()
-        } label: {
-            Image.back
-                .fittedToSize(.defaultIconSize)
         }
     }
 }

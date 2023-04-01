@@ -6,6 +6,18 @@ public struct EventNavigationBarModifier: ViewModifier {
     var title: String
     let editAction: () -> Void
 
+    init(title: String, editAction: @escaping () -> Void) {
+        self.title = title
+        self.editAction = editAction
+
+        let coloredAppearance = UINavigationBarAppearance()
+        coloredAppearance.configureWithTransparentBackground()
+        coloredAppearance.backgroundColor = UIColor(.appBackground)
+        UINavigationBar.appearance().standardAppearance = coloredAppearance
+        UINavigationBar.appearance().compactAppearance = coloredAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+    }
+
     public func body(content: Content) -> some View {
         content
             .navigationBarTitleDisplayMode(.inline)
@@ -20,18 +32,12 @@ public struct EventNavigationBarModifier: ViewModifier {
 
 extension EventNavigationBarModifier {
     @ViewBuilder var backButton: some View {
-        Button {
+        IconButton(.back) {
             presentationMode.wrappedValue.dismiss()
-        } label: {
-            Image.back
-                .fittedToSize(.defaultIconSize)
         }
     }
 
     @ViewBuilder var editButton: some View {
-        Button(action: editAction) {
-            Image.edit
-                .fittedToSize(.defaultIconSize)
-        }
+        IconButton(.edit, action: editAction)
     }
 }
