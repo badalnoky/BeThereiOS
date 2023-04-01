@@ -11,8 +11,8 @@ public struct Card<Content: View> {
 extension Card: View {
     public var body: some View {
         content
-            .textStyle(.body)
             .foregroundColor(.appAccentColor)
+            .textStyle(.body)
             .padding(.padding16)
             .frame(maxWidth: .infinity)
             .background(

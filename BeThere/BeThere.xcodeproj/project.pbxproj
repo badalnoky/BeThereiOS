@@ -56,6 +56,7 @@
 		7994CA2B29BB402D00EB90E0 /* ChatViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2A29BB402D00EB90E0 /* ChatViewModel+Mock.swift */; };
 		79C235C029C76D6000B9C497 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C235BF29C76D6000B9C497 /* UserDataService.swift */; };
 		79C235C229C7709100B9C497 /* UserDataService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C235C129C7709100B9C497 /* UserDataService+Mock.swift */; };
+		79C6B80729D8CC2F00705947 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6B80629D8CC2F00705947 /* UserList.swift */; };
 		79D6CF2629C4741F0022656C /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2529C4741F0022656C /* AuthenticationService.swift */; };
 		79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */; };
 		79D922D729D5ED94006F4732 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D922D629D5ED94006F4732 /* Colors.xcassets */; };
@@ -177,6 +178,7 @@
 		7994CA2A29BB402D00EB90E0 /* ChatViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatViewModel+Mock.swift"; sourceTree = "<group>"; };
 		79C235BF29C76D6000B9C497 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		79C235C129C7709100B9C497 /* UserDataService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDataService+Mock.swift"; sourceTree = "<group>"; };
+		79C6B80629D8CC2F00705947 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		79D6CF2529C4741F0022656C /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationService+Mock.swift"; sourceTree = "<group>"; };
 		79D922D629D5ED94006F4732 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				7935C49129D84386008FF924 /* IconButton */,
 				7916D4A429D7557E00CF8016 /* Lottie */,
 				7916D4B529D76B1B00CF8016 /* StyledField */,
+				79C6B80529D8CBE500705947 /* UserList */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -475,6 +478,14 @@
 				798F3F0929C9FCDF0022AECC /* AddMemberViewModel.swift */,
 			);
 			path = AddMember;
+			sourceTree = "<group>";
+		};
+		79C6B80529D8CBE500705947 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				79C6B80629D8CC2F00705947 /* UserList.swift */,
+			);
+			path = UserList;
 			sourceTree = "<group>";
 		};
 		79D6CF2429C473DA0022656C /* Firebase */ = {
@@ -1002,6 +1013,7 @@
 				7916D4A629D755C400CF8016 /* Lottie.swift in Sources */,
 				79E7CA4C29D720D400558265 /* TextButtonStyle.swift in Sources */,
 				79EBF84F29B8F7EF00E83646 /* LoginViewModel.swift in Sources */,
+				79C6B80729D8CC2F00705947 /* UserList.swift in Sources */,
 				7916D4B929D76B3F00CF8016 /* StyledFieldModel.swift in Sources */,
 				79C235C029C76D6000B9C497 /* UserDataService.swift in Sources */,
 				79EBF85B29B907E300E83646 /* SuccessfulRegistrationViewModel.swift in Sources */,

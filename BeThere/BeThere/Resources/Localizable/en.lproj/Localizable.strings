@@ -68,8 +68,8 @@
 "Settings.title" = "Settings";
 "Settings.saveLabel" = "Save";
 
-"Search.title" = "Search";
-"Search.searchLabel" = "Name of a person";
+"Search.title" = "Add friends";
+"Search.searchLabel" = "Search for users";
 "Search.otherLabel" = "Other users";
 
 "Chat.dateLabel" = "Time and Date";

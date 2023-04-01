@@ -27,6 +27,7 @@ public struct ChatItem: View {
     }
 }
 
+#if DEBUG
 struct ChatItem_Previews: PreviewProvider {
     static var previews: some View {
         ChatItem(
@@ -36,3 +37,4 @@ struct ChatItem_Previews: PreviewProvider {
         )
     }
 }
+#endif

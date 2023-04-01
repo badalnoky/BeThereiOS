@@ -9,34 +9,25 @@ struct SearchView {
 extension SearchView: View {
     var body: some View {
         VStack {
-            HStack {
-                TextField(text: $viewModel.searchString) {
-                    Text(Str.searchLabel)
-                }
-                IconButton(.search, action: viewModel.didTapSearch)
-            }
-            Divider()
+            StyledField(style: .search, title: Str.searchLabel, text: $viewModel.searchString)
+            Divider().styledDivider()
             ScrollView {
-                ForEach(viewModel.otherUsers.indices, id: \.self) { idx in
-                    let user = viewModel.otherUsers[idx]
-                    HStack {
-                        Text(user.name)
-                        Spacer()
-                        IconButton(.plus) {
-                            viewModel.didTapAdd(friend: user)
-                        }
-                    }
+                VStack(spacing: .padding8) {
+                    UserList(users: viewModel.otherUsers, action: viewModel.didTapAdd(friend:))
                 }
             }
         }
-        .navigationTitle(Str.title)
+        .defaultNavigationBar(title: Str.title)
+        .defaultViewSettings()
     }
 }
 
 #if DEBUG
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView(viewModel: .mock)
+        NavigationStack {
+            SearchView(viewModel: .mock)
+        }
     }
 }
 #endif

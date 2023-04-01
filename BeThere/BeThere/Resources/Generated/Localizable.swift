@@ -177,10 +177,10 @@ internal enum Txt {
   internal enum Search {
     /// Other users
     internal static let otherLabel = Txt.tr("Localizable", "Search.otherLabel", fallback: "Other users")
-    /// Name of a person
-    internal static let searchLabel = Txt.tr("Localizable", "Search.searchLabel", fallback: "Name of a person")
-    /// Search
-    internal static let title = Txt.tr("Localizable", "Search.title", fallback: "Search")
+    /// Search for users
+    internal static let searchLabel = Txt.tr("Localizable", "Search.searchLabel", fallback: "Search for users")
+    /// Add friends
+    internal static let title = Txt.tr("Localizable", "Search.title", fallback: "Add friends")
   }
   internal enum Settings {
     /// Save
