@@ -7,26 +7,26 @@ struct LoginView {
 
 extension LoginView: View {
     var body: some View {
-        VStack {
-            Text(Str.emailLabel)
-            TextField(text: $viewModel.email) {
-                Text(String.empty)
-            }
-            Text(Str.passwordLabel)
-            TextField(text: $viewModel.password) {
-                Text(String.empty)
-            }
+        VStack(spacing: .padding32) {
+            StyledField(style: .email, title: Str.emailLabel, text: $viewModel.email)
+            StyledField(style: .password, title: Str.passwordLabel, text: $viewModel.password)
             Button(Str.registrateLabel, action: viewModel.didTapRegistrate)
+                .buttonStyle(TextButtonStyle())
+            Spacer()
             Button(Str.signInLabel, action: viewModel.didTapLogin)
+                .buttonStyle(BaseButtonStyle())
         }
-        .navigationTitle(Str.title)
+        .defaultNavigationBar(title: Str.title, isNavigatable: false)
+        .defaultViewSettings()
     }
 }
 
 #if DEBUG
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(viewModel: .mock)
+        NavigationStack {
+            LoginView(viewModel: .mock)
+        }
     }
 }
 #endif
