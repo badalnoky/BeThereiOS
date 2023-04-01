@@ -19,18 +19,22 @@
 
 // MARK: Resources
 
-"Icons.check" = "checkmark";
 "Icons.signOut" = "rectangle.portrait.and.arrow.right";
 "Icons.addFriends" = "person.fill.badge.plus";
 "Icons.settings" = "gear";
-"Icons.search" = "magnifyingglass";
-"Icons.plus" = "plus";
+"Icons.plus" = "plus.circle";
 "Icons.edit" = "pencil";
 "Icons.send" = "paperplane";
 "Icons.profilePicture" = "person.fill";
 "Icons.back" = "chevron.left";
 "Icons.obeyedGuideline" = "checkmark.circle.fill";
 "Icons.violatedGuideline" = "x.circle.fill";
+"Icons.email" = "envelope.fill";
+"Icons.password" = "lock.fill";
+"Icons.name" = "person.circle";
+"Icons.search" = "magnifyingglass";
+"Icons.discloseText" = "eye.slash.fill";
+"Icons.seeText" = "eye.fill";
 
 "Guidelines.title" = "Password has to contain:";
 "Guidelines.length" = "At least 8 charachters long";

@@ -99,18 +99,26 @@ internal enum Txt {
     internal static let addFriends = Txt.tr("Localizable", "Icons.addFriends", fallback: "person.fill.badge.plus")
     /// chevron.left
     internal static let back = Txt.tr("Localizable", "Icons.back", fallback: "chevron.left")
-    /// checkmark
-    internal static let check = Txt.tr("Localizable", "Icons.check", fallback: "checkmark")
+    /// eye.slash.fill
+    internal static let discloseText = Txt.tr("Localizable", "Icons.discloseText", fallback: "eye.slash.fill")
     /// pencil
     internal static let edit = Txt.tr("Localizable", "Icons.edit", fallback: "pencil")
+    /// envelope.fill
+    internal static let email = Txt.tr("Localizable", "Icons.email", fallback: "envelope.fill")
+    /// person.circle
+    internal static let name = Txt.tr("Localizable", "Icons.name", fallback: "person.circle")
     /// checkmark.circle.fill
     internal static let obeyedGuideline = Txt.tr("Localizable", "Icons.obeyedGuideline", fallback: "checkmark.circle.fill")
-    /// plus
-    internal static let plus = Txt.tr("Localizable", "Icons.plus", fallback: "plus")
+    /// lock.fill
+    internal static let password = Txt.tr("Localizable", "Icons.password", fallback: "lock.fill")
+    /// plus.circle
+    internal static let plus = Txt.tr("Localizable", "Icons.plus", fallback: "plus.circle")
     /// person.fill
     internal static let profilePicture = Txt.tr("Localizable", "Icons.profilePicture", fallback: "person.fill")
     /// magnifyingglass
     internal static let search = Txt.tr("Localizable", "Icons.search", fallback: "magnifyingglass")
+    /// eye.fill
+    internal static let seeText = Txt.tr("Localizable", "Icons.seeText", fallback: "eye.fill")
     /// paperplane
     internal static let send = Txt.tr("Localizable", "Icons.send", fallback: "paperplane")
     /// gear

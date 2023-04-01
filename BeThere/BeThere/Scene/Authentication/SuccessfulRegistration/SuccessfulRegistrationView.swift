@@ -8,7 +8,7 @@ struct SuccessfulRegistrationView {
 extension SuccessfulRegistrationView: View {
     var body: some View {
         VStack {
-            Image.checkMark
+            Image.profilePicture
                 .resizable()
                 .scaledToFit()
             Button(Str.nextLabel, action: viewModel.didTapNext)

@@ -6,18 +6,20 @@ public struct BaseButtonStyle: ButtonStyle {
 
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .foregroundColor(configuration.isPressed ? .primary : .background)
+            .foregroundColor(configuration.isPressed ? .appPrimary : .appBackground)
             .textStyle(.headline)
             .frame(maxWidth: .infinity, alignment: .center)
             .padding(.padding16)
             .overlay {
                 RoundedRectangle(cornerRadius: .cornerRadius)
-                    .stroke(isEnabled ? Color.primary : Color.clear, lineWidth: .borderWidth)
+                    .stroke(isEnabled ? Color.appPrimary : Color.clear, lineWidth: .borderWidth)
             }
             .background(
                 RoundedRectangle(cornerRadius: .cornerRadius)
                     .fill(
-                        isEnabled ? (configuration.isPressed ? Color.background : Color.primary) : Color.primary.opacity(.reducedOpacityValue)
+                        isEnabled ?
+                        (configuration.isPressed ? Color.appBackground : Color.appPrimary)
+                        : Color.appPrimary.opacity(.reducedOpacityValue)
                     )
             )
     }

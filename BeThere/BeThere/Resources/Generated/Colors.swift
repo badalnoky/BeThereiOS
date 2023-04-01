@@ -5,15 +5,15 @@
 import SwiftUI
 
 public extension Color {
-   static let accentColor = Color("AccentColor")
+   static let appAccentColor = Color("AppAccentColor")
 
-   static let background = Color("Background")
+   static let appBackground = Color("AppBackground")
+
+   static let appPrimary = Color("AppPrimary")
+
+   static let appSecondary = Color("AppSecondary")
 
    static let error = Color("Error")
-
-   static let primary = Color("Primary")
-
-   static let secondary = Color("Secondary")
 
    static let success = Color("Success")
 

@@ -1,3 +1,4 @@
+import BaseKit
 import SwiftUI
 
 public struct IconButton: View {
@@ -8,7 +9,7 @@ public struct IconButton: View {
         Button(action: action) {
             icon
                 .fittedToSize(.defaultIconSize)
-                .foregroundColor(.primary)
+                .foregroundColor(.appPrimary)
         }
     }
 

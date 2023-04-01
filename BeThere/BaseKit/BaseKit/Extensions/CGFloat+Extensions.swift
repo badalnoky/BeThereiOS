@@ -8,6 +8,8 @@ public extension CGFloat {
 public extension CGFloat {
     /// 2 pt
     static let borderWidth: CGFloat = 2
+    /// 3 pt
+    static let focusedBorderWidth: CGFloat = 3
     /// 8 pt
     static let padding8: CGFloat = 8
     /// 12 pt

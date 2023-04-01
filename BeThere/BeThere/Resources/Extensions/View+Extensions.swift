@@ -1,10 +1,33 @@
 import SwiftUI
 
 extension View {
+    func textFieldOverlay(isFocused: Bool, isValid: Bool) -> some View {
+        self
+            .overlay {
+                RoundedRectangle(cornerRadius: .cornerRadius)
+                    .stroke(
+                        isValid ? (isFocused ? Color.appPrimary : Color.appAccentColor) : Color.error,
+                        lineWidth: isFocused ? .focusedBorderWidth : .borderWidth
+                    )
+            }
+            .background(
+                RoundedRectangle(cornerRadius: .cornerRadius)
+                    .fill(Color.appSecondary)
+            )
+    }
+
     func textStyle(_ style: TextStyle) -> some View {
         self
             .font(style.font)
             .foregroundColor(style.color)
+    }
+
+    func keyboardSettings(for style: StyledFieldStyle) -> some View {
+        self
+            .keyboardType(style.keyboardType)
+            .textContentType(style.textType)
+            .autocapitalization(style.capitalizationType)
+            .autocorrectionDisabled()
     }
 }
 
