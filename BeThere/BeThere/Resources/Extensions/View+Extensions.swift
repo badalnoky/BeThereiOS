@@ -42,6 +42,20 @@ extension View {
             .padding(.padding16)
             .background(Color.appBackground)
     }
+
+    func messageSettings(_ settings: MessageSettings) -> some View {
+        self
+            .foregroundColor(settings.sentByUser ? Color.appBackground : Color.appAccentColor)
+            .textStyle(.callout)
+            .padding(.padding16)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(
+                RoundedRectangle(cornerRadius: .cornerRadius)
+                    .fill(settings.sentByUser ? Color.appPrimary : Color.appSecondary)
+            )
+            .padding(settings.sentByUser ? .leading : .trailing, .messagePadding)
+            .padding(.bottom, settings.isContinued ? .padding4 : .padding16)
+    }
 }
 
 extension View {

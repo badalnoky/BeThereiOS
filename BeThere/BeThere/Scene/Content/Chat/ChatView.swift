@@ -25,10 +25,17 @@ extension ChatView: View {
                 Text(viewModel.event.location)
             }
             Divider()
-            ScrollView {
-                ForEach(viewModel.event.messages.indices, id: \.self) { idx in
-                    let message = viewModel.event.messages[idx]
-                    Text(message.text)
+            ScrollViewReader { proxy in
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: .zero) {
+                        ForEach(viewModel.event.messages.indices, id: \.self) { idx in
+                            let message = viewModel.event.messages[idx]
+                            let settings = viewModel.getMessageSettings(indexed: idx)
+                            ChatItem(message: message, settings: settings, urlString: viewModel.urlCatalog[message.sentBy])
+                            .onAppear { proxy.scrollTo(viewModel.event.messages.indices.last) }
+                            .id(idx)
+                        }
+                    }
                 }
             }
             HStack {

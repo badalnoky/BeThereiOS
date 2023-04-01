@@ -10,6 +10,8 @@ final class ChatViewModel: ObservableObject {
     private var eventId: String
     private var userId: String = .empty
 
+    var urlCatalog: [String: String] = [:]
+
     @Published var event: Event = .mock
     @Published var members: [User] = []
     @Published var currentMessage: String = .empty
@@ -40,6 +42,15 @@ extension ChatViewModel {
             currentMessage = .empty
         }
     }
+
+    func getMessageSettings(indexed idx: Int) -> MessageSettings {
+        let message = event.messages[idx]
+        let isNotLast = idx != event.messages.count.previous
+        let isContinued = isNotLast && (message.sentBy == event.messages[idx.next].sentBy)
+        let sentByUser = message.sentBy == userId
+
+        return MessageSettings(sentByUser: sentByUser, isContinued: isContinued)
+    }
 }
 
 private extension ChatViewModel {
@@ -65,6 +76,9 @@ private extension ChatViewModel {
             .sink { [weak self] users in
                 guard let self = self else { return }
                 self.members = users
+                for user in users {
+                    self.urlCatalog[user.id] = user.photo
+                }
             }
             .store(in: &cancellables)
     }

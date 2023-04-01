@@ -17,6 +17,8 @@
 		79188CC229C6744500F47280 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79188CC129C6744500F47280 /* User.swift */; };
 		7935C49329D84386008FF924 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7935C49229D84386008FF924 /* IconButton.swift */; };
 		7935C49629D8733C008FF924 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7935C49529D8733C008FF924 /* Card.swift */; };
+		7935C49D29D89C59008FF924 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7935C49C29D89C59008FF924 /* ChatModel.swift */; };
+		7935C4A029D89CFE008FF924 /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7935C49F29D89CFE008FF924 /* ChatItem.swift */; };
 		7936AC1629D73877000B4467 /* Guideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936AC1529D73877000B4467 /* Guideline.swift */; };
 		7936AC1829D7387E000B4467 /* Guidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936AC1729D7387E000B4467 /* Guidelines.swift */; };
 		7936AC1A29D73889000B4467 /* GuidelinesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7936AC1929D73889000B4467 /* GuidelinesModel.swift */; };
@@ -136,6 +138,8 @@
 		79188CC129C6744500F47280 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7935C49229D84386008FF924 /* IconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		7935C49529D8733C008FF924 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		7935C49C29D89C59008FF924 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		7935C49F29D89CFE008FF924 /* ChatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
 		7936AC1529D73877000B4467 /* Guideline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guideline.swift; sourceTree = "<group>"; };
 		7936AC1729D7387E000B4467 /* Guidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guidelines.swift; sourceTree = "<group>"; };
 		7936AC1929D73889000B4467 /* GuidelinesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesModel.swift; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				7935C49429D8731D008FF924 /* Card */,
+				7935C49E29D89CEC008FF924 /* ChatItem */,
 				7936AC1429D73860000B4467 /* Guidelines */,
 				7935C49129D84386008FF924 /* IconButton */,
 				7916D4A429D7557E00CF8016 /* Lottie */,
@@ -316,6 +321,14 @@
 				7935C49529D8733C008FF924 /* Card.swift */,
 			);
 			path = Card;
+			sourceTree = "<group>";
+		};
+		7935C49E29D89CEC008FF924 /* ChatItem */ = {
+			isa = PBXGroup;
+			children = (
+				7935C49F29D89CFE008FF924 /* ChatItem.swift */,
+			);
+			path = ChatItem;
 			sourceTree = "<group>";
 		};
 		7936AC1429D73860000B4467 /* Guidelines */ = {
@@ -430,6 +443,7 @@
 			children = (
 				793A5A3429B7A0B6009A3D5B /* ChatView.swift */,
 				7994CA2829BB3F6D00EB90E0 /* ChatViewModel.swift */,
+				7935C49C29D89C59008FF924 /* ChatModel.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -997,6 +1011,7 @@
 				79E4039F29CB701400935E83 /* EventModel.swift in Sources */,
 				7994CA2B29BB402D00EB90E0 /* ChatViewModel+Mock.swift in Sources */,
 				79D922F729D60755006F4732 /* Fonts.swift in Sources */,
+				7935C4A029D89CFE008FF924 /* ChatItem.swift in Sources */,
 				793A5A3129B7A09C009A3D5B /* RegistrationView.swift in Sources */,
 				79DDA6B029B5017F00B04E2A /* Localizable.swift in Sources */,
 				798048DC29BA5119006AE94C /* SettingsViewModel.swift in Sources */,
@@ -1005,6 +1020,7 @@
 				798F3F1429CA13450022AECC /* Message.swift in Sources */,
 				793A5A1229B78F09009A3D5B /* AppDelegate.swift in Sources */,
 				798048D829BA4D27006AE94C /* MainViewModel.swift in Sources */,
+				7935C49D29D89C59008FF924 /* ChatModel.swift in Sources */,
 				793A5A2129B79A00009A3D5B /* ContentSceneFactory.swift in Sources */,
 				79D922FF29D60F25006F4732 /* DefaultNavigationBarModifier.swift in Sources */,
 				79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */,

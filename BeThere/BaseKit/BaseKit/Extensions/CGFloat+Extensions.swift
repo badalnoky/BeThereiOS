@@ -10,6 +10,8 @@ public extension CGFloat {
     static let borderWidth: CGFloat = 2
     /// 3 pt
     static let focusedBorderWidth: CGFloat = 3
+    /// 4 pt
+    static let padding4: CGFloat = 4
     /// 8 pt
     static let padding8: CGFloat = 8
     /// 12 pt
@@ -22,4 +24,6 @@ public extension CGFloat {
     static let padding32: CGFloat = 32
     /// 56 pt
     static let padding56: CGFloat = 56
+    /// 100 pt
+    static let messagePadding: CGFloat = 100
 }
