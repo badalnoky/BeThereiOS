@@ -65,6 +65,7 @@
 "Main.searchLabel" = "Search";
 "Main.createLabel" = "Create an event";
 
+"Settings.title" = "Settings";
 "Settings.saveLabel" = "Save";
 
 "Search.title" = "Search";
