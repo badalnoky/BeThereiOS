@@ -12,6 +12,7 @@
 "Event.date" = "date";
 "Event.users" = "users";
 "Event.messages" = "messages";
+"Event.newUsers" = "newUsers";
 
 "Message.id" = "id";
 "Message.sentBy" = "sentBy";
@@ -100,3 +101,4 @@
 "EventData.events" = "events";
 "EventData.users" = "users";
 "EventData.messages" = "messages";
+"EventData.newUsers" = "newUsers";

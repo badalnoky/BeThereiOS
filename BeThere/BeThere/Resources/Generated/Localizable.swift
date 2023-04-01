@@ -53,6 +53,8 @@ internal enum Txt {
     internal static let messages = Txt.tr("Localizable", "Event.messages", fallback: "messages")
     /// name
     internal static let name = Txt.tr("Localizable", "Event.name", fallback: "name")
+    /// newUsers
+    internal static let newUsers = Txt.tr("Localizable", "Event.newUsers", fallback: "newUsers")
     /// users
     internal static let users = Txt.tr("Localizable", "Event.users", fallback: "users")
   }
@@ -65,6 +67,8 @@ internal enum Txt {
     internal static let id = Txt.tr("Localizable", "EventData.id", fallback: "id")
     /// messages
     internal static let messages = Txt.tr("Localizable", "EventData.messages", fallback: "messages")
+    /// newUsers
+    internal static let newUsers = Txt.tr("Localizable", "EventData.newUsers", fallback: "newUsers")
     /// user
     internal static let userCollection = Txt.tr("Localizable", "EventData.userCollection", fallback: "user")
     /// users
