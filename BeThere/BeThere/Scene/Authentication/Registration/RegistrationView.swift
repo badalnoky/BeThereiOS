@@ -7,39 +7,30 @@ struct RegistrationView {
 
 extension RegistrationView: View {
     var body: some View {
-        VStack {
-            Group {
-                Text(Str.emailLabel)
-                TextField(text: $viewModel.email) {
-                    Text(String.empty)
-                }
-                Text(Str.firstNameLabel)
-                TextField(text: $viewModel.firstName) {
-                    Text(String.empty)
-                }
-                Text(Str.lastNameLabel)
-                TextField(text: $viewModel.lastName) {
-                    Text(String.empty)
-                }
-                Text(Str.passwordLabel)
-                TextField(text: $viewModel.password) {
-                    Text(String.empty)
-                }
-                Text(Str.passwordAgainLabel)
-                TextField(text: $viewModel.passwordAgain) {
-                    Text(String.empty)
-                }
+        ScrollView {
+            VStack(spacing: .padding32) {
+                StyledField(style: .email, title: Str.emailLabel, text: $viewModel.email)
+                StyledField(style: .name, title: Str.firstNameLabel, text: $viewModel.firstName)
+                StyledField(style: .name, title: Str.lastNameLabel, text: $viewModel.lastName)
+                StyledField(style: .newPassword, title: Str.passwordLabel, text: $viewModel.password)
+                Guidelines(guidelines: [.length, .lowerCase, .upperCase, .numeric], text: $viewModel.password)
+                StyledField(title: Str.passwordAgainLabel, text: $viewModel.passwordAgain, validateText: $viewModel.password)
+                Button(Str.registrateLabel, action: viewModel.didTapRegistrate)
+                    .buttonStyle(BaseButtonStyle())
             }
-            Button(Str.registrateLabel, action: viewModel.didTapRegistrate)
+            .padding(.padding16)
         }
-        .navigationTitle(Str.title)
+        .defaultNavigationBar(title: Str.title)
+        .scrollableViewSettings()
     }
 }
 
 #if DEBUG
 struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-        RegistrationView(viewModel: .mock)
+        NavigationStack {
+            RegistrationView(viewModel: .mock)
+        }
     }
 }
 #endif

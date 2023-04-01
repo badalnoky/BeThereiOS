@@ -43,6 +43,12 @@ extension View {
             .background(Color.appBackground)
     }
 
+    func scrollableViewSettings() -> some View {
+        self
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.appBackground)
+    }
+
     func messageSettings(_ settings: MessageSettings) -> some View {
         self
             .foregroundColor(settings.sentByUser ? Color.appBackground : Color.appAccentColor)
