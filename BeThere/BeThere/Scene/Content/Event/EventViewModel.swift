@@ -65,6 +65,10 @@ extension EventViewModel {
             // TODO: handle non compliant field values
         }
     }
+
+    func setChoosingDate() {
+        isChoosingDate = true
+    }
 }
 
 // MARK: Common

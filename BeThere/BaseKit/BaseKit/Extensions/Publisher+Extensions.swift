@@ -1,7 +1,7 @@
 import Combine
 
-extension Publisher {
-    public func sink(
+public extension Publisher {
+    func sink(
         receiveValue: @escaping ((Self.Output) -> Void),
         receiveError: @escaping ((Self.Failure) -> Void)
     ) -> AnyCancellable {

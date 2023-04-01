@@ -2,10 +2,16 @@ import SwiftUI
 
 public struct CachedAsyncImage {
     var urlString: String
+    var color: Color
     var size: CGFloat
 
-    public init(urlString: String, size: Double = .defaultImageSize) {
+    public init(
+        urlString: String,
+        color: Color = .primary,
+        size: Double = .defaultImageSize
+    ) {
         self.urlString = urlString
+        self.color = color
         self.size = size
     }
 }
@@ -23,6 +29,7 @@ extension CachedAsyncImage: View {
             } placeholder: {
                 Image(systemName: .person)
                     .circularFittedToSize(size)
+                    .foregroundColor(color)
             }
         }
     }

@@ -1,0 +1,26 @@
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+// Template by Bertalan Dálnoky
+
+{% macro casesBlock assets %}
+    {% for asset in assets %}
+    {% if asset.type == "color" %}
+   static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = Color("{{asset.value}}")
+
+    {% elif asset.items %}
+   enum {{asset.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+        {% filter indent:4 %}{% call casesBlock asset.items %}{% endfilter %}
+    }
+    {% endif %}
+    {% endfor %}
+{% endmacro %}
+import SwiftUI
+
+{% if catalogs %}
+public extension Color {
+{% call casesBlock catalogs.first.assets %}
+}
+
+{% else %}
+// No assets found
+{% endif %}

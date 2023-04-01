@@ -8,11 +8,14 @@ struct SuccessfulRegistrationView {
 extension SuccessfulRegistrationView: View {
     var body: some View {
         VStack {
-            Image.checkMark
-                .resizable()
-                .scaledToFit()
+            Text(Str.title).textStyle(.largeTitle)
+            Spacer()
+            Lottie(named: Lotties.succesfulRegistration)
+            Spacer()
             Button(Str.nextLabel, action: viewModel.didTapNext)
+                .buttonStyle(BaseButtonStyle())
         }
+        .defaultViewSettings()
     }
 }
 

@@ -1,3 +1,4 @@
+import BaseKit
 import SwiftUI
 
 public struct IconButton: View {
@@ -5,7 +6,11 @@ public struct IconButton: View {
     private var action: () -> Void
 
     public var body: some View {
-        Button(action: action) { icon }
+        Button(action: action) {
+            icon
+                .fittedToSize(.defaultIconSize)
+                .foregroundColor(.appPrimary)
+        }
     }
 
     public init(_ icon: Image, action: @escaping () -> Void) {
@@ -17,7 +22,7 @@ public struct IconButton: View {
 #if DEBUG
 struct IconButton_Previews: PreviewProvider {
     static var previews: some View {
-        IconButton(.settings) {}
+        IconButton(Image(systemName: .person)) {}
             .padding()
             .previewLayout(.sizeThatFits)
     }

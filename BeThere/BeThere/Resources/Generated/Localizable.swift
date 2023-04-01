@@ -15,16 +15,18 @@ internal enum Txt {
     internal static let friendsLabel = Txt.tr("Localizable", "AddMember.friendsLabel", fallback: "Your Friends")
     /// Other users
     internal static let otherLabel = Txt.tr("Localizable", "AddMember.otherLabel", fallback: "Other users")
-    /// Name of a person
-    internal static let searchLabel = Txt.tr("Localizable", "AddMember.searchLabel", fallback: "Name of a person")
-    /// Add people
-    internal static let title = Txt.tr("Localizable", "AddMember.title", fallback: "Add people")
+    /// Search for users
+    internal static let searchLabel = Txt.tr("Localizable", "AddMember.searchLabel", fallback: "Search for users")
+    /// Add members
+    internal static let title = Txt.tr("Localizable", "AddMember.title", fallback: "Add members")
   }
   internal enum Chat {
-    /// Time and Date
-    internal static let dateLabel = Txt.tr("Localizable", "Chat.dateLabel", fallback: "Time and Date")
-    /// Location
-    internal static let locationLabel = Txt.tr("Localizable", "Chat.locationLabel", fallback: "Location")
+    /// Time and Date:
+    internal static let dateLabel = Txt.tr("Localizable", "Chat.dateLabel", fallback: "Time and Date:")
+    /// Location:
+    internal static let locationLabel = Txt.tr("Localizable", "Chat.locationLabel", fallback: "Location:")
+    /// Send a message
+    internal static let messageLabel = Txt.tr("Localizable", "Chat.messageLabel", fallback: "Send a message")
   }
   internal enum Data {
     /// profilePicture
@@ -53,6 +55,8 @@ internal enum Txt {
     internal static let messages = Txt.tr("Localizable", "Event.messages", fallback: "messages")
     /// name
     internal static let name = Txt.tr("Localizable", "Event.name", fallback: "name")
+    /// newUsers
+    internal static let newUsers = Txt.tr("Localizable", "Event.newUsers", fallback: "newUsers")
     /// users
     internal static let users = Txt.tr("Localizable", "Event.users", fallback: "users")
   }
@@ -65,6 +69,8 @@ internal enum Txt {
     internal static let id = Txt.tr("Localizable", "EventData.id", fallback: "id")
     /// messages
     internal static let messages = Txt.tr("Localizable", "EventData.messages", fallback: "messages")
+    /// newUsers
+    internal static let newUsers = Txt.tr("Localizable", "EventData.newUsers", fallback: "newUsers")
     /// user
     internal static let userCollection = Txt.tr("Localizable", "EventData.userCollection", fallback: "user")
     /// users
@@ -81,26 +87,54 @@ internal enum Txt {
     internal static let nameLabel = Txt.tr("Localizable", "EventScreen.nameLabel", fallback: "Name of event:")
     /// Save
     internal static let saveLabel = Txt.tr("Localizable", "EventScreen.saveLabel", fallback: "Save")
+    /// Edit event
+    internal static let title = Txt.tr("Localizable", "EventScreen.title", fallback: "Edit event")
+  }
+  internal enum Guidelines {
+    /// At least 8 charachters long
+    internal static let length = Txt.tr("Localizable", "Guidelines.length", fallback: "At least 8 charachters long")
+    /// Contain an lowercase letter
+    internal static let lowerCase = Txt.tr("Localizable", "Guidelines.lowerCase", fallback: "Contain an lowercase letter")
+    /// Contain a number
+    internal static let numeric = Txt.tr("Localizable", "Guidelines.numeric", fallback: "Contain a number")
+    /// Password has to contain:
+    internal static let title = Txt.tr("Localizable", "Guidelines.title", fallback: "Password has to contain:")
+    /// Contain an uppercase letter
+    internal static let upperCase = Txt.tr("Localizable", "Guidelines.upperCase", fallback: "Contain an uppercase letter")
   }
   internal enum Icons {
     /// person.fill.badge.plus
     internal static let addFriends = Txt.tr("Localizable", "Icons.addFriends", fallback: "person.fill.badge.plus")
-    /// checkmark
-    internal static let check = Txt.tr("Localizable", "Icons.check", fallback: "checkmark")
+    /// chevron.left
+    internal static let back = Txt.tr("Localizable", "Icons.back", fallback: "chevron.left")
+    /// eye.slash.fill
+    internal static let discloseText = Txt.tr("Localizable", "Icons.discloseText", fallback: "eye.slash.fill")
     /// pencil
     internal static let edit = Txt.tr("Localizable", "Icons.edit", fallback: "pencil")
-    /// plus
-    internal static let plus = Txt.tr("Localizable", "Icons.plus", fallback: "plus")
+    /// envelope.fill
+    internal static let email = Txt.tr("Localizable", "Icons.email", fallback: "envelope.fill")
+    /// person.circle
+    internal static let name = Txt.tr("Localizable", "Icons.name", fallback: "person.circle")
+    /// checkmark.circle.fill
+    internal static let obeyedGuideline = Txt.tr("Localizable", "Icons.obeyedGuideline", fallback: "checkmark.circle.fill")
+    /// lock.fill
+    internal static let password = Txt.tr("Localizable", "Icons.password", fallback: "lock.fill")
+    /// plus.circle
+    internal static let plus = Txt.tr("Localizable", "Icons.plus", fallback: "plus.circle")
     /// person.fill
     internal static let profilePicture = Txt.tr("Localizable", "Icons.profilePicture", fallback: "person.fill")
     /// magnifyingglass
     internal static let search = Txt.tr("Localizable", "Icons.search", fallback: "magnifyingglass")
+    /// eye.fill
+    internal static let seeText = Txt.tr("Localizable", "Icons.seeText", fallback: "eye.fill")
     /// paperplane
     internal static let send = Txt.tr("Localizable", "Icons.send", fallback: "paperplane")
     /// gear
     internal static let settings = Txt.tr("Localizable", "Icons.settings", fallback: "gear")
     /// rectangle.portrait.and.arrow.right
     internal static let signOut = Txt.tr("Localizable", "Icons.signOut", fallback: "rectangle.portrait.and.arrow.right")
+    /// x.circle.fill
+    internal static let violatedGuideline = Txt.tr("Localizable", "Icons.violatedGuideline", fallback: "x.circle.fill")
   }
   internal enum Login {
     /// Email
@@ -147,14 +181,16 @@ internal enum Txt {
   internal enum Search {
     /// Other users
     internal static let otherLabel = Txt.tr("Localizable", "Search.otherLabel", fallback: "Other users")
-    /// Name of a person
-    internal static let searchLabel = Txt.tr("Localizable", "Search.searchLabel", fallback: "Name of a person")
-    /// Search
-    internal static let title = Txt.tr("Localizable", "Search.title", fallback: "Search")
+    /// Search for users
+    internal static let searchLabel = Txt.tr("Localizable", "Search.searchLabel", fallback: "Search for users")
+    /// Add friends
+    internal static let title = Txt.tr("Localizable", "Search.title", fallback: "Add friends")
   }
   internal enum Settings {
     /// Save
     internal static let saveLabel = Txt.tr("Localizable", "Settings.saveLabel", fallback: "Save")
+    /// Settings
+    internal static let title = Txt.tr("Localizable", "Settings.title", fallback: "Settings")
   }
   internal enum SuccessfulRegistration {
     /// Next

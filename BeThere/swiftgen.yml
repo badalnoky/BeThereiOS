@@ -6,3 +6,28 @@ strings:
       enumName: Txt
     templateName: structured-swift5
     output: BeThere/Resources/Generated/Localizable.swift
+
+xcassets:
+  - inputs: BeThere/Resources/Assets/Colors.xcassets
+    outputs:
+      params:
+        enumName: Colors
+      templatePath: Templates/colors-simplified.stencil
+      output: BeThere/Resources/Generated/Colors.swift
+
+  - inputs: BeThere/Resources/Assets/Animations.xcassets
+    outputs:
+      params:
+        enumName: Animations
+      templatePath: Templates/lottie-simplified.stencil
+      output: BeThere/Resources/Generated/Animations.swift
+
+fonts:
+  inputs:
+    - BeThere/Resources/Assets/Fonts
+  outputs:
+    params:
+      enumName: Fonts
+    templatePath: Templates/fonts-swiftui-swift5.stencil
+    output: BeThere/Resources/Generated/Fonts.swift
+

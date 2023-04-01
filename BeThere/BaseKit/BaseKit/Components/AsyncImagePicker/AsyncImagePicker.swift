@@ -4,6 +4,7 @@ import SwiftUI
 public struct AsyncImagePicker: View {
     private var url: String
     private var size: Double
+    private var color: Color
     private var selectedImage: Binding<UIImage?>
     private var hasChanged: Binding<Bool>
 
@@ -15,7 +16,7 @@ public struct AsyncImagePicker: View {
                 Image(uiImage: image)
                     .circularFittedToSize(size)
             } else {
-                CachedAsyncImage(urlString: url, size: size)
+                CachedAsyncImage(urlString: url, color: color, size: size)
             }
         }
         .onChange(of: selectedItem) { newItem in
@@ -28,8 +29,15 @@ public struct AsyncImagePicker: View {
         }
     }
 
-    public init(url: String, size: Double, image: Binding<UIImage?>, hasChanged: Binding<Bool>) {
+    public init(
+        url: String,
+        color: Color = .primary,
+        size: Double,
+        image: Binding<UIImage?>,
+        hasChanged: Binding<Bool>
+    ) {
         self.url = url
+        self.color = color
         self.size = size
         self.selectedImage = image
         self.hasChanged = hasChanged

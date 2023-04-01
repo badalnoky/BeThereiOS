@@ -59,11 +59,18 @@ extension EventDataService: EventDataServiceInput {
 
     public func updateEvent(with id: String, difference: [String: Any]) -> CurrentValueSubject<Bool, Never> {
         let successfulUpdate = CurrentValueSubject<Bool, Never>(false)
+        var uploadedDifference = difference
+        if difference[Keys.newUsers] as? [String] != nil {
+            uploadedDifference[Keys.newUsers] = nil
+        }
 
         eventCollection
             .document(id)
-            .updateData(difference) { [weak self] error in
+            .updateData(uploadedDifference) { [weak self] error in
                 guard error == nil else { return }
+                if let newUsers = difference[Keys.newUsers] as? [String] {
+                    self?.addEvent(to: newUsers, eventId: id)
+                }
                 self?.provisionalMembers.send([])
             }
 

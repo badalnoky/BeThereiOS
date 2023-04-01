@@ -8,21 +8,31 @@ struct SettingsView {
 
 extension SettingsView: View {
     var body: some View {
-        VStack {
-            AsyncImagePicker(url: viewModel.urlString, size: .defaultImageSize, image: $viewModel.image, hasChanged: $viewModel.hasImageChanged)
-            TextField(text: $viewModel.name) {
-                Text(String.empty)
-            }
+        VStack(spacing: .padding32) {
+            AsyncImagePicker(
+                url: viewModel.urlString,
+                color: .appPrimary,
+                size: .defaultImageSize,
+                image: $viewModel.image,
+                hasChanged: $viewModel.hasImageChanged
+            )
+            .padding(.top, .padding56)
+            StyledField(style: .base, title: .empty, text: $viewModel.name)
             Spacer()
             Button(Str.saveLabel, action: viewModel.didTapSave)
+                .buttonStyle(BaseButtonStyle())
         }
+        .defaultNavigationBar(title: Str.title)
+        .defaultViewSettings()
     }
 }
 
 #if DEBUG
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(viewModel: .mock)
+        NavigationStack {
+            SettingsView(viewModel: .mock)
+        }
     }
 }
 #endif

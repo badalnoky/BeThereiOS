@@ -12,6 +12,7 @@
 "Event.date" = "date";
 "Event.users" = "users";
 "Event.messages" = "messages";
+"Event.newUsers" = "newUsers";
 
 "Message.id" = "id";
 "Message.sentBy" = "sentBy";
@@ -19,15 +20,28 @@
 
 // MARK: Resources
 
-"Icons.check" = "checkmark";
 "Icons.signOut" = "rectangle.portrait.and.arrow.right";
 "Icons.addFriends" = "person.fill.badge.plus";
 "Icons.settings" = "gear";
-"Icons.search" = "magnifyingglass";
-"Icons.plus" = "plus";
+"Icons.plus" = "plus.circle";
 "Icons.edit" = "pencil";
 "Icons.send" = "paperplane";
 "Icons.profilePicture" = "person.fill";
+"Icons.back" = "chevron.left";
+"Icons.obeyedGuideline" = "checkmark.circle.fill";
+"Icons.violatedGuideline" = "x.circle.fill";
+"Icons.email" = "envelope.fill";
+"Icons.password" = "lock.fill";
+"Icons.name" = "person.circle";
+"Icons.search" = "magnifyingglass";
+"Icons.discloseText" = "eye.slash.fill";
+"Icons.seeText" = "eye.fill";
+
+"Guidelines.title" = "Password has to contain:";
+"Guidelines.length" = "At least 8 charachters long";
+"Guidelines.numeric" = "Contain a number";
+"Guidelines.upperCase" = "Contain an uppercase letter";
+"Guidelines.lowerCase" = "Contain an lowercase letter";
 
 // MARK: Screens
 
@@ -51,23 +65,26 @@
 "Main.searchLabel" = "Search";
 "Main.createLabel" = "Create an event";
 
+"Settings.title" = "Settings";
 "Settings.saveLabel" = "Save";
 
-"Search.title" = "Search";
-"Search.searchLabel" = "Name of a person";
+"Search.title" = "Add friends";
+"Search.searchLabel" = "Search for users";
 "Search.otherLabel" = "Other users";
 
-"Chat.dateLabel" = "Time and Date";
-"Chat.locationLabel" = "Location";
+"Chat.dateLabel" = "Time and Date:";
+"Chat.locationLabel" = "Location:";
+"Chat.messageLabel" = "Send a message";
 
 "EventScreen.nameLabel" = "Name of event:";
 "EventScreen.dateLabel" = "Time and Date:";
 "EventScreen.locationLabel" = "Location:";
 "EventScreen.membersLabel" = "Members";
 "EventScreen.saveLabel" = "Save";
+"EventScreen.title" = "Edit event";
 
-"AddMember.title" = "Add people";
-"AddMember.searchLabel" = "Name of a person";
+"AddMember.title" = "Add members";
+"AddMember.searchLabel" = "Search for users";
 "AddMember.friendsLabel" = "Your Friends";
 "AddMember.otherLabel" = "Other users";
 
@@ -87,3 +104,4 @@
 "EventData.events" = "events";
 "EventData.users" = "users";
 "EventData.messages" = "messages";
+"EventData.newUsers" = "newUsers";
