@@ -22,7 +22,7 @@ extension SuccessfulRegistrationView: View {
 #if DEBUG
 struct SuccessfulRegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-            SuccessfulRegistrationView(viewModel: .mock)
+        SuccessfulRegistrationView(viewModel: .mock)
     }
 }
 #endif
