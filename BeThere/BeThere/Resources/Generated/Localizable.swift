@@ -87,6 +87,8 @@ internal enum Txt {
     internal static let nameLabel = Txt.tr("Localizable", "EventScreen.nameLabel", fallback: "Name of event:")
     /// Save
     internal static let saveLabel = Txt.tr("Localizable", "EventScreen.saveLabel", fallback: "Save")
+    /// Edit event
+    internal static let title = Txt.tr("Localizable", "EventScreen.title", fallback: "Edit event")
   }
   internal enum Guidelines {
     /// At least 8 charachters long

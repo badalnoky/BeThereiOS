@@ -81,6 +81,7 @@
 "EventScreen.locationLabel" = "Location:";
 "EventScreen.membersLabel" = "Members";
 "EventScreen.saveLabel" = "Save";
+"EventScreen.title" = "Edit event";
 
 "AddMember.title" = "Add members";
 "AddMember.searchLabel" = "Search for users";
