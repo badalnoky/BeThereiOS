@@ -21,10 +21,12 @@ internal enum Txt {
     internal static let title = Txt.tr("Localizable", "AddMember.title", fallback: "Add members")
   }
   internal enum Chat {
-    /// Time and Date
-    internal static let dateLabel = Txt.tr("Localizable", "Chat.dateLabel", fallback: "Time and Date")
-    /// Location
-    internal static let locationLabel = Txt.tr("Localizable", "Chat.locationLabel", fallback: "Location")
+    /// Time and Date:
+    internal static let dateLabel = Txt.tr("Localizable", "Chat.dateLabel", fallback: "Time and Date:")
+    /// Location:
+    internal static let locationLabel = Txt.tr("Localizable", "Chat.locationLabel", fallback: "Location:")
+    /// Send a message
+    internal static let messageLabel = Txt.tr("Localizable", "Chat.messageLabel", fallback: "Send a message")
   }
   internal enum Data {
     /// profilePicture

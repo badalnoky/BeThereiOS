@@ -72,8 +72,9 @@
 "Search.searchLabel" = "Search for users";
 "Search.otherLabel" = "Other users";
 
-"Chat.dateLabel" = "Time and Date";
-"Chat.locationLabel" = "Location";
+"Chat.dateLabel" = "Time and Date:";
+"Chat.locationLabel" = "Location:";
+"Chat.messageLabel" = "Send a message";
 
 "EventScreen.nameLabel" = "Name of event:";
 "EventScreen.dateLabel" = "Time and Date:";

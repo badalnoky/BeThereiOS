@@ -8,23 +8,9 @@ struct ChatView {
 
 extension ChatView: View {
     var body: some View {
-        VStack {
-            Text(viewModel.event.name)
-            HStack {
-                Spacer()
-                IconButton(.edit, action: viewModel.didTapEdit)
-            }
-            HStack {
-                Text(Str.dateLabel)
-                Spacer()
-                Text(viewModel.event.date, format: .dateTime.month().day().hour().minute())
-            }
-            HStack {
-                Text(Str.locationLabel)
-                Spacer()
-                Text(viewModel.event.location)
-            }
-            Divider()
+        VStack(spacing: .zero) {
+            header
+            Divider().styledDivider()
             ScrollViewReader { proxy in
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: .zero) {
@@ -36,23 +22,45 @@ extension ChatView: View {
                             .id(idx)
                         }
                     }
+                    .padding(.top, .padding8)
                 }
             }
-            HStack {
-                TextField(text: $viewModel.currentMessage) {
-                    Text(String.empty)
-                }
+            HStack(spacing: .padding16) {
+                StyledField(style: .base, title: Str.messageLabel, text: $viewModel.currentMessage)
                 IconButton(.send, action: viewModel.didTapSend)
             }
         }
-        .navigationTitle(viewModel.event.name)
+        .eventNavigationBar(title: viewModel.event.name, editAction: viewModel.didTapEdit)
+        .defaultViewSettings()
+    }
+}
+
+extension ChatView {
+    var header: some View {
+        Card {
+            VStack(spacing: .padding16) {
+                HStack {
+                    Text(Str.dateLabel)
+                    Spacer()
+                    Text(viewModel.event.date, format: .dateTime.month().day().hour().minute())
+                }
+                HStack {
+                    Text(Str.locationLabel)
+                    Spacer()
+                    Text(viewModel.event.location)
+                }
+            }
+        }
+        .padding(.bottom, .padding16)
     }
 }
 
 #if DEBUG
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView(viewModel: .mock)
+        NavigationStack {
+            ChatView(viewModel: .mock)
+        }
     }
 }
 #endif
