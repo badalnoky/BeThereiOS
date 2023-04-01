@@ -35,6 +35,13 @@ extension View {
             .frame(minHeight: .borderWidth)
             .background(Color.appPrimary)
     }
+
+    func defaultViewSettings() -> some View {
+        self
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.padding16)
+            .background(Color.appBackground)
+    }
 }
 
 extension View {
