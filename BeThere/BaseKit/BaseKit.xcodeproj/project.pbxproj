@@ -59,18 +59,18 @@
 		793C051229D2364E00939923 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				793C051329D2367200939923 /* AsyncImagePicker */,
 				79502F8F29D4803C00B1DD37 /* CachedAsyncImage */,
-				793C051329D2367200939923 /* ImagePicker */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		793C051329D2367200939923 /* ImagePicker */ = {
+		793C051329D2367200939923 /* AsyncImagePicker */ = {
 			isa = PBXGroup;
 			children = (
 				793C051429D2369F00939923 /* AsyncImagePicker.swift */,
 			);
-			path = ImagePicker;
+			path = AsyncImagePicker;
 			sourceTree = "<group>";
 		};
 		793C051829D2480900939923 /* Extensions */ = {
