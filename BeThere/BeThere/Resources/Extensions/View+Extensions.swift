@@ -29,6 +29,12 @@ extension View {
             .autocapitalization(style.capitalizationType)
             .autocorrectionDisabled()
     }
+
+    func styledDivider() -> some View {
+        self
+            .frame(minHeight: .borderWidth)
+            .background(Color.appPrimary)
+    }
 }
 
 extension View {
