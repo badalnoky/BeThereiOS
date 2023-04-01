@@ -8,48 +8,35 @@ struct AddMemberView {
 
 extension AddMemberView: View {
     var body: some View {
-        VStack {
-            HStack {
-                TextField(text: $viewModel.searchString) {
-                    Text(Str.searchLabel)
-                }
-                IconButton(.search, action: viewModel.didTapSearch)
-            }
+        VStack(spacing: .padding8) {
+            StyledField(style: .search, title: Str.searchLabel, text: $viewModel.searchString)
+            Divider().styledDivider()
             ScrollView {
-                Divider()
-                Text(Str.friendsLabel)
-                ForEach(viewModel.friends.indices, id: \.self) { idx in
-                    let friend = viewModel.friends[idx]
-                    HStack {
-                        Text(friend.name)
-                        Spacer()
-                        IconButton(.plus) {
-                            viewModel.didTapAdd(user: friend)
-                        }
-                    }
-                }
-                Divider()
-                Text(Str.otherLabel)
-                ForEach(viewModel.otherUsers.indices, id: \.self) { idx in
-                    let user = viewModel.otherUsers[idx]
-                    HStack {
-                        Text(user.name)
-                        Spacer()
-                        IconButton(.plus) {
-                            viewModel.didTapAdd(user: user)
-                        }
-                    }
+                VStack(spacing: .padding8) {
+                    Text(Str.friendsLabel)
+                        .textStyle(.callout)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    UserList(users: viewModel.friends, action: viewModel.didTapAdd(user:))
+                    Divider().styledDivider()
+                        .padding(.top, .padding8)
+                    Text(Str.otherLabel)
+                        .textStyle(.callout)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    UserList(users: viewModel.otherUsers, action: viewModel.didTapAdd(user:))
                 }
             }
         }
-        .navigationTitle(Str.title)
+        .defaultNavigationBar(title: Str.title)
+        .defaultViewSettings()
     }
 }
 
 #if DEBUG
 struct AddMemberView_Previews: PreviewProvider {
     static var previews: some View {
-        AddMemberView(viewModel: .mock)
+        NavigationStack {
+            AddMemberView(viewModel: .mock)
+        }
     }
 }
 #endif

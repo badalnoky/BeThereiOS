@@ -15,10 +15,10 @@ internal enum Txt {
     internal static let friendsLabel = Txt.tr("Localizable", "AddMember.friendsLabel", fallback: "Your Friends")
     /// Other users
     internal static let otherLabel = Txt.tr("Localizable", "AddMember.otherLabel", fallback: "Other users")
-    /// Name of a person
-    internal static let searchLabel = Txt.tr("Localizable", "AddMember.searchLabel", fallback: "Name of a person")
-    /// Add people
-    internal static let title = Txt.tr("Localizable", "AddMember.title", fallback: "Add people")
+    /// Search for users
+    internal static let searchLabel = Txt.tr("Localizable", "AddMember.searchLabel", fallback: "Search for users")
+    /// Add members
+    internal static let title = Txt.tr("Localizable", "AddMember.title", fallback: "Add members")
   }
   internal enum Chat {
     /// Time and Date

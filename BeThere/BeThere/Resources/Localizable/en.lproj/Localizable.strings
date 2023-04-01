@@ -81,8 +81,8 @@
 "EventScreen.membersLabel" = "Members";
 "EventScreen.saveLabel" = "Save";
 
-"AddMember.title" = "Add people";
-"AddMember.searchLabel" = "Name of a person";
+"AddMember.title" = "Add members";
+"AddMember.searchLabel" = "Search for users";
 "AddMember.friendsLabel" = "Your Friends";
 "AddMember.otherLabel" = "Other users";
 
