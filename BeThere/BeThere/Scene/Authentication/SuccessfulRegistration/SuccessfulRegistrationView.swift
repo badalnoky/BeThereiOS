@@ -8,18 +8,21 @@ struct SuccessfulRegistrationView {
 extension SuccessfulRegistrationView: View {
     var body: some View {
         VStack {
-            Image.profilePicture
-                .resizable()
-                .scaledToFit()
+            Text(Str.title).textStyle(.largeTitle)
+            Spacer()
+            Lottie(named: Lotties.succesfulRegistration)
+            Spacer()
             Button(Str.nextLabel, action: viewModel.didTapNext)
+                .buttonStyle(BaseButtonStyle())
         }
+        .defaultViewSettings()
     }
 }
 
 #if DEBUG
 struct SuccessfulRegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-        SuccessfulRegistrationView(viewModel: .mock)
+            SuccessfulRegistrationView(viewModel: .mock)
     }
 }
 #endif
