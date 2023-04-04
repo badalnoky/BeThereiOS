@@ -1,4 +1,4 @@
-public struct Message {
+public struct Message: Equatable {
     public var id: String
     public var sentBy: String
     public var text: String
