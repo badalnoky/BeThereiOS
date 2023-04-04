@@ -227,6 +227,14 @@ internal enum Txt {
     internal static let name = Txt.tr("Localizable", "User.name", fallback: "name")
     /// photo
     internal static let photo = Txt.tr("Localizable", "User.photo", fallback: "photo")
+    internal enum Mock {
+      /// userId
+      internal static let id = Txt.tr("Localizable", "User.mock.id", fallback: "userId")
+      /// userName
+      internal static let name = Txt.tr("Localizable", "User.mock.name", fallback: "userName")
+      /// userPhoto
+      internal static let photo = Txt.tr("Localizable", "User.mock.photo", fallback: "userPhoto")
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

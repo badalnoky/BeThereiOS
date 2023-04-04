@@ -59,6 +59,7 @@
 		79C235C229C7709100B9C497 /* UserDataService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C235C129C7709100B9C497 /* UserDataService+Mock.swift */; };
 		79C6B80729D8CC2F00705947 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6B80629D8CC2F00705947 /* UserList.swift */; };
 		79CA7EB829DC994800F21EE4 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CA7EB729DC994800F21EE4 /* MessageTests.swift */; };
+		79CA7EBA29DCA26700F21EE4 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CA7EB929DCA26700F21EE4 /* UserTests.swift */; };
 		79D6CF2629C4741F0022656C /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2529C4741F0022656C /* AuthenticationService.swift */; };
 		79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */; };
 		79D922D729D5ED94006F4732 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D922D629D5ED94006F4732 /* Colors.xcassets */; };
@@ -183,6 +184,7 @@
 		79C235C129C7709100B9C497 /* UserDataService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDataService+Mock.swift"; sourceTree = "<group>"; };
 		79C6B80629D8CC2F00705947 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		79CA7EB729DC994800F21EE4 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
+		79CA7EB929DCA26700F21EE4 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		79D6CF2529C4741F0022656C /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationService+Mock.swift"; sourceTree = "<group>"; };
 		79D922D629D5ED94006F4732 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			children = (
 				79DDA68B29B4FB7000B04E2A /* EventTests.swift */,
 				79CA7EB729DC994800F21EE4 /* MessageTests.swift */,
+				79CA7EB929DCA26700F21EE4 /* UserTests.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -1079,6 +1082,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79CA7EBA29DCA26700F21EE4 /* UserTests.swift in Sources */,
 				79DDA68C29B4FB7000B04E2A /* EventTests.swift in Sources */,
 				79CA7EB829DC994800F21EE4 /* MessageTests.swift in Sources */,
 			);

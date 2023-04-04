@@ -1,4 +1,4 @@
-public struct User: Identifiable {
+public struct User: Identifiable, Equatable {
     public var id: String
     public var name: String
     public var photo: String
@@ -22,6 +22,16 @@ public struct User: Identifiable {
 
 extension User {
     private typealias Keys = Txt.User
+
+    static var mock: User {
+        User(
+            id: Keys.Mock.id,
+            name: Keys.Mock.name,
+            photo: Keys.Mock.photo,
+            friends: [],
+            events: []
+        )
+    }
 
     var defaultDocumentValue: [String: Any] {
         [

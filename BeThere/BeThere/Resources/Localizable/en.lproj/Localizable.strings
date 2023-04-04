@@ -5,6 +5,9 @@
 "User.photo" = "photo";
 "User.friends" = "friends";
 "User.events" = "events";
+"User.mock.id" = "userId";
+"User.mock.name" = "userName";
+"User.mock.photo" = "userPhoto";
 
 "Event.id" = "id";
 "Event.name" = "name";
