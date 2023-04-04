@@ -59,6 +59,16 @@ internal enum Txt {
     internal static let newUsers = Txt.tr("Localizable", "Event.newUsers", fallback: "newUsers")
     /// users
     internal static let users = Txt.tr("Localizable", "Event.users", fallback: "users")
+    internal enum Mock {
+      /// eventId
+      internal static let id = Txt.tr("Localizable", "Event.mock.id", fallback: "eventId")
+      /// eventLocation
+      internal static let location = Txt.tr("Localizable", "Event.mock.location", fallback: "eventLocation")
+      /// eventName
+      internal static let name = Txt.tr("Localizable", "Event.mock.name", fallback: "eventName")
+      /// eventUserId
+      internal static let userId = Txt.tr("Localizable", "Event.mock.userId", fallback: "eventUserId")
+    }
   }
   internal enum EventData {
     /// event
@@ -161,6 +171,14 @@ internal enum Txt {
     internal static let sentBy = Txt.tr("Localizable", "Message.sentBy", fallback: "sentBy")
     /// text
     internal static let text = Txt.tr("Localizable", "Message.text", fallback: "text")
+    internal enum Mock {
+      /// messageId
+      internal static let id = Txt.tr("Localizable", "Message.mock.id", fallback: "messageId")
+      /// messageSentBy
+      internal static let sentBy = Txt.tr("Localizable", "Message.mock.sentBy", fallback: "messageSentBy")
+      /// messageText
+      internal static let text = Txt.tr("Localizable", "Message.mock.text", fallback: "messageText")
+    }
   }
   internal enum Registration {
     /// Email

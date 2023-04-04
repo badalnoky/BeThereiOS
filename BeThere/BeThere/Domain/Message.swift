@@ -17,6 +17,10 @@ public struct Message {
 extension Message {
     private typealias Keys = Txt.Message
 
+    static var mock: Message {
+        Message(id: Keys.Mock.id, sentBy: Keys.Mock.sentBy, text: Keys.Mock.text)
+    }
+
     var defaultDocumentValue: [String: Any] {
         [
             Keys.id: id,
