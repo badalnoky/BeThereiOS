@@ -60,6 +60,7 @@
 		79C6B80729D8CC2F00705947 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6B80629D8CC2F00705947 /* UserList.swift */; };
 		79CA7EB829DC994800F21EE4 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CA7EB729DC994800F21EE4 /* MessageTests.swift */; };
 		79CA7EBA29DCA26700F21EE4 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CA7EB929DCA26700F21EE4 /* UserTests.swift */; };
+		79CA7EC429DCAE4800F21EE4 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CA7EC329DCAE4800F21EE4 /* AutoMockable.generated.swift */; };
 		79D6CF2629C4741F0022656C /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2529C4741F0022656C /* AuthenticationService.swift */; };
 		79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */; };
 		79D922D729D5ED94006F4732 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D922D629D5ED94006F4732 /* Colors.xcassets */; };
@@ -185,6 +186,7 @@
 		79C6B80629D8CC2F00705947 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		79CA7EB729DC994800F21EE4 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
 		79CA7EB929DCA26700F21EE4 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		79CA7EC329DCAE4800F21EE4 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
 		79D6CF2529C4741F0022656C /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationService+Mock.swift"; sourceTree = "<group>"; };
 		79D922D629D5ED94006F4732 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -504,6 +506,22 @@
 			path = UserList;
 			sourceTree = "<group>";
 		};
+		79CA7EC129DCAC0500F21EE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				79CA7EC229DCAC1600F21EE4 /* Generated */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		79CA7EC229DCAC1600F21EE4 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				79CA7EC329DCAE4800F21EE4 /* AutoMockable.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		79D6CF2429C473DA0022656C /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,6 +628,7 @@
 		79DDA68A29B4FB7000B04E2A /* BeThereTests */ = {
 			isa = PBXGroup;
 			children = (
+				79CA7EC129DCAC0500F21EE4 /* Resources */,
 				7901707129DB6C0700FD74FE /* Domain */,
 			);
 			path = BeThereTests;
@@ -767,6 +786,7 @@
 			buildPhases = (
 				98F2AFF51B0231D4601280CD /* [CP] Check Pods Manifest.lock */,
 				79DDA6AE29B500AE00B04E2A /* SwiftGen */,
+				79CA7EC029DCAB8200F21EE4 /* Sourcery */,
 				79DDA6A429B4FDFA00B04E2A /* SwiftLint */,
 				79DDA67329B4FB6F00B04E2A /* Sources */,
 				79DDA67429B4FB6F00B04E2A /* Frameworks */,
@@ -912,6 +932,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeThere/Pods-BeThere-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		79CA7EC029DCAB8200F21EE4 /* Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Sourcery;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "Pods/Sourcery/bin/sourcery --sources \"BeThere/Service\" \\\n--templates \"Templates/Sourcery\" \\\n--output \"BeThereTests/Resources/Generated\"\n";
 		};
 		79DDA6A429B4FDFA00B04E2A /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1082,6 +1121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79CA7EC429DCAE4800F21EE4 /* AutoMockable.generated.swift in Sources */,
 				79CA7EBA29DCA26700F21EE4 /* UserTests.swift in Sources */,
 				79DDA68C29B4FB7000B04E2A /* EventTests.swift in Sources */,
 				79CA7EB829DC994800F21EE4 /* MessageTests.swift in Sources */,

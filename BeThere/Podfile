@@ -13,6 +13,7 @@ target 'BeThere' do
   pod 'SwiftGen'
   pod 'Resolver'
   pod 'lottie-ios'
+  pod 'Sourcery'
 
 end
 
