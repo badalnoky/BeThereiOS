@@ -61,6 +61,7 @@
 		79CA7EB829DC994800F21EE4 /* MessageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CA7EB729DC994800F21EE4 /* MessageTests.swift */; };
 		79CA7EBA29DCA26700F21EE4 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CA7EB929DCA26700F21EE4 /* UserTests.swift */; };
 		79CA7EC429DCAE4800F21EE4 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CA7EC329DCAE4800F21EE4 /* AutoMockable.generated.swift */; };
+		79CA7EC829DCB0BD00F21EE4 /* RegistrationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CA7EC729DCB0BD00F21EE4 /* RegistrationViewModelTests.swift */; };
 		79D6CF2629C4741F0022656C /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2529C4741F0022656C /* AuthenticationService.swift */; };
 		79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */; };
 		79D922D729D5ED94006F4732 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D922D629D5ED94006F4732 /* Colors.xcassets */; };
@@ -187,6 +188,7 @@
 		79CA7EB729DC994800F21EE4 /* MessageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTests.swift; sourceTree = "<group>"; };
 		79CA7EB929DCA26700F21EE4 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		79CA7EC329DCAE4800F21EE4 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoMockable.generated.swift; sourceTree = "<group>"; };
+		79CA7EC729DCB0BD00F21EE4 /* RegistrationViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModelTests.swift; sourceTree = "<group>"; };
 		79D6CF2529C4741F0022656C /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		79D6CF2929C492080022656C /* AuthenticationService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationService+Mock.swift"; sourceTree = "<group>"; };
 		79D922D629D5ED94006F4732 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -522,6 +524,22 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		79CA7EC529DCB0BD00F21EE4 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				79CA7EC629DCB0BD00F21EE4 /* Authentication */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		79CA7EC629DCB0BD00F21EE4 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				79CA7EC729DCB0BD00F21EE4 /* RegistrationViewModelTests.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		79D6CF2429C473DA0022656C /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
@@ -628,8 +646,9 @@
 		79DDA68A29B4FB7000B04E2A /* BeThereTests */ = {
 			isa = PBXGroup;
 			children = (
-				79CA7EC129DCAC0500F21EE4 /* Resources */,
 				7901707129DB6C0700FD74FE /* Domain */,
+				79CA7EC129DCAC0500F21EE4 /* Resources */,
+				79CA7EC529DCB0BD00F21EE4 /* Scene */,
 			);
 			path = BeThereTests;
 			sourceTree = "<group>";
@@ -1121,6 +1140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79CA7EC829DCB0BD00F21EE4 /* RegistrationViewModelTests.swift in Sources */,
 				79CA7EC429DCAE4800F21EE4 /* AutoMockable.generated.swift in Sources */,
 				79CA7EBA29DCA26700F21EE4 /* UserTests.swift in Sources */,
 				79DDA68C29B4FB7000B04E2A /* EventTests.swift in Sources */,
