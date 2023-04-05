@@ -1,19 +1,23 @@
 // Generated using Sourcery 2.0.1 — https://github.com/krzysztofzablocki/Sourcery
 // DO NOT EDIT
-// swiftlint:disable: all
+// swiftlint: disable: type_contents_order
+// swiftlint: disable: implicitly_unwrapped_optional
+// swiftlint: disable: line_length
+// swiftlint: disable: identifier_name
+// swiftlint: disable: let_var_whitespace
 
-import Combine
-import Foundation
 import BeThere
+import Combine
+import UIKit
 
 public class AuthenticationServiceInputMock: AuthenticationServiceInput {
     public init() {}
 
-    //MARK: - signIn
+    // MARK: - signIn
 
     public var signInEmailPasswordCallsCount = 0
     public var signInEmailPasswordCalled: Bool {
-        return signInEmailPasswordCallsCount > 0
+        signInEmailPasswordCallsCount > 0
     }
     public var signInEmailPasswordReceivedArguments: (email: String, password: String)?
     public var signInEmailPasswordReceivedInvocations: [(email: String, password: String)] = []
@@ -30,12 +34,11 @@ public class AuthenticationServiceInputMock: AuthenticationServiceInput {
             return signInEmailPasswordReturnValue
         }
     }
-
-    //MARK: - registrate
+    // MARK: - registrate
 
     public var registrateEmailPasswordNameCallsCount = 0
     public var registrateEmailPasswordNameCalled: Bool {
-        return registrateEmailPasswordNameCallsCount > 0
+        registrateEmailPasswordNameCallsCount > 0
     }
     public var registrateEmailPasswordNameReceivedArguments: (email: String, password: String, name: String)?
     public var registrateEmailPasswordNameReceivedInvocations: [(email: String, password: String, name: String)] = []
@@ -52,12 +55,11 @@ public class AuthenticationServiceInputMock: AuthenticationServiceInput {
             return registrateEmailPasswordNameReturnValue
         }
     }
-
-    //MARK: - signOut
+    // MARK: - signOut
 
     public var signOutCallsCount = 0
     public var signOutCalled: Bool {
-        return signOutCallsCount > 0
+        signOutCallsCount > 0
     }
     public var signOutReturnValue: CurrentValueSubject<Bool, Error>!
     public var signOutClosure: (() -> CurrentValueSubject<Bool, Error>)?
@@ -70,31 +72,30 @@ public class AuthenticationServiceInputMock: AuthenticationServiceInput {
             return signOutReturnValue
         }
     }
-
 }
 public class EventDataServiceInputMock: EventDataServiceInput {
     public init() {}
     public var userEvents: CurrentValueSubject<[Event], Never> {
-        get { return underlyingUserEvents }
+        get { underlyingUserEvents }
         set(value) { underlyingUserEvents = value }
     }
     public var underlyingUserEvents: CurrentValueSubject<[Event], Never>!
     public var currentEvent: CurrentValueSubject<Event, Never> {
-        get { return underlyingCurrentEvent }
+        get { underlyingCurrentEvent }
         set(value) { underlyingCurrentEvent = value }
     }
     public var underlyingCurrentEvent: CurrentValueSubject<Event, Never>!
     public var provisionalMembers: CurrentValueSubject<[User], Never> {
-        get { return underlyingProvisionalMembers }
+        get { underlyingProvisionalMembers }
         set(value) { underlyingProvisionalMembers = value }
     }
     public var underlyingProvisionalMembers: CurrentValueSubject<[User], Never>!
 
-    //MARK: - getEvents
+    // MARK: - getEvents
 
     public var getEventsForCallsCount = 0
     public var getEventsForCalled: Bool {
-        return getEventsForCallsCount > 0
+        getEventsForCallsCount > 0
     }
     public var getEventsForReceivedUser: User?
     public var getEventsForReceivedInvocations: [User] = []
@@ -106,12 +107,11 @@ public class EventDataServiceInputMock: EventDataServiceInput {
         getEventsForReceivedInvocations.append(user)
         getEventsForClosure?(user)
     }
-
-    //MARK: - createEvent
+    // MARK: - createEvent
 
     public var createEventCallsCount = 0
     public var createEventCalled: Bool {
-        return createEventCallsCount > 0
+        createEventCallsCount > 0
     }
     public var createEventReceivedEvent: Event?
     public var createEventReceivedInvocations: [Event] = []
@@ -123,12 +123,11 @@ public class EventDataServiceInputMock: EventDataServiceInput {
         createEventReceivedInvocations.append(event)
         createEventClosure?(event)
     }
-
-    //MARK: - updateEvent
+    // MARK: - updateEvent
 
     public var updateEventWithDifferenceCallsCount = 0
     public var updateEventWithDifferenceCalled: Bool {
-        return updateEventWithDifferenceCallsCount > 0
+        updateEventWithDifferenceCallsCount > 0
     }
     public var updateEventWithDifferenceReceivedArguments: (id: String, difference: [String: Any])?
     public var updateEventWithDifferenceReceivedInvocations: [(id: String, difference: [String: Any])] = []
@@ -145,12 +144,11 @@ public class EventDataServiceInputMock: EventDataServiceInput {
             return updateEventWithDifferenceReturnValue
         }
     }
-
-    //MARK: - getEventData
+    // MARK: - getEventData
 
     public var getEventDataForCallsCount = 0
     public var getEventDataForCalled: Bool {
-        return getEventDataForCallsCount > 0
+        getEventDataForCallsCount > 0
     }
     public var getEventDataForReceivedId: String?
     public var getEventDataForReceivedInvocations: [String] = []
@@ -162,12 +160,11 @@ public class EventDataServiceInputMock: EventDataServiceInput {
         getEventDataForReceivedInvocations.append(id)
         getEventDataForClosure?(id)
     }
-
-    //MARK: - provisionallyAdd
+    // MARK: - provisionallyAdd
 
     public var provisionallyAddUserCallsCount = 0
     public var provisionallyAddUserCalled: Bool {
-        return provisionallyAddUserCallsCount > 0
+        provisionallyAddUserCallsCount > 0
     }
     public var provisionallyAddUserReceivedUser: User?
     public var provisionallyAddUserReceivedInvocations: [User] = []
@@ -179,12 +176,11 @@ public class EventDataServiceInputMock: EventDataServiceInput {
         provisionallyAddUserReceivedInvocations.append(user)
         provisionallyAddUserClosure?(user)
     }
-
-    //MARK: - send
+    // MARK: - send
 
     public var sendToCallsCount = 0
     public var sendToCalled: Bool {
-        return sendToCallsCount > 0
+        sendToCallsCount > 0
     }
     public var sendToReceivedArguments: (message: Message, eventId: String)?
     public var sendToReceivedInvocations: [(message: Message, eventId: String)] = []
@@ -196,41 +192,40 @@ public class EventDataServiceInputMock: EventDataServiceInput {
         sendToReceivedInvocations.append((message: message, eventId: eventId))
         sendToClosure?(message, eventId)
     }
-
 }
 public class UserDataServiceInputMock: UserDataServiceInput {
     public init() {}
     public var user: CurrentValueSubject<User?, Never> {
-        get { return underlyingUser }
+        get { underlyingUser }
         set(value) { underlyingUser = value }
     }
     public var underlyingUser: CurrentValueSubject<User?, Never>!
     public var searchedUsers: CurrentValueSubject<[User], Never> {
-        get { return underlyingSearchedUsers }
+        get { underlyingSearchedUsers }
         set(value) { underlyingSearchedUsers = value }
     }
     public var underlyingSearchedUsers: CurrentValueSubject<[User], Never>!
     public var searchedOtherMembers: CurrentValueSubject<[User], Never> {
-        get { return underlyingSearchedOtherMembers }
+        get { underlyingSearchedOtherMembers }
         set(value) { underlyingSearchedOtherMembers = value }
     }
     public var underlyingSearchedOtherMembers: CurrentValueSubject<[User], Never>!
     public var searchedFriendMembers: CurrentValueSubject<[User], Never> {
-        get { return underlyingSearchedFriendMembers }
+        get { underlyingSearchedFriendMembers }
         set(value) { underlyingSearchedFriendMembers = value }
     }
     public var underlyingSearchedFriendMembers: CurrentValueSubject<[User], Never>!
     public var eventMembers: CurrentValueSubject<[User], Never> {
-        get { return underlyingEventMembers }
+        get { underlyingEventMembers }
         set(value) { underlyingEventMembers = value }
     }
     public var underlyingEventMembers: CurrentValueSubject<[User], Never>!
 
-    //MARK: - resetUser
+    // MARK: - resetUser
 
     public var resetUserCallsCount = 0
     public var resetUserCalled: Bool {
-        return resetUserCallsCount > 0
+        resetUserCallsCount > 0
     }
     public var resetUserClosure: (() -> Void)?
 
@@ -238,12 +233,11 @@ public class UserDataServiceInputMock: UserDataServiceInput {
         resetUserCallsCount += 1
         resetUserClosure?()
     }
-
-    //MARK: - createUserDocument
+    // MARK: - createUserDocument
 
     public var createUserDocumentWithNameCallsCount = 0
     public var createUserDocumentWithNameCalled: Bool {
-        return createUserDocumentWithNameCallsCount > 0
+        createUserDocumentWithNameCallsCount > 0
     }
     public var createUserDocumentWithNameReceivedArguments: (id: String, name: String)?
     public var createUserDocumentWithNameReceivedInvocations: [(id: String, name: String)] = []
@@ -260,12 +254,11 @@ public class UserDataServiceInputMock: UserDataServiceInput {
             return createUserDocumentWithNameReturnValue
         }
     }
-
-    //MARK: - getUserData
+    // MARK: - getUserData
 
     public var getUserDataForCallsCount = 0
     public var getUserDataForCalled: Bool {
-        return getUserDataForCallsCount > 0
+        getUserDataForCallsCount > 0
     }
     public var getUserDataForReceivedId: String?
     public var getUserDataForReceivedInvocations: [String] = []
@@ -277,12 +270,11 @@ public class UserDataServiceInputMock: UserDataServiceInput {
         getUserDataForReceivedInvocations.append(id)
         getUserDataForClosure?(id)
     }
-
-    //MARK: - updateUserName
+    // MARK: - updateUserName
 
     public var updateUserNameToCallsCount = 0
     public var updateUserNameToCalled: Bool {
-        return updateUserNameToCallsCount > 0
+        updateUserNameToCallsCount > 0
     }
     public var updateUserNameToReceivedName: String?
     public var updateUserNameToReceivedInvocations: [String] = []
@@ -294,12 +286,11 @@ public class UserDataServiceInputMock: UserDataServiceInput {
         updateUserNameToReceivedInvocations.append(name)
         updateUserNameToClosure?(name)
     }
-
-    //MARK: - fetchUsers
+    // MARK: - fetchUsers
 
     public var fetchUsersContainingCallsCount = 0
     public var fetchUsersContainingCalled: Bool {
-        return fetchUsersContainingCallsCount > 0
+        fetchUsersContainingCallsCount > 0
     }
     public var fetchUsersContainingReceivedSubstring: String?
     public var fetchUsersContainingReceivedInvocations: [String] = []
@@ -311,12 +302,11 @@ public class UserDataServiceInputMock: UserDataServiceInput {
         fetchUsersContainingReceivedInvocations.append(substring)
         fetchUsersContainingClosure?(substring)
     }
-
-    //MARK: - fetchSearchedUsers
+    // MARK: - fetchSearchedUsers
 
     public var fetchSearchedUsersContainingIsInitialFetchFilteringCallsCount = 0
     public var fetchSearchedUsersContainingIsInitialFetchFilteringCalled: Bool {
-        return fetchSearchedUsersContainingIsInitialFetchFilteringCallsCount > 0
+        fetchSearchedUsersContainingIsInitialFetchFilteringCallsCount > 0
     }
     public var fetchSearchedUsersContainingIsInitialFetchFilteringReceivedArguments: (substring: String, isInitialFetch: Bool, filtering: [User])?
     public var fetchSearchedUsersContainingIsInitialFetchFilteringReceivedInvocations: [(substring: String, isInitialFetch: Bool, filtering: [User])] = []
@@ -328,12 +318,11 @@ public class UserDataServiceInputMock: UserDataServiceInput {
         fetchSearchedUsersContainingIsInitialFetchFilteringReceivedInvocations.append((substring: substring, isInitialFetch: isInitialFetch, filtering: filtering))
         fetchSearchedUsersContainingIsInitialFetchFilteringClosure?(substring, isInitialFetch, filtering)
     }
-
-    //MARK: - addFriend
+    // MARK: - addFriend
 
     public var addFriendCallsCount = 0
     public var addFriendCalled: Bool {
-        return addFriendCallsCount > 0
+        addFriendCallsCount > 0
     }
     public var addFriendReceivedFriend: User?
     public var addFriendReceivedInvocations: [User] = []
@@ -345,12 +334,11 @@ public class UserDataServiceInputMock: UserDataServiceInput {
         addFriendReceivedInvocations.append(friend)
         addFriendClosure?(friend)
     }
-
-    //MARK: - fetchMembers
+    // MARK: - fetchMembers
 
     public var fetchMembersCallsCount = 0
     public var fetchMembersCalled: Bool {
-        return fetchMembersCallsCount > 0
+        fetchMembersCallsCount > 0
     }
     public var fetchMembersReceivedIds: [String]?
     public var fetchMembersReceivedInvocations: [[String]] = []
@@ -362,12 +350,11 @@ public class UserDataServiceInputMock: UserDataServiceInput {
         fetchMembersReceivedInvocations.append(ids)
         fetchMembersClosure?(ids)
     }
-
-    //MARK: - upload
+    // MARK: - upload
 
     public var uploadImageCallsCount = 0
     public var uploadImageCalled: Bool {
-        return uploadImageCallsCount > 0
+        uploadImageCallsCount > 0
     }
     public var uploadImageReceivedImage: UIImage?
     public var uploadImageReceivedInvocations: [UIImage] = []
@@ -384,5 +371,4 @@ public class UserDataServiceInputMock: UserDataServiceInput {
             return uploadImageReturnValue
         }
     }
-
 }
