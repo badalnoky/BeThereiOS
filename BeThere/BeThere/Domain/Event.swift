@@ -1,7 +1,7 @@
 import FirebaseFirestore
 import Foundation
 
-public struct Event: Identifiable {
+public struct Event: Identifiable, Equatable {
     public var id: String
     public var name: String
     public var location: String

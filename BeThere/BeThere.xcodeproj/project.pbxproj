@@ -86,6 +86,7 @@
 		79DDA6E929B50FF000B04E2A /* BaseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 79DDA6E729B50FF000B04E2A /* BaseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79E4039F29CB701400935E83 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E4039E29CB701400935E83 /* EventModel.swift */; };
 		79E5F23829DDE960004A32C4 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E5F23729DDE960004A32C4 /* LoginViewModelTests.swift */; };
+		79E5F23B29DDED8B004A32C4 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E5F23A29DDED8B004A32C4 /* MainViewModelTests.swift */; };
 		79E7CA4A29D720BF00558265 /* BaseButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7CA4929D720BF00558265 /* BaseButtonStyle.swift */; };
 		79E7CA4C29D720D400558265 /* TextButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7CA4B29D720D400558265 /* TextButtonStyle.swift */; };
 		79EAA1B529D1E62300E0AC1D /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAA1B429D1E62300E0AC1D /* CGFloat+Extensions.swift */; };
@@ -217,6 +218,7 @@
 		79DDA6E729B50FF000B04E2A /* BaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E4039E29CB701400935E83 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		79E5F23729DDE960004A32C4 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		79E5F23A29DDED8B004A32C4 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		79E7CA4929D720BF00558265 /* BaseButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButtonStyle.swift; sourceTree = "<group>"; };
 		79E7CA4B29D720D400558265 /* TextButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonStyle.swift; sourceTree = "<group>"; };
 		79EAA1B429D1E62300E0AC1D /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 			isa = PBXGroup;
 			children = (
 				79CA7EC629DCB0BD00F21EE4 /* Authentication */,
+				79E5F23929DDED40004A32C4 /* Content */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -744,6 +747,14 @@
 				79D922F029D60654006F4732 /* Fonts */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		79E5F23929DDED40004A32C4 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				79E5F23A29DDED8B004A32C4 /* MainViewModelTests.swift */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 		79EBF85029B8FFB600E83646 /* Mock */ = {
@@ -1146,6 +1157,7 @@
 				79E5F23829DDE960004A32C4 /* LoginViewModelTests.swift in Sources */,
 				79CA7EC829DCB0BD00F21EE4 /* RegistrationViewModelTests.swift in Sources */,
 				79CA7EC429DCAE4800F21EE4 /* AutoMockable.generated.swift in Sources */,
+				79E5F23B29DDED8B004A32C4 /* MainViewModelTests.swift in Sources */,
 				79CA7EBA29DCA26700F21EE4 /* UserTests.swift in Sources */,
 				79DDA68C29B4FB7000B04E2A /* EventTests.swift in Sources */,
 				79CA7EB829DC994800F21EE4 /* MessageTests.swift in Sources */,
