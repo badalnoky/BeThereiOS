@@ -52,7 +52,7 @@ extension ContentSceneFactory {
         ChatView(
             viewModel: ChatViewModel(
                 navigator: navigator,
-                evetService: Resolver.resolve(),
+                eventService: Resolver.resolve(),
                 userDataService: Resolver.resolve(),
                 eventId: eventId
             )

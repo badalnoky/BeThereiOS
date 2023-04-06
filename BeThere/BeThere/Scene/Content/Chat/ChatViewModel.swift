@@ -18,12 +18,12 @@ final class ChatViewModel: ObservableObject {
 
     init(
         navigator: Navigator<ContentSceneFactory>,
-        evetService: EventDataServiceInput,
+        eventService: EventDataServiceInput,
         userDataService: UserDataServiceInput,
         eventId: String
     ) {
         self.navigator = navigator
-        self.eventService = evetService
+        self.eventService = eventService
         self.userDataService = userDataService
         self.eventId = eventId
 
