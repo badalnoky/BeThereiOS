@@ -64,7 +64,7 @@ extension ContentSceneFactory {
             return EventView(
                 viewModel: EventViewModel(
                     navigator: navigator,
-                    evetService: Resolver.resolve(),
+                    eventService: Resolver.resolve(),
                     userDataService: Resolver.resolve()
                 )
             )
@@ -72,7 +72,7 @@ extension ContentSceneFactory {
             return EventView(
                 viewModel: EventViewModel(
                     navigator: navigator,
-                    evetService: Resolver.resolve(),
+                    eventService: Resolver.resolve(),
                     userDataService: Resolver.resolve(),
                     eventId: eventId)
             )
