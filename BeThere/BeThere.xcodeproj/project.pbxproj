@@ -56,6 +56,7 @@
 		7994CA2929BB3F6D00EB90E0 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2829BB3F6D00EB90E0 /* ChatViewModel.swift */; };
 		7994CA2B29BB402D00EB90E0 /* ChatViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2A29BB402D00EB90E0 /* ChatViewModel+Mock.swift */; };
 		79B3B2DF29DF2BFE000A9B80 /* EventViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3B2DE29DF2BFE000A9B80 /* EventViewModelTests.swift */; };
+		79B3B2E129DF342E000A9B80 /* AddMemberViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3B2E029DF342E000A9B80 /* AddMemberViewModelTests.swift */; };
 		79C235C029C76D6000B9C497 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C235BF29C76D6000B9C497 /* UserDataService.swift */; };
 		79C235C229C7709100B9C497 /* UserDataService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C235C129C7709100B9C497 /* UserDataService+Mock.swift */; };
 		79C6B80729D8CC2F00705947 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6B80629D8CC2F00705947 /* UserList.swift */; };
@@ -188,6 +189,7 @@
 		7994CA2829BB3F6D00EB90E0 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		7994CA2A29BB402D00EB90E0 /* ChatViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatViewModel+Mock.swift"; sourceTree = "<group>"; };
 		79B3B2DE29DF2BFE000A9B80 /* EventViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelTests.swift; sourceTree = "<group>"; };
+		79B3B2E029DF342E000A9B80 /* AddMemberViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewModelTests.swift; sourceTree = "<group>"; };
 		79C235BF29C76D6000B9C497 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		79C235C129C7709100B9C497 /* UserDataService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDataService+Mock.swift"; sourceTree = "<group>"; };
 		79C6B80629D8CC2F00705947 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
@@ -758,6 +760,7 @@
 		79E5F23929DDED40004A32C4 /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				79B3B2E029DF342E000A9B80 /* AddMemberViewModelTests.swift */,
 				79B3B2DE29DF2BFE000A9B80 /* EventViewModelTests.swift */,
 				79E5F23A29DDED8B004A32C4 /* MainViewModelTests.swift */,
 				79E5F23E29DE1002004A32C4 /* SearchViewModelTests.swift */,
@@ -1165,6 +1168,7 @@
 			files = (
 				79E5F23829DDE960004A32C4 /* LoginViewModelTests.swift in Sources */,
 				79CA7EC829DCB0BD00F21EE4 /* RegistrationViewModelTests.swift in Sources */,
+				79B3B2E129DF342E000A9B80 /* AddMemberViewModelTests.swift in Sources */,
 				79CA7EC429DCAE4800F21EE4 /* AutoMockable.generated.swift in Sources */,
 				79E5F23B29DDED8B004A32C4 /* MainViewModelTests.swift in Sources */,
 				79CA7EBA29DCA26700F21EE4 /* UserTests.swift in Sources */,
