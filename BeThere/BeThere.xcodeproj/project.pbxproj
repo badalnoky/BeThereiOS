@@ -104,6 +104,7 @@
 		79F645F429BB6F31004B761D /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F645F329BB6F31004B761D /* EventViewModel.swift */; };
 		79F645F629BB6F62004B761D /* EventViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F645F529BB6F62004B761D /* EventViewModel+Mock.swift */; };
 		79FEA39E29E59A9D00B3CE59 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEA39D29E59A9D00B3CE59 /* LoginUITests.swift */; };
+		79FEA3A029E5A27600B3CE59 /* RegistrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEA39F29E5A27600B3CE59 /* RegistrationUITests.swift */; };
 		A4006CCED997397A56516499 /* libPods-BeThereTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EC6FABCBB05042FA96EF57 /* libPods-BeThereTests.a */; };
 /* End PBXBuildFile section */
 
@@ -241,6 +242,7 @@
 		79F645F329BB6F31004B761D /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		79F645F529BB6F62004B761D /* EventViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventViewModel+Mock.swift"; sourceTree = "<group>"; };
 		79FEA39D29E59A9D00B3CE59 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
+		79FEA39F29E5A27600B3CE59 /* RegistrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUITests.swift; sourceTree = "<group>"; };
 		9A46FDF8AD0B5CB5B7F9A24B /* Pods_BeThere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeThere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A019FF2B4B235760874CD4 /* Pods-BeThere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThere.release.xcconfig"; path = "Target Support Files/Pods-BeThere/Pods-BeThere.release.xcconfig"; sourceTree = "<group>"; };
 		CF35A98EBE118096C5AF97E8 /* Pods-BeThere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThere.debug.xcconfig"; path = "Target Support Files/Pods-BeThere/Pods-BeThere.debug.xcconfig"; sourceTree = "<group>"; };
@@ -829,6 +831,7 @@
 			isa = PBXGroup;
 			children = (
 				79FEA39D29E59A9D00B3CE59 /* LoginUITests.swift */,
+				79FEA39F29E5A27600B3CE59 /* RegistrationUITests.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -1197,6 +1200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79FEA3A029E5A27600B3CE59 /* RegistrationUITests.swift in Sources */,
 				79FEA39E29E59A9D00B3CE59 /* LoginUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
