@@ -2,6 +2,7 @@ import Combine
 import FirebaseFirestore
 import FirebaseStorage
 
+// sourcery: AutoMockable
 public protocol UserDataServiceInput {
     var user: CurrentValueSubject<User?, Never> { get }
     var searchedUsers: CurrentValueSubject<[User], Never> { get }

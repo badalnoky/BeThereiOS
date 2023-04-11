@@ -5,6 +5,9 @@
 "User.photo" = "photo";
 "User.friends" = "friends";
 "User.events" = "events";
+"User.mock.id" = "userId";
+"User.mock.name" = "userName";
+"User.mock.photo" = "userPhoto";
 
 "Event.id" = "id";
 "Event.name" = "name";
@@ -13,10 +16,17 @@
 "Event.users" = "users";
 "Event.messages" = "messages";
 "Event.newUsers" = "newUsers";
+"Event.mock.id" = "eventId";
+"Event.mock.name" = "eventName";
+"Event.mock.location" = "eventLocation";
+"Event.mock.userId" = "eventUserId";
 
 "Message.id" = "id";
 "Message.sentBy" = "sentBy";
 "Message.text" = "text";
+"Message.mock.id" = "messageId";
+"Message.mock.sentBy" = "messageSentBy";
+"Message.mock.text" = "messageText";
 
 // MARK: Resources
 

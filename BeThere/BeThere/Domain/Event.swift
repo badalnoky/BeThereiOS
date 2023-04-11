@@ -1,7 +1,7 @@
 import FirebaseFirestore
 import Foundation
 
-public struct Event: Identifiable {
+public struct Event: Identifiable, Equatable {
     public var id: String
     public var name: String
     public var location: String
@@ -30,7 +30,14 @@ extension Event {
     private typealias Keys = Txt.Event
 
     static var mock: Event {
-        Event(id: .empty, name: .empty, location: .empty, date: .now, users: [], messages: [])
+        Event(
+            id: Keys.Mock.id,
+            name: Keys.Mock.name,
+            location: Keys.Mock.location,
+            date: .defaultDateTime,
+            users: [Keys.Mock.userId],
+            messages: [.mock]
+        )
     }
 
     var defaultDocumentValue: [String: Any] {

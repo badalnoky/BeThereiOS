@@ -1,6 +1,7 @@
 import Combine
 import FirebaseAuth
 
+// sourcery: AutoMockable
 public protocol AuthenticationServiceInput {
     func signIn(email: String, password: String) -> CurrentValueSubject<Bool, Error>
     func registrate(email: String, password: String, name: String) -> CurrentValueSubject<Bool, Error>

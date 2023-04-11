@@ -1,4 +1,4 @@
-public struct Message {
+public struct Message: Equatable {
     public var id: String
     public var sentBy: String
     public var text: String
@@ -16,6 +16,10 @@ public struct Message {
 
 extension Message {
     private typealias Keys = Txt.Message
+
+    static var mock: Message {
+        Message(id: Keys.Mock.id, sentBy: Keys.Mock.sentBy, text: Keys.Mock.text)
+    }
 
     var defaultDocumentValue: [String: Any] {
         [

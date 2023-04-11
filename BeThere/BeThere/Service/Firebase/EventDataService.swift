@@ -1,6 +1,7 @@
 import Combine
 import FirebaseFirestore
 
+// sourcery: AutoMockable
 public protocol EventDataServiceInput {
     var userEvents: CurrentValueSubject<[Event], Never> { get }
     var currentEvent: CurrentValueSubject<Event, Never> { get }

@@ -19,11 +19,11 @@ final class EventViewModel: ObservableObject {
 
     init(
         navigator: Navigator<ContentSceneFactory>,
-        evetService: EventDataServiceInput,
+        eventService: EventDataServiceInput,
         userDataService: UserDataServiceInput
     ) {
         self.navigator = navigator
-        self.eventService = evetService
+        self.eventService = eventService
         self.userDataService = userDataService
         self.state = .creation
         self.eventId = UUID().uuidString
@@ -34,12 +34,12 @@ final class EventViewModel: ObservableObject {
 
     init(
         navigator: Navigator<ContentSceneFactory>,
-        evetService: EventDataServiceInput,
+        eventService: EventDataServiceInput,
         userDataService: UserDataServiceInput,
         eventId: String
     ) {
         self.navigator = navigator
-        self.eventService = evetService
+        self.eventService = eventService
         self.userDataService = userDataService
         self.state = .modification
         self.eventId = eventId
