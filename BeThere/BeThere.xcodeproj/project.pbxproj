@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		112D7F5EE4519EE61062E6DF /* Pods_BeThere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A46FDF8AD0B5CB5B7F9A24B /* Pods_BeThere.framework */; };
 		790BA70B29C39C94003C15DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 790BA70A29C39C94003C15DC /* GoogleService-Info.plist */; };
+		79150F3929E6D4B000578A1A /* ChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79150F3829E6D4B000578A1A /* ChatUITests.swift */; };
 		7916D4A629D755C400CF8016 /* Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916D4A529D755C400CF8016 /* Lottie.swift */; };
 		7916D4AA29D75F2B00CF8016 /* Animations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7916D4A929D75F2B00CF8016 /* Animations.xcassets */; };
 		7916D4AC29D7600E00CF8016 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916D4AB29D7600D00CF8016 /* Animations.swift */; };
@@ -81,7 +82,6 @@
 		79DDA67F29B4FB7000B04E2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA67E29B4FB7000B04E2A /* Assets.xcassets */; };
 		79DDA68229B4FB7000B04E2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA68129B4FB7000B04E2A /* Preview Assets.xcassets */; };
 		79DDA68C29B4FB7000B04E2A /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA68B29B4FB7000B04E2A /* EventTests.swift */; };
-		79DDA69629B4FB7000B04E2A /* BeThereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA69529B4FB7000B04E2A /* BeThereUITests.swift */; };
 		79DDA6AB29B5006400B04E2A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79DDA6AD29B5006400B04E2A /* Localizable.strings */; };
 		79DDA6B029B5017F00B04E2A /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6AF29B5017F00B04E2A /* Localizable.swift */; };
 		79DDA6B229B5040E00B04E2A /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6B129B5040E00B04E2A /* DI.swift */; };
@@ -104,6 +104,11 @@
 		79EBF86129B90D1E00E83646 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EBF86029B90D1E00E83646 /* Image+Extensions.swift */; };
 		79F645F429BB6F31004B761D /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F645F329BB6F31004B761D /* EventViewModel.swift */; };
 		79F645F629BB6F62004B761D /* EventViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F645F529BB6F62004B761D /* EventViewModel+Mock.swift */; };
+		79FEA39E29E59A9D00B3CE59 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEA39D29E59A9D00B3CE59 /* LoginUITests.swift */; };
+		79FEA3A029E5A27600B3CE59 /* RegistrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEA39F29E5A27600B3CE59 /* RegistrationUITests.swift */; };
+		79FEA3A329E5A95300B3CE59 /* MainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEA3A229E5A95300B3CE59 /* MainUITests.swift */; };
+		79FEA3A529E5B05900B3CE59 /* EventUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEA3A429E5B05900B3CE59 /* EventUITests.swift */; };
+		79FEA3A729E5B0A400B3CE59 /* AddMemberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FEA3A629E5B0A400B3CE59 /* AddMemberUITests.swift */; };
 		A4006CCED997397A56516499 /* libPods-BeThereTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EC6FABCBB05042FA96EF57 /* libPods-BeThereTests.a */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +148,7 @@
 		4FB2F596789E0BBF1AA6C198 /* Pods-BeThereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThereTests.debug.xcconfig"; path = "Target Support Files/Pods-BeThereTests/Pods-BeThereTests.debug.xcconfig"; sourceTree = "<group>"; };
 		57EC6FABCBB05042FA96EF57 /* libPods-BeThereTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeThereTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		790BA70A29C39C94003C15DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		79150F3829E6D4B000578A1A /* ChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUITests.swift; sourceTree = "<group>"; };
 		7916D4A529D755C400CF8016 /* Lottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottie.swift; sourceTree = "<group>"; };
 		7916D4A929D75F2B00CF8016 /* Animations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Animations.xcassets; sourceTree = "<group>"; };
 		7916D4AB29D7600D00CF8016 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
@@ -219,7 +225,6 @@
 		79DDA68729B4FB7000B04E2A /* BeThereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeThereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA68B29B4FB7000B04E2A /* EventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		79DDA69129B4FB7000B04E2A /* BeThereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeThereUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		79DDA69529B4FB7000B04E2A /* BeThereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeThereUITests.swift; sourceTree = "<group>"; };
 		79DDA6AC29B5006400B04E2A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		79DDA6AF29B5017F00B04E2A /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		79DDA6B129B5040E00B04E2A /* DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
@@ -241,6 +246,11 @@
 		79EBF86029B90D1E00E83646 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 		79F645F329BB6F31004B761D /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		79F645F529BB6F62004B761D /* EventViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventViewModel+Mock.swift"; sourceTree = "<group>"; };
+		79FEA39D29E59A9D00B3CE59 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
+		79FEA39F29E5A27600B3CE59 /* RegistrationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUITests.swift; sourceTree = "<group>"; };
+		79FEA3A229E5A95300B3CE59 /* MainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUITests.swift; sourceTree = "<group>"; };
+		79FEA3A429E5B05900B3CE59 /* EventUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventUITests.swift; sourceTree = "<group>"; };
+		79FEA3A629E5B0A400B3CE59 /* AddMemberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberUITests.swift; sourceTree = "<group>"; };
 		9A46FDF8AD0B5CB5B7F9A24B /* Pods_BeThere.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeThere.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A019FF2B4B235760874CD4 /* Pods-BeThere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThere.release.xcconfig"; path = "Target Support Files/Pods-BeThere/Pods-BeThere.release.xcconfig"; sourceTree = "<group>"; };
 		CF35A98EBE118096C5AF97E8 /* Pods-BeThere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThere.debug.xcconfig"; path = "Target Support Files/Pods-BeThere/Pods-BeThere.debug.xcconfig"; sourceTree = "<group>"; };
@@ -672,7 +682,8 @@
 		79DDA69429B4FB7000B04E2A /* BeThereUITests */ = {
 			isa = PBXGroup;
 			children = (
-				79DDA69529B4FB7000B04E2A /* BeThereUITests.swift */,
+				79FEA39B29E59A6300B3CE59 /* Authentication */,
+				79FEA3A129E5A91D00B3CE59 /* Content */,
 			);
 			path = BeThereUITests;
 			sourceTree = "<group>";
@@ -825,6 +836,26 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		79FEA39B29E59A6300B3CE59 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				79FEA39D29E59A9D00B3CE59 /* LoginUITests.swift */,
+				79FEA39F29E5A27600B3CE59 /* RegistrationUITests.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		79FEA3A129E5A91D00B3CE59 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				79FEA3A629E5B0A400B3CE59 /* AddMemberUITests.swift */,
+				79150F3829E6D4B000578A1A /* ChatUITests.swift */,
+				79FEA3A429E5B05900B3CE59 /* EventUITests.swift */,
+				79FEA3A229E5A95300B3CE59 /* MainUITests.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -907,6 +938,7 @@
 					};
 					79DDA69029B4FB7000B04E2A = {
 						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
 						TestTargetID = 79DDA67629B4FB6F00B04E2A;
 					};
 				};
@@ -1188,7 +1220,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79DDA69629B4FB7000B04E2A /* BeThereUITests.swift in Sources */,
+				79FEA3A529E5B05900B3CE59 /* EventUITests.swift in Sources */,
+				79FEA3A029E5A27600B3CE59 /* RegistrationUITests.swift in Sources */,
+				79FEA3A729E5B0A400B3CE59 /* AddMemberUITests.swift in Sources */,
+				79FEA39E29E59A9D00B3CE59 /* LoginUITests.swift in Sources */,
+				79FEA3A329E5A95300B3CE59 /* MainUITests.swift in Sources */,
+				79150F3929E6D4B000578A1A /* ChatUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1449,14 +1486,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2D3N9A382G;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.bercidalnoky.BeThereUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BeThere;
@@ -1467,10 +1511,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2D3N9A382G;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.bercidalnoky.BeThereUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
