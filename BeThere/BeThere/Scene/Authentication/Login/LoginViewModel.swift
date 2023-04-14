@@ -27,7 +27,9 @@ extension LoginViewModel {
         authenticationService.signIn(email: email, password: password)
             .sink(
                 receiveValue: { [weak self] in if $0 { self?.navigator.finishFlow() } },
-                receiveError: { print($0) }
+                receiveError: { _ in
+                    // TODO: handle error
+                }
             )
             .store(in: &cancellables)
     }

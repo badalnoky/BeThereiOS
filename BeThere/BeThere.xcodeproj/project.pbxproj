@@ -56,6 +56,7 @@
 		7994CA2729BB3C0900EB90E0 /* SearchViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2629BB3C0900EB90E0 /* SearchViewModel+Mock.swift */; };
 		7994CA2929BB3F6D00EB90E0 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2829BB3F6D00EB90E0 /* ChatViewModel.swift */; };
 		7994CA2B29BB402D00EB90E0 /* ChatViewModel+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7994CA2A29BB402D00EB90E0 /* ChatViewModel+Mock.swift */; };
+		79AAD63629E9B0E600E12A10 /* Error+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AAD63529E9B0E600E12A10 /* Error+Extensions.swift */; };
 		79B3B2DF29DF2BFE000A9B80 /* EventViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3B2DE29DF2BFE000A9B80 /* EventViewModelTests.swift */; };
 		79B3B2E129DF342E000A9B80 /* AddMemberViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3B2E029DF342E000A9B80 /* AddMemberViewModelTests.swift */; };
 		79B3B2E329DF3941000A9B80 /* ChatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3B2E229DF3941000A9B80 /* ChatViewModelTests.swift */; };
@@ -195,6 +196,7 @@
 		7994CA2629BB3C0900EB90E0 /* SearchViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewModel+Mock.swift"; sourceTree = "<group>"; };
 		7994CA2829BB3F6D00EB90E0 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		7994CA2A29BB402D00EB90E0 /* ChatViewModel+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatViewModel+Mock.swift"; sourceTree = "<group>"; };
+		79AAD63529E9B0E600E12A10 /* Error+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extensions.swift"; sourceTree = "<group>"; };
 		79B3B2DE29DF2BFE000A9B80 /* EventViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelTests.swift; sourceTree = "<group>"; };
 		79B3B2E029DF342E000A9B80 /* AddMemberViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewModelTests.swift; sourceTree = "<group>"; };
 		79B3B2E229DF3941000A9B80 /* ChatViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModelTests.swift; sourceTree = "<group>"; };
@@ -832,6 +834,7 @@
 				795118F329D7474C00144EDE /* Double+Extensions.swift */,
 				79EBF86029B90D1E00E83646 /* Image+Extensions.swift */,
 				79D922FB29D60C27006F4732 /* View+Extensions.swift */,
+				79AAD63529E9B0E600E12A10 /* Error+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1175,6 +1178,7 @@
 				79D6CF2A29C492080022656C /* AuthenticationService+Mock.swift in Sources */,
 				7935C49329D84386008FF924 /* IconButton.swift in Sources */,
 				7916D4AC29D7600E00CF8016 /* Animations.swift in Sources */,
+				79AAD63629E9B0E600E12A10 /* Error+Extensions.swift in Sources */,
 				7936AC1A29D73889000B4467 /* GuidelinesModel.swift in Sources */,
 				79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */,
 				79D9230329D61A8B006F4732 /* EventNavigationBarModifier.swift in Sources */,

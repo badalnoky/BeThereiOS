@@ -44,6 +44,20 @@ internal enum Txt {
     /// user
     internal static let userCollection = Txt.tr("Localizable", "Data.userCollection", fallback: "user")
   }
+  internal enum Error {
+    /// Please enter a correct email
+    internal static let emailFormat = Txt.tr("Localizable", "Error.emailFormat", fallback: "Please enter a correct email")
+    /// No internetconnection, please connect and try again.
+    internal static let network = Txt.tr("Localizable", "Error.network", fallback: "No internetconnection, please connect and try again.")
+    /// There is no account for this email
+    internal static let nonUser = Txt.tr("Localizable", "Error.nonUser", fallback: "There is no account for this email")
+    /// There is already a registered account with this email
+    internal static let takenEmail = Txt.tr("Localizable", "Error.takenEmail", fallback: "There is already a registered account with this email")
+    /// An unknown error occured
+    internal static let unknown = Txt.tr("Localizable", "Error.unknown", fallback: "An unknown error occured")
+    /// Incorrect password
+    internal static let wrongPassword = Txt.tr("Localizable", "Error.wrongPassword", fallback: "Incorrect password")
+  }
   internal enum Event {
     /// date
     internal static let date = Txt.tr("Localizable", "Event.date", fallback: "date")

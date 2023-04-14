@@ -48,7 +48,9 @@ extension AuthenticatonService: AuthenticationServiceInput {
                                 loggedIn.send(true)
                             }
                         },
-                        receiveError: { print($0) }
+                        receiveError: { error in
+                            loggedIn.send(completion: .failure(error))
+                        }
                     )
                     .store(in: &self.cancellables)
             }

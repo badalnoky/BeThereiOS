@@ -28,7 +28,9 @@ extension RegistrationViewModel {
         authenticationService.registrate(email: email, password: password, name: name)
             .sink(
                 receiveValue: { [weak self] in if $0 { self?.navigator.showSuccessfulRegistration() } },
-                receiveError: { print($0) }
+                receiveError: { _ in
+                    // TODO: handle error
+                }
             )
             .store(in: &cancellables)
     }

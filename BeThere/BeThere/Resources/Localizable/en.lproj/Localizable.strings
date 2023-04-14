@@ -115,3 +115,12 @@
 "EventData.users" = "users";
 "EventData.messages" = "messages";
 "EventData.newUsers" = "newUsers";
+
+// MARK: Error
+
+"Error.wrongPassword" = "Incorrect password";
+"Error.emailFormat" = "Please enter a correct email";
+"Error.nonUser" = "There is no account for this email";
+"Error.takenEmail" = "There is already a registered account with this email";
+"Error.network" = "No internetconnection, please connect and try again.";
+"Error.unknown" = "An unknown error occured";

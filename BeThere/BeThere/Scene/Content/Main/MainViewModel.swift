@@ -37,7 +37,9 @@ extension MainViewModel {
         authenticationService.signOut()
             .sink(
                 receiveValue: { [weak self] in if $0 { self?.navigator.finishFlow() } },
-                receiveError: { print($0) }
+                receiveError: { _ in
+                    // TODO: handle error
+                }
             )
             .store(in: &cancellables)
     }
