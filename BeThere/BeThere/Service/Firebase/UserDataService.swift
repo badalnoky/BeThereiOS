@@ -87,7 +87,7 @@ extension UserDataService: UserDataServiceInput {
                 if error == nil, let documents = query?.documents {
                     otherUsers.removeAll()
                     for document in documents {
-                        if let addedUser = User(fromDocument: document.data()), addedUser.name.contains(substring) {
+                        if let addedUser = User(fromDocument: document.data()), addedUser.name.caseInsensitiveContains(substring) {
                             otherUsers.append(addedUser)
                         }
                     }
@@ -112,9 +112,9 @@ extension UserDataService: UserDataServiceInput {
                     friends.removeAll()
                     for document in documents {
                         if let addedUser = User(fromDocument: document.data()) {
-                            if (isInitialFetch || addedUser.name.contains(substring)) && user.friends.contains(addedUser.id) {
+                            if (isInitialFetch || addedUser.name.caseInsensitiveContains(substring)) && user.friends.contains(addedUser.id) {
                                 friends.append(addedUser)
-                            } else if !isInitialFetch, !user.friends.contains(addedUser.id), addedUser.name.contains(substring) {
+                            } else if !isInitialFetch, !user.friends.contains(addedUser.id), addedUser.name.caseInsensitiveContains(substring) {
                                 otherUsers.append(addedUser)
                             }
                         }

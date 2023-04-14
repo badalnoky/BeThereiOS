@@ -8,17 +8,13 @@ final class MainViewModel: ObservableObject {
     private var eventService: EventDataServiceInput
     private var cancellables = Set<AnyCancellable>()
 
-    @Published var searchString: String = .empty
     @Published var filteredEvents: [Event] = []
+    @Published var searchString: String = .empty {
+        didSet { setFilteredEvents() }
+    }
 
     var allEvents: [Event] = [] {
-        didSet {
-            if searchString.count > 2 {
-                filteredEvents = allEvents.filter { $0.name.contains(searchString) }
-            } else {
-                filteredEvents = allEvents
-            }
-        }
+        didSet { setFilteredEvents() }
     }
 
     init(
@@ -61,15 +57,6 @@ extension MainViewModel {
     func didTapCreate() {
         navigator.showEvent()
     }
-
-    func didTapSearch() {
-        if searchString.count > 2 {
-            filteredEvents = allEvents.filter { $0.name.contains(searchString) }
-        } else {
-            filteredEvents = allEvents
-            // TODO: show error message
-        }
-    }
 }
 
 private extension MainViewModel {
@@ -94,5 +81,13 @@ private extension MainViewModel {
                 self?.allEvents = $0
             }
             .store(in: &cancellables)
+    }
+
+    func setFilteredEvents() {
+        if !searchString.isEmpty {
+            filteredEvents = allEvents.filter { $0.name.caseInsensitiveContains(searchString) }
+        } else {
+            filteredEvents = allEvents
+        }
     }
 }
