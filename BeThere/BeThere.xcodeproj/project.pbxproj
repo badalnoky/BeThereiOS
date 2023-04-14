@@ -488,9 +488,9 @@
 		793A5A2C29B79FC6009A3D5B /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				7935C49C29D89C59008FF924 /* ChatModel.swift */,
 				793A5A3429B7A0B6009A3D5B /* ChatView.swift */,
 				7994CA2829BB3F6D00EB90E0 /* ChatViewModel.swift */,
-				7935C49C29D89C59008FF924 /* ChatModel.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
