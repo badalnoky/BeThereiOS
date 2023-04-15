@@ -17,6 +17,7 @@ extension RegistrationView: View {
                 StyledField(title: Str.passwordAgainLabel, text: $viewModel.passwordAgain, validateText: $viewModel.password)
                 Button(Str.registrateLabel, action: viewModel.didTapRegistrate)
                     .buttonStyle(BaseButtonStyle())
+                    .disabled(viewModel.submitDisabled)
             }
             .padding(.padding16)
         }

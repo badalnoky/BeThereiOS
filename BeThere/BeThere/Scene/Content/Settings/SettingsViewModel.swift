@@ -16,6 +16,10 @@ public final class SettingsViewModel: ObservableObject {
     @Published var alertText: String = .empty
     @Published var displayAlert = false
 
+    public var submitDisabled: Bool {
+        (nameMemento == name || name.count < 3) && !hasImageChanged
+    }
+
     init(
         navigator: Navigator<ContentSceneFactory>,
         userDataService: UserDataServiceInput

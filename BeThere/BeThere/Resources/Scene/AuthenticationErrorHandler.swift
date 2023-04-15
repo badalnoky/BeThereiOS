@@ -1,6 +1,6 @@
 import Foundation
 
-class AuthenticationErrorHandler {
+public class AuthenticationErrorHandler {
     @Published var alertText: String = .empty
     @Published var displayAlert = false
 
