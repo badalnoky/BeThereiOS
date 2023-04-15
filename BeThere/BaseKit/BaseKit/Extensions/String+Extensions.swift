@@ -1,6 +1,8 @@
 public extension String {
     static var empty: String = ""
     static var person: String = "person.circle.fill"
+    static var networkErrorIcon: String = "wifi.slash"
+    static var networkErrorDescription: String = "No network connection available. Please connect to the internet!"
 
     var isStrong: Bool {
         let isLong = self.count > 7
