@@ -1,7 +1,7 @@
 import BaseKit
 import Combine
 
-final class LoginViewModel: ObservableObject {
+final class LoginViewModel: AuthenticationErrorHandler, ObservableObject {
     private var navigator: Navigator<AuthenticationSceneFactory>
     private var authenticationService: AuthenticationServiceInput
     private var cancellables = Set<AnyCancellable>()
@@ -27,9 +27,7 @@ extension LoginViewModel {
         authenticationService.signIn(email: email, password: password)
             .sink(
                 receiveValue: { [weak self] in if $0 { self?.navigator.finishFlow() } },
-                receiveError: { _ in
-                    // TODO: handle error
-                }
+                receiveError: { [weak self] in self?.handleError($0) }
             )
             .store(in: &cancellables)
     }

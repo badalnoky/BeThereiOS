@@ -2,7 +2,7 @@ import FirebaseAuth
 
 extension Error {
     private typealias Errors = Txt.Error
-    var authErrorDescription: String {
+    var localErrorDescription: String {
         let error = self as NSError
         switch error.code {
         case AuthErrorCode.wrongPassword.rawValue: return Errors.wrongPassword

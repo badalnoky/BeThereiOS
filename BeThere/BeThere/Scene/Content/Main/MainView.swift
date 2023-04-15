@@ -35,6 +35,9 @@ extension MainView: View {
             settingsAction: viewModel.didTapSettings
         )
         .defaultViewSettings()
+        .alert(viewModel.alertText, isPresented: $viewModel.displayAlert) {
+            Button(Str.dismissButton, role: .cancel) { }
+        }
     }
 }
 

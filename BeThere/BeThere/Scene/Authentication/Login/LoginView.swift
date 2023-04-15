@@ -18,6 +18,9 @@ extension LoginView: View {
         }
         .defaultNavigationBar(title: Str.title, isNavigatable: false)
         .defaultViewSettings()
+        .alert(viewModel.alertText, isPresented: $viewModel.displayAlert) {
+            Button(Str.dismissButton, role: .cancel) { }
+        }
     }
 }
 

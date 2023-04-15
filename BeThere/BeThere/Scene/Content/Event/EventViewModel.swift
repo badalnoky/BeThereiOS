@@ -16,6 +16,8 @@ final class EventViewModel: ObservableObject {
     @Published var location: String = .empty
     @Published var members: [User] = []
     @Published var isChoosingDate = false
+    @Published var alertText: String = .empty
+    @Published var displayAlert = false
 
     init(
         navigator: Navigator<ContentSceneFactory>,
@@ -55,14 +57,15 @@ extension EventViewModel {
     }
 
     func didTapSave() {
-        if name.count > 3, location.count > 3 {
+        if name.count > 2, location.count > 2 {
             if state == .creation {
                 createEvent()
             } else {
                 modifyEvent()
             }
         } else {
-            // TODO: handle non compliant field values
+            let error: SaveEventError = name.count < 3 ? .name : .location
+            handleError(error)
         }
     }
 
@@ -81,6 +84,11 @@ private extension EventViewModel {
                 self.members.append(contentsOf: filtered)
             }
             .store(in: &cancellables)
+    }
+
+    func handleError(_ error: SaveEventError) {
+        alertText = error.description
+        displayAlert = true
     }
 }
 

@@ -22,6 +22,9 @@ extension RegistrationView: View {
         }
         .defaultNavigationBar(title: Str.title)
         .scrollableViewSettings()
+        .alert(viewModel.alertText, isPresented: $viewModel.displayAlert) {
+            Button(Str.dismissButton, role: .cancel) { }
+        }
     }
 }
 

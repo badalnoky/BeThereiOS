@@ -60,6 +60,8 @@
 		79B3B2DF29DF2BFE000A9B80 /* EventViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3B2DE29DF2BFE000A9B80 /* EventViewModelTests.swift */; };
 		79B3B2E129DF342E000A9B80 /* AddMemberViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3B2E029DF342E000A9B80 /* AddMemberViewModelTests.swift */; };
 		79B3B2E329DF3941000A9B80 /* ChatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3B2E229DF3941000A9B80 /* ChatViewModelTests.swift */; };
+		79BFAF9429EA9EAA0042CDBA /* AuthenticationErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFAF9329EA9EAA0042CDBA /* AuthenticationErrorHandler.swift */; };
+		79BFAF9629EAACE90042CDBA /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFAF9529EAACE90042CDBA /* SettingsModel.swift */; };
 		79C235C029C76D6000B9C497 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C235BF29C76D6000B9C497 /* UserDataService.swift */; };
 		79C235C229C7709100B9C497 /* UserDataService+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C235C129C7709100B9C497 /* UserDataService+Mock.swift */; };
 		79C6B80729D8CC2F00705947 /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C6B80629D8CC2F00705947 /* UserList.swift */; };
@@ -200,6 +202,8 @@
 		79B3B2DE29DF2BFE000A9B80 /* EventViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelTests.swift; sourceTree = "<group>"; };
 		79B3B2E029DF342E000A9B80 /* AddMemberViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewModelTests.swift; sourceTree = "<group>"; };
 		79B3B2E229DF3941000A9B80 /* ChatViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModelTests.swift; sourceTree = "<group>"; };
+		79BFAF9329EA9EAA0042CDBA /* AuthenticationErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationErrorHandler.swift; sourceTree = "<group>"; };
+		79BFAF9529EAACE90042CDBA /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		79C235BF29C76D6000B9C497 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		79C235C129C7709100B9C497 /* UserDataService+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDataService+Mock.swift"; sourceTree = "<group>"; };
 		79C6B80629D8CC2F00705947 /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
@@ -472,6 +476,7 @@
 		793A5A2A29B79FB3009A3D5B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				79BFAF9529EAACE90042CDBA /* SettingsModel.swift */,
 				793A5A3C29B7A0E6009A3D5B /* SettingsView.swift */,
 				798048DB29BA5119006AE94C /* SettingsViewModel.swift */,
 			);
@@ -524,6 +529,14 @@
 				798F3F0929C9FCDF0022AECC /* AddMemberViewModel.swift */,
 			);
 			path = AddMember;
+			sourceTree = "<group>";
+		};
+		79BFAF9229EA9E670042CDBA /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				79BFAF9329EA9EAA0042CDBA /* AuthenticationErrorHandler.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		79C6B80529D8CBE500705947 /* UserList */ = {
@@ -700,6 +713,7 @@
 				79DDA6A829B5003700B04E2A /* Localizable */,
 				79EBF85029B8FFB600E83646 /* Mock */,
 				79D922FD29D60EC3006F4732 /* Modifiers */,
+				79BFAF9229EA9E670042CDBA /* Scene */,
 				79D922F829D608C6006F4732 /* Styles */,
 			);
 			path = Resources;
@@ -1144,6 +1158,7 @@
 				79DDA6B229B5040E00B04E2A /* DI.swift in Sources */,
 				79EAA1B529D1E62300E0AC1D /* CGFloat+Extensions.swift in Sources */,
 				798048DA29BA4DBE006AE94C /* MainViewModel+Mock.swift in Sources */,
+				79BFAF9629EAACE90042CDBA /* SettingsModel.swift in Sources */,
 				7936AC1629D73877000B4467 /* Guideline.swift in Sources */,
 				79D922D929D5F05B006F4732 /* Colors.swift in Sources */,
 				79EBF85929B9020D00E83646 /* RegistrationViewModel+Mock.swift in Sources */,
@@ -1183,6 +1198,7 @@
 				79DDA67B29B4FB6F00B04E2A /* BeThereApp.swift in Sources */,
 				79D9230329D61A8B006F4732 /* EventNavigationBarModifier.swift in Sources */,
 				79188CC229C6744500F47280 /* User.swift in Sources */,
+				79BFAF9429EA9EAA0042CDBA /* AuthenticationErrorHandler.swift in Sources */,
 				798F3F1229CA10980022AECC /* EventDataService.swift in Sources */,
 				79EBF86129B90D1E00E83646 /* Image+Extensions.swift in Sources */,
 				7994CA2529BB3B5000EB90E0 /* SearchViewModel.swift in Sources */,

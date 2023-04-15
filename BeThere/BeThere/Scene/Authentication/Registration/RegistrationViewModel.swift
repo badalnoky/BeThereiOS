@@ -1,7 +1,7 @@
 import BaseKit
 import Combine
 
-final class RegistrationViewModel: ObservableObject {
+final class RegistrationViewModel: AuthenticationErrorHandler, ObservableObject {
     private var navigator: Navigator<AuthenticationSceneFactory>
     private var authenticationService: AuthenticationServiceInput
     private var cancellables = Set<AnyCancellable>()
@@ -28,9 +28,7 @@ extension RegistrationViewModel {
         authenticationService.registrate(email: email, password: password, name: name)
             .sink(
                 receiveValue: { [weak self] in if $0 { self?.navigator.showSuccessfulRegistration() } },
-                receiveError: { _ in
-                    // TODO: handle error
-                }
+                receiveError: { [weak self] in self?.handleError($0) }
             )
             .store(in: &cancellables)
     }

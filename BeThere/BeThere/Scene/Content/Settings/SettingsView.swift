@@ -24,6 +24,9 @@ extension SettingsView: View {
         }
         .defaultNavigationBar(title: Str.title)
         .defaultViewSettings()
+        .alert(viewModel.alertText, isPresented: $viewModel.displayAlert) {
+            Button(Str.dismissButton, role: .cancel) { }
+        }
     }
 }
 

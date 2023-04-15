@@ -12,6 +12,8 @@ final class MainViewModel: ObservableObject {
     @Published var searchString: String = .empty {
         didSet { setFilteredEvents() }
     }
+    @Published var alertText: String = .empty
+    @Published var displayAlert = false
 
     var allEvents: [Event] = [] {
         didSet { setFilteredEvents() }
@@ -37,9 +39,7 @@ extension MainViewModel {
         authenticationService.signOut()
             .sink(
                 receiveValue: { [weak self] in if $0 { self?.navigator.finishFlow() } },
-                receiveError: { _ in
-                    // TODO: handle error
-                }
+                receiveError: { [weak self] in self?.handleError($0)}
             )
             .store(in: &cancellables)
     }
@@ -91,5 +91,10 @@ private extension MainViewModel {
         } else {
             filteredEvents = allEvents
         }
+    }
+
+    func handleError(_ error: Error) {
+        alertText = error.localErrorDescription
+        displayAlert = true
     }
 }
