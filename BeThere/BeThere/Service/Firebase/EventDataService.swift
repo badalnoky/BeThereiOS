@@ -37,7 +37,11 @@ extension EventDataService: EventDataServiceInput {
                     events.removeAll()
                     for document in documents {
                         if let event = Event(fromDocument: document.data()) {
-                            events.append(event)
+                            if event.date.addingTimeInterval(.day) < Date.now {
+                                self.deletePastEvent(event)
+                            } else {
+                                events.append(event)
+                            }
                         }
                     }
                     self.userEvents.send(events)
@@ -115,6 +119,13 @@ private extension EventDataService {
             if let error = error {
                 print(error.localizedDescription)
             }
+        }
+    }
+
+    func deletePastEvent(_ event: Event) {
+        eventCollection.document(event.id).delete()
+        for userId in event.users {
+            userCollection.document(userId).updateData([Keys.events: FieldValue.arrayRemove([event.id])])
         }
     }
 }

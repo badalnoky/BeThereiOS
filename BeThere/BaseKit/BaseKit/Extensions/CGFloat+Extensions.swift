@@ -3,6 +3,8 @@ public extension CGFloat {
     static let defaultIconSize: CGFloat = 30
     /// 20 pt
     static let smallIconSize: CGFloat = 20
+    /// 50 pt
+    static let mediumIconSize: CGFloat = 50
 }
 
 public extension CGFloat {

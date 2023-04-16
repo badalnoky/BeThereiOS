@@ -16,6 +16,8 @@
 		79502F9129D4806700B1DD37 /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79502F9029D4806700B1DD37 /* CachedAsyncImage.swift */; };
 		79502F9329D4808C00B1DD37 /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79502F9229D4808C00B1DD37 /* ImageCacheService.swift */; };
 		79502F9529D4848E00B1DD37 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79502F9429D4848E00B1DD37 /* Int+Extensions.swift */; };
+		79BFAFAA29EB0C9E0042CDBA /* NetworkMonitorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFAFA929EB0C9E0042CDBA /* NetworkMonitorViewModel.swift */; };
+		79BFAFAC29EB133A0042CDBA /* NetworkOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BFAFAB29EB133A0042CDBA /* NetworkOverlay.swift */; };
 		79D922EF29D60548006F4732 /* Publisher+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D922EE29D60548006F4732 /* Publisher+Extensions.swift */; };
 		79DDA6C929B50AEF00B04E2A /* BaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 79DDA6C829B50AEF00B04E2A /* BaseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		79DDA6D329B50B1D00B04E2A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDA6D129B50B1D00B04E2A /* NetworkMonitor.swift */; };
@@ -37,6 +39,8 @@
 		79502F9029D4806700B1DD37 /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		79502F9229D4808C00B1DD37 /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
 		79502F9429D4848E00B1DD37 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		79BFAFA929EB0C9E0042CDBA /* NetworkMonitorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorViewModel.swift; sourceTree = "<group>"; };
+		79BFAFAB29EB133A0042CDBA /* NetworkOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkOverlay.swift; sourceTree = "<group>"; };
 		79D922EE29D60548006F4732 /* Publisher+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+Extensions.swift"; sourceTree = "<group>"; };
 		79DDA6C529B50AEF00B04E2A /* BaseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DDA6C829B50AEF00B04E2A /* BaseKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseKit.h; sourceTree = "<group>"; };
@@ -108,6 +112,24 @@
 			path = CachedAsyncImage;
 			sourceTree = "<group>";
 		};
+		79BFAFA729EB0C5A0042CDBA /* ImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				79502F9229D4808C00B1DD37 /* ImageCacheService.swift */,
+			);
+			path = ImageCache;
+			sourceTree = "<group>";
+		};
+		79BFAFA829EB0C670042CDBA /* NetworkMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				79DDA6D129B50B1D00B04E2A /* NetworkMonitor.swift */,
+				79BFAFA929EB0C9E0042CDBA /* NetworkMonitorViewModel.swift */,
+				79BFAFAB29EB133A0042CDBA /* NetworkOverlay.swift */,
+			);
+			path = NetworkMonitor;
+			sourceTree = "<group>";
+		};
 		79DDA6BB29B50AEF00B04E2A = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +162,8 @@
 		79DDA6CF29B50B1D00B04E2A /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				79502F9229D4808C00B1DD37 /* ImageCacheService.swift */,
-				79DDA6D129B50B1D00B04E2A /* NetworkMonitor.swift */,
+				79BFAFA729EB0C5A0042CDBA /* ImageCache */,
+				79BFAFA829EB0C670042CDBA /* NetworkMonitor */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -244,8 +266,10 @@
 				79502F9329D4808C00B1DD37 /* ImageCacheService.swift in Sources */,
 				79DDA6DC29B50B2700B04E2A /* SceneFactory.swift in Sources */,
 				7935C4A229D8AACA008FF924 /* View+Extensions.swift in Sources */,
+				79BFAFAA29EB0C9E0042CDBA /* NetworkMonitorViewModel.swift in Sources */,
 				79DDA6DD29B50B2700B04E2A /* Coordinator.swift in Sources */,
 				79502F9529D4848E00B1DD37 /* Int+Extensions.swift in Sources */,
+				79BFAFAC29EB133A0042CDBA /* NetworkOverlay.swift in Sources */,
 				793C051E29D2488500939923 /* Double+Extensions.swift in Sources */,
 				793C051529D2369F00939923 /* AsyncImagePicker.swift in Sources */,
 				79502F9129D4806700B1DD37 /* CachedAsyncImage.swift in Sources */,

@@ -43,6 +43,9 @@ extension EventView: View {
                 .datePickerStyle(.graphical)
                 .presentationDetents([.medium])
         }
+        .alert(viewModel.alertText, isPresented: $viewModel.displayAlert) {
+            Button(Str.dismissButton, role: .cancel) { }
+        }
     }
 }
 

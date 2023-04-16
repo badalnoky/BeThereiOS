@@ -13,6 +13,12 @@ public final class SettingsViewModel: ObservableObject {
     @Published var name: String = .empty
     @Published var image: UIImage?
     @Published var hasImageChanged = false
+    @Published var alertText: String = .empty
+    @Published var displayAlert = false
+
+    public var submitDisabled: Bool {
+        (nameMemento == name || name.count < 3) && !hasImageChanged
+    }
 
     init(
         navigator: Navigator<ContentSceneFactory>,
@@ -29,21 +35,15 @@ public extension SettingsViewModel {
     func didTapSave() {
         if nameMemento != name, name.count > 2 {
             userDataService.updateUserName(to: name)
-        } else {
-            // TODO: show error message
         }
 
         if let uiImage = image, hasImageChanged {
             userDataService.upload(image: uiImage)
                 .sink { [weak self] success in
                     self?.hasImageChanged = false
-                    // TODO: handle succes
-                } receiveError: { error in
-                    // TODO: Handle error
-                }
+                    self?.handleMessage(.successfulUpload)
+                } receiveError: { _ in self.handleMessage(.uploadError) }
                 .store(in: &cancellables)
-        } else {
-            // TODO: show error message
         }
     }
 }
@@ -59,5 +59,10 @@ private extension SettingsViewModel {
                 }
             }
             .store(in: &cancellables)
+    }
+
+    func handleMessage(_ message: SettingsMessage) {
+        alertText = message.description
+        displayAlert = true
     }
 }

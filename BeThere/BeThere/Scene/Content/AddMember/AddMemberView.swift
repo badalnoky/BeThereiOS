@@ -17,12 +17,14 @@ extension AddMemberView: View {
                         .textStyle(.callout)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     UserList(users: viewModel.friends, action: viewModel.didTapAdd(user:))
+                        .withPlaceHolder(collection: viewModel.friends, text: Str.friendPlaceholderText)
                     Divider().styledDivider()
                         .padding(.top, .padding8)
                     Text(Str.otherLabel)
                         .textStyle(.callout)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     UserList(users: viewModel.otherUsers, action: viewModel.didTapAdd(user:))
+                        .withPlaceHolder(collection: viewModel.otherUsers, text: Str.otherPlaceholderText)
                 }
             }
         }

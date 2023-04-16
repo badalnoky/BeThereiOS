@@ -9,9 +9,17 @@ public final class AddMemberViewModel: ObservableObject {
 
     private var eventId: String
 
-    @Published var searchString: String = .empty
     @Published var friends: [User] = []
     @Published var otherUsers: [User] = []
+    @Published var searchString: String = .empty {
+        didSet {
+            if !searchString.isEmpty {
+                userDataService.fetchSearchedUsers(containing: searchString, isInitialFetch: false, filtering: eventService.provisionalMembers.value)
+            } else {
+                otherUsers.removeAll()
+            }
+        }
+    }
 
     init(
         navigator: Navigator<ContentSceneFactory>,
@@ -29,13 +37,6 @@ public final class AddMemberViewModel: ObservableObject {
 }
 
 extension AddMemberViewModel {
-    func didTapSearch() {
-        if searchString.count > 2 {
-            userDataService.fetchSearchedUsers(containing: searchString, isInitialFetch: false, filtering: eventService.provisionalMembers.value)
-        } else {
-            // TODO: show error message
-        }
-    }
     func didTapAdd(user: User) {
         eventService.provisionallyAdd(user: user)
         userDataService.fetchSearchedUsers(containing: searchString, isInitialFetch: false, filtering: eventService.provisionalMembers.value + [user])

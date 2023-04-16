@@ -6,8 +6,16 @@ public final class SearchViewModel: ObservableObject {
     private var userDataService: UserDataServiceInput
     private var cancellables = Set<AnyCancellable>()
 
-    @Published var searchString: String = .empty
     @Published var otherUsers: [User] = []
+    @Published var searchString: String = .empty {
+        didSet {
+            if !searchString.isEmpty {
+                userDataService.fetchUsers(containing: searchString)
+            } else {
+                otherUsers.removeAll()
+            }
+        }
+    }
 
     init(
         navigator: Navigator<ContentSceneFactory>,
@@ -21,14 +29,6 @@ public final class SearchViewModel: ObservableObject {
 }
 
 extension SearchViewModel {
-    func didTapSearch() {
-        if searchString.count > 2 {
-            userDataService.fetchUsers(containing: searchString)
-        } else {
-            // TODO: show error message
-        }
-    }
-
     func didTapAdd(friend: User) {
         userDataService.addFriend(friend)
     }

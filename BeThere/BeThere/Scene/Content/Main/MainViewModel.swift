@@ -8,17 +8,15 @@ final class MainViewModel: ObservableObject {
     private var eventService: EventDataServiceInput
     private var cancellables = Set<AnyCancellable>()
 
-    @Published var searchString: String = .empty
     @Published var filteredEvents: [Event] = []
+    @Published var searchString: String = .empty {
+        didSet { setFilteredEvents() }
+    }
+    @Published var alertText: String = .empty
+    @Published var displayAlert = false
 
     var allEvents: [Event] = [] {
-        didSet {
-            if searchString.count > 2 {
-                filteredEvents = allEvents.filter { $0.name.contains(searchString) }
-            } else {
-                filteredEvents = allEvents
-            }
-        }
+        didSet { setFilteredEvents() }
     }
 
     init(
@@ -41,7 +39,7 @@ extension MainViewModel {
         authenticationService.signOut()
             .sink(
                 receiveValue: { [weak self] in if $0 { self?.navigator.finishFlow() } },
-                receiveError: { print($0) }
+                receiveError: { [weak self] in self?.handleError($0)}
             )
             .store(in: &cancellables)
     }
@@ -60,15 +58,6 @@ extension MainViewModel {
 
     func didTapCreate() {
         navigator.showEvent()
-    }
-
-    func didTapSearch() {
-        if searchString.count > 2 {
-            filteredEvents = allEvents.filter { $0.name.contains(searchString) }
-        } else {
-            filteredEvents = allEvents
-            // TODO: show error message
-        }
     }
 }
 
@@ -94,5 +83,18 @@ private extension MainViewModel {
                 self?.allEvents = $0
             }
             .store(in: &cancellables)
+    }
+
+    func setFilteredEvents() {
+        if !searchString.isEmpty {
+            filteredEvents = allEvents.filter { $0.name.caseInsensitiveContains(searchString) }
+        } else {
+            filteredEvents = allEvents
+        }
+    }
+
+    func handleError(_ error: Error) {
+        alertText = error.localErrorDescription
+        displayAlert = true
     }
 }

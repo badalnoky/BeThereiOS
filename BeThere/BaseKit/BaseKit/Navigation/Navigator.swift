@@ -31,6 +31,7 @@ public struct Navigator<Factory: SceneFactory>: NavigatorInput {
         }
         .onAppear { withAnimation(Animation.easeInOut(duration: .one)) { fadeInOut = false } }
         .opacity(fadeInOut ? .zero : .one)
+        .handlesNetworkError()
     }
 
     public init(sceneFactory: Factory, root: Factory.FlowScreen) {

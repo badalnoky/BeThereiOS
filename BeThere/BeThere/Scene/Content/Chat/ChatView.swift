@@ -25,6 +25,7 @@ extension ChatView: View {
                     .padding(.top, .padding8)
                 }
             }
+            .withPlaceHolder(collection: viewModel.event.messages, text: Str.placeholderText)
             HStack(spacing: .padding16) {
                 StyledField(style: .base, title: Str.messageLabel, text: $viewModel.currentMessage)
                 IconButton(.send, action: viewModel.didTapSend)

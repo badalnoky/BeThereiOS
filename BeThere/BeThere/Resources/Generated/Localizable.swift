@@ -11,10 +11,14 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Txt {
   internal enum AddMember {
+    /// No friends found!
+    internal static let friendPlaceholderText = Txt.tr("Localizable", "AddMember.friendPlaceholderText", fallback: "No friends found!")
     /// Your Friends
     internal static let friendsLabel = Txt.tr("Localizable", "AddMember.friendsLabel", fallback: "Your Friends")
     /// Other users
     internal static let otherLabel = Txt.tr("Localizable", "AddMember.otherLabel", fallback: "Other users")
+    /// No other user found!
+    internal static let otherPlaceholderText = Txt.tr("Localizable", "AddMember.otherPlaceholderText", fallback: "No other user found!")
     /// Search for users
     internal static let searchLabel = Txt.tr("Localizable", "AddMember.searchLabel", fallback: "Search for users")
     /// Add members
@@ -27,6 +31,8 @@ internal enum Txt {
     internal static let locationLabel = Txt.tr("Localizable", "Chat.locationLabel", fallback: "Location:")
     /// Send a message
     internal static let messageLabel = Txt.tr("Localizable", "Chat.messageLabel", fallback: "Send a message")
+    /// No messages yet!
+    internal static let placeholderText = Txt.tr("Localizable", "Chat.placeholderText", fallback: "No messages yet!")
   }
   internal enum Data {
     /// profilePicture
@@ -43,6 +49,24 @@ internal enum Txt {
     internal static let photo = Txt.tr("Localizable", "Data.photo", fallback: "photo")
     /// user
     internal static let userCollection = Txt.tr("Localizable", "Data.userCollection", fallback: "user")
+  }
+  internal enum Error {
+    /// Please enter a correct email format!
+    internal static let emailFormat = Txt.tr("Localizable", "Error.emailFormat", fallback: "Please enter a correct email format!")
+    /// The location of the event needs to be at least 3 characters!
+    internal static let locationLength = Txt.tr("Localizable", "Error.locationLength", fallback: "The location of the event needs to be at least 3 characters!")
+    /// The name of the event needs to be at least 3 characters!
+    internal static let nameLength = Txt.tr("Localizable", "Error.nameLength", fallback: "The name of the event needs to be at least 3 characters!")
+    /// No internetconnection, please connect and try again!
+    internal static let network = Txt.tr("Localizable", "Error.network", fallback: "No internetconnection, please connect and try again!")
+    /// There is no account for this email!
+    internal static let nonUser = Txt.tr("Localizable", "Error.nonUser", fallback: "There is no account for this email!")
+    /// There is already a registered account with this email!
+    internal static let takenEmail = Txt.tr("Localizable", "Error.takenEmail", fallback: "There is already a registered account with this email!")
+    /// An unknown error occured, please try again later!
+    internal static let unknown = Txt.tr("Localizable", "Error.unknown", fallback: "An unknown error occured, please try again later!")
+    /// Incorrect password!
+    internal static let wrongPassword = Txt.tr("Localizable", "Error.wrongPassword", fallback: "Incorrect password!")
   }
   internal enum Event {
     /// date
@@ -89,6 +113,8 @@ internal enum Txt {
   internal enum EventScreen {
     /// Time and Date:
     internal static let dateLabel = Txt.tr("Localizable", "EventScreen.dateLabel", fallback: "Time and Date:")
+    /// OK
+    internal static let dismissButton = Txt.tr("Localizable", "EventScreen.dismissButton", fallback: "OK")
     /// Location:
     internal static let locationLabel = Txt.tr("Localizable", "EventScreen.locationLabel", fallback: "Location:")
     /// Members
@@ -147,6 +173,8 @@ internal enum Txt {
     internal static let violatedGuideline = Txt.tr("Localizable", "Icons.violatedGuideline", fallback: "x.circle.fill")
   }
   internal enum Login {
+    /// OK
+    internal static let dismissButton = Txt.tr("Localizable", "Login.dismissButton", fallback: "OK")
     /// Email
     internal static let emailLabel = Txt.tr("Localizable", "Login.emailLabel", fallback: "Email")
     /// Password
@@ -161,6 +189,10 @@ internal enum Txt {
   internal enum Main {
     /// Create an event
     internal static let createLabel = Txt.tr("Localizable", "Main.createLabel", fallback: "Create an event")
+    /// OK
+    internal static let dismissButton = Txt.tr("Localizable", "Main.dismissButton", fallback: "OK")
+    /// You have no events planned!
+    internal static let placeholderText = Txt.tr("Localizable", "Main.placeholderText", fallback: "You have no events planned!")
     /// Search
     internal static let searchLabel = Txt.tr("Localizable", "Main.searchLabel", fallback: "Search")
   }
@@ -181,6 +213,8 @@ internal enum Txt {
     }
   }
   internal enum Registration {
+    /// OK
+    internal static let dismissButton = Txt.tr("Localizable", "Registration.dismissButton", fallback: "OK")
     /// Email
     internal static let emailLabel = Txt.tr("Localizable", "Registration.emailLabel", fallback: "Email")
     /// First name
@@ -199,12 +233,16 @@ internal enum Txt {
   internal enum Search {
     /// Other users
     internal static let otherLabel = Txt.tr("Localizable", "Search.otherLabel", fallback: "Other users")
+    /// No users found!
+    internal static let placeholderText = Txt.tr("Localizable", "Search.placeholderText", fallback: "No users found!")
     /// Search for users
     internal static let searchLabel = Txt.tr("Localizable", "Search.searchLabel", fallback: "Search for users")
     /// Add friends
     internal static let title = Txt.tr("Localizable", "Search.title", fallback: "Add friends")
   }
   internal enum Settings {
+    /// OK
+    internal static let dismissButton = Txt.tr("Localizable", "Settings.dismissButton", fallback: "OK")
     /// Save
     internal static let saveLabel = Txt.tr("Localizable", "Settings.saveLabel", fallback: "Save")
     /// Settings
@@ -215,6 +253,12 @@ internal enum Txt {
     internal static let nextLabel = Txt.tr("Localizable", "SuccessfulRegistration.nextLabel", fallback: "Next")
     /// Successful registration
     internal static let title = Txt.tr("Localizable", "SuccessfulRegistration.title", fallback: "Successful registration")
+  }
+  internal enum UploadMessage {
+    /// Something went wrong, please try again later!
+    internal static let error = Txt.tr("Localizable", "UploadMessage.error", fallback: "Something went wrong, please try again later!")
+    /// Profile picture succesfully updated!
+    internal static let success = Txt.tr("Localizable", "UploadMessage.success", fallback: "Profile picture succesfully updated!")
   }
   internal enum User {
     /// events

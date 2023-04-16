@@ -60,6 +60,7 @@
 "Login.passwordLabel" = "Password";
 "Login.registrateLabel" = "registrate";
 "Login.signInLabel" = "Sign in";
+"Login.dismissButton" = "OK";
 
 "Registration.title" = "Registration";
 "Registration.emailLabel" = "Email";
@@ -68,23 +69,29 @@
 "Registration.passwordLabel" = "Password";
 "Registration.passwordAgainLabel" = "Password again";
 "Registration.registrateLabel" = "Registrate";
+"Registration.dismissButton" = "OK";
 
 "SuccessfulRegistration.title" = "Successful registration";
 "SuccessfulRegistration.nextLabel" = "Next";
 
 "Main.searchLabel" = "Search";
 "Main.createLabel" = "Create an event";
+"Main.dismissButton" = "OK";
+"Main.placeholderText" = "You have no events planned!";
 
 "Settings.title" = "Settings";
 "Settings.saveLabel" = "Save";
+"Settings.dismissButton" = "OK";
 
 "Search.title" = "Add friends";
 "Search.searchLabel" = "Search for users";
 "Search.otherLabel" = "Other users";
+"Search.placeholderText" = "No users found!";
 
 "Chat.dateLabel" = "Time and Date:";
 "Chat.locationLabel" = "Location:";
 "Chat.messageLabel" = "Send a message";
+"Chat.placeholderText" = "No messages yet!";
 
 "EventScreen.nameLabel" = "Name of event:";
 "EventScreen.dateLabel" = "Time and Date:";
@@ -92,11 +99,14 @@
 "EventScreen.membersLabel" = "Members";
 "EventScreen.saveLabel" = "Save";
 "EventScreen.title" = "Edit event";
+"EventScreen.dismissButton" = "OK";
 
 "AddMember.title" = "Add members";
 "AddMember.searchLabel" = "Search for users";
 "AddMember.friendsLabel" = "Your Friends";
 "AddMember.otherLabel" = "Other users";
+"AddMember.friendPlaceholderText" = "No friends found!";
+"AddMember.otherPlaceholderText" = "No other user found!";
 
 // MARK: Services
 
@@ -115,3 +125,19 @@
 "EventData.users" = "users";
 "EventData.messages" = "messages";
 "EventData.newUsers" = "newUsers";
+
+// MARK: Error
+
+"Error.wrongPassword" = "Incorrect password!";
+"Error.emailFormat" = "Please enter a correct email format!";
+"Error.nonUser" = "There is no account for this email!";
+"Error.takenEmail" = "There is already a registered account with this email!";
+"Error.network" = "No internetconnection, please connect and try again!";
+"Error.unknown" = "An unknown error occured, please try again later!";
+"Error.nameLength" = "The name of the event needs to be at least 3 characters!";
+"Error.locationLength" = "The location of the event needs to be at least 3 characters!";
+
+// MARK: Message
+
+"UploadMessage.success" = "Profile picture succesfully updated!";
+"UploadMessage.error" = "Something went wrong, please try again later!";
