@@ -62,6 +62,12 @@ extension View {
             .padding(settings.sentByUser ? .leading : .trailing, .messagePadding)
             .padding(.bottom, settings.isContinued ? .padding4 : .padding16)
     }
+
+    @ViewBuilder func withPlaceHolder<T>(collection: [T], text: String) -> some View {
+        if collection.isEmpty {
+            ListPlaceholder(text)
+        } else { self }
+    }
 }
 
 extension View {

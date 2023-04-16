@@ -11,10 +11,14 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Txt {
   internal enum AddMember {
+    /// No friends found!
+    internal static let friendPlaceholderText = Txt.tr("Localizable", "AddMember.friendPlaceholderText", fallback: "No friends found!")
     /// Your Friends
     internal static let friendsLabel = Txt.tr("Localizable", "AddMember.friendsLabel", fallback: "Your Friends")
     /// Other users
     internal static let otherLabel = Txt.tr("Localizable", "AddMember.otherLabel", fallback: "Other users")
+    /// No other user found!
+    internal static let otherPlaceholderText = Txt.tr("Localizable", "AddMember.otherPlaceholderText", fallback: "No other user found!")
     /// Search for users
     internal static let searchLabel = Txt.tr("Localizable", "AddMember.searchLabel", fallback: "Search for users")
     /// Add members
@@ -27,6 +31,8 @@ internal enum Txt {
     internal static let locationLabel = Txt.tr("Localizable", "Chat.locationLabel", fallback: "Location:")
     /// Send a message
     internal static let messageLabel = Txt.tr("Localizable", "Chat.messageLabel", fallback: "Send a message")
+    /// No messages yet!
+    internal static let placeholderText = Txt.tr("Localizable", "Chat.placeholderText", fallback: "No messages yet!")
   }
   internal enum Data {
     /// profilePicture
@@ -185,6 +191,8 @@ internal enum Txt {
     internal static let createLabel = Txt.tr("Localizable", "Main.createLabel", fallback: "Create an event")
     /// OK
     internal static let dismissButton = Txt.tr("Localizable", "Main.dismissButton", fallback: "OK")
+    /// You have no events planned!
+    internal static let placeholderText = Txt.tr("Localizable", "Main.placeholderText", fallback: "You have no events planned!")
     /// Search
     internal static let searchLabel = Txt.tr("Localizable", "Main.searchLabel", fallback: "Search")
   }
@@ -225,6 +233,8 @@ internal enum Txt {
   internal enum Search {
     /// Other users
     internal static let otherLabel = Txt.tr("Localizable", "Search.otherLabel", fallback: "Other users")
+    /// No users found!
+    internal static let placeholderText = Txt.tr("Localizable", "Search.placeholderText", fallback: "No users found!")
     /// Search for users
     internal static let searchLabel = Txt.tr("Localizable", "Search.searchLabel", fallback: "Search for users")
     /// Add friends

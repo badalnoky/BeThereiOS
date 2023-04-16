@@ -26,6 +26,7 @@ extension MainView: View {
                     }
                 }
             }
+            .withPlaceHolder(collection: viewModel.filteredEvents, text: Str.placeholderText)
             Button(Str.createLabel, action: viewModel.didTapCreate)
                 .buttonStyle(BaseButtonStyle())
         }

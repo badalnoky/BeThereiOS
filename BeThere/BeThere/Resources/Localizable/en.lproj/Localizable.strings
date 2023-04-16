@@ -77,6 +77,7 @@
 "Main.searchLabel" = "Search";
 "Main.createLabel" = "Create an event";
 "Main.dismissButton" = "OK";
+"Main.placeholderText" = "You have no events planned!";
 
 "Settings.title" = "Settings";
 "Settings.saveLabel" = "Save";
@@ -85,10 +86,12 @@
 "Search.title" = "Add friends";
 "Search.searchLabel" = "Search for users";
 "Search.otherLabel" = "Other users";
+"Search.placeholderText" = "No users found!";
 
 "Chat.dateLabel" = "Time and Date:";
 "Chat.locationLabel" = "Location:";
 "Chat.messageLabel" = "Send a message";
+"Chat.placeholderText" = "No messages yet!";
 
 "EventScreen.nameLabel" = "Name of event:";
 "EventScreen.dateLabel" = "Time and Date:";
@@ -102,6 +105,8 @@
 "AddMember.searchLabel" = "Search for users";
 "AddMember.friendsLabel" = "Your Friends";
 "AddMember.otherLabel" = "Other users";
+"AddMember.friendPlaceholderText" = "No friends found!";
+"AddMember.otherPlaceholderText" = "No other user found!";
 
 // MARK: Services
 

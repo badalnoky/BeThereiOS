@@ -16,6 +16,7 @@ extension SearchView: View {
                     UserList(users: viewModel.otherUsers, action: viewModel.didTapAdd(friend:))
                 }
             }
+            .withPlaceHolder(collection: viewModel.otherUsers, text: Str.placeholderText)
         }
         .defaultNavigationBar(title: Str.title)
         .defaultViewSettings()

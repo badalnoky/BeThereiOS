@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		112D7F5EE4519EE61062E6DF /* Pods_BeThere.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A46FDF8AD0B5CB5B7F9A24B /* Pods_BeThere.framework */; };
+		790AEFDD29EC693D00E6CDDD /* ListPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790AEFDC29EC693D00E6CDDD /* ListPlaceholder.swift */; };
 		790BA70B29C39C94003C15DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 790BA70A29C39C94003C15DC /* GoogleService-Info.plist */; };
 		79150F3929E6D4B000578A1A /* ChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79150F3829E6D4B000578A1A /* ChatUITests.swift */; };
 		7916D4A629D755C400CF8016 /* Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7916D4A529D755C400CF8016 /* Lottie.swift */; };
@@ -151,6 +152,7 @@
 		352C0FEF851DD906B3401A70 /* Pods-BeThereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThereTests.release.xcconfig"; path = "Target Support Files/Pods-BeThereTests/Pods-BeThereTests.release.xcconfig"; sourceTree = "<group>"; };
 		4FB2F596789E0BBF1AA6C198 /* Pods-BeThereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeThereTests.debug.xcconfig"; path = "Target Support Files/Pods-BeThereTests/Pods-BeThereTests.debug.xcconfig"; sourceTree = "<group>"; };
 		57EC6FABCBB05042FA96EF57 /* libPods-BeThereTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BeThereTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		790AEFDC29EC693D00E6CDDD /* ListPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlaceholder.swift; sourceTree = "<group>"; };
 		790BA70A29C39C94003C15DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		79150F3829E6D4B000578A1A /* ChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUITests.swift; sourceTree = "<group>"; };
 		7916D4A529D755C400CF8016 /* Lottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottie.swift; sourceTree = "<group>"; };
@@ -323,6 +325,14 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		790AEFDB29EC691E00E6CDDD /* ListPlaceholder */ = {
+			isa = PBXGroup;
+			children = (
+				790AEFDC29EC693D00E6CDDD /* ListPlaceholder.swift */,
+			);
+			path = ListPlaceholder;
+			sourceTree = "<group>";
+		};
 		790BA70929C39C37003C15DC /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +344,7 @@
 		791277F729C0E5B80013173D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				790AEFDB29EC691E00E6CDDD /* ListPlaceholder */,
 				7935C49429D8731D008FF924 /* Card */,
 				7935C49E29D89CEC008FF924 /* ChatItem */,
 				7936AC1429D73860000B4467 /* Guidelines */,
@@ -1218,6 +1229,7 @@
 				7994CA2929BB3F6D00EB90E0 /* ChatViewModel.swift in Sources */,
 				79F645F429BB6F31004B761D /* EventViewModel.swift in Sources */,
 				793A5A1C29B796F7009A3D5B /* AuthenticationSceneFactory.swift in Sources */,
+				790AEFDD29EC693D00E6CDDD /* ListPlaceholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
