@@ -47,7 +47,7 @@ extension Event {
             Keys.location: location,
             Keys.date: date,
             Keys.users: users,
-            Keys.messages: []
+            Keys.messages: [String]()
         ]
     }
 
