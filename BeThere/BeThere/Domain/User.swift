@@ -38,8 +38,8 @@ extension User {
             Keys.id: id,
             Keys.name: name,
             Keys.photo: photo,
-            Keys.friends: [],
-            Keys.events: []
+            Keys.friends: [String](),
+            Keys.events: [String]()
         ]
     }
 
