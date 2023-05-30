@@ -61,7 +61,6 @@ final class MainViewModelTests: XCTestCase {
 
     func test_didTapSearch_shouldFilterEvents() throws {
         sut.searchString = "test"
-        sut.didTapSearch()
         XCTAssertEqual(sut.filteredEvents, [eventTestMock])
     }
 }

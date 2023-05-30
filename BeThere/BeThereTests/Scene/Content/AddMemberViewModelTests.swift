@@ -51,8 +51,6 @@ final class AddMemberViewModelTests: XCTestCase {
     func test_didTapSearch_shouldInvokeFetch() throws {
         sut.searchString = "testString"
 
-        sut.didTapSearch()
-
         XCTAssertTrue(userService.fetchSearchedUsersContainingIsInitialFetchFilteringCalled)
         XCTAssertEqual(userService.fetchSearchedUsersContainingIsInitialFetchFilteringCallsCount, 2)
     }
