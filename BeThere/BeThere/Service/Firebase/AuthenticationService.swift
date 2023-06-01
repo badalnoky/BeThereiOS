@@ -1,5 +1,6 @@
 import Combine
 import FirebaseAuth
+import FirebaseMessaging
 
 // sourcery: AutoMockable
 public protocol AuthenticationServiceInput {
@@ -27,6 +28,7 @@ extension AuthenticatonService: AuthenticationServiceInput {
                 loggedIn.send(completion: .failure(error))
             } else if let result = result {
                 self.userDataService.getUserData(for: result.user.uid)
+                Messaging.messaging().subscribe(toTopic: result.user.uid)
                 loggedIn.send(true)
             }
         }
@@ -61,9 +63,13 @@ extension AuthenticatonService: AuthenticationServiceInput {
     public func signOut() -> CurrentValueSubject<Bool, Error> {
         let successfulSignOut = CurrentValueSubject<Bool, Error>(false)
         do {
+            let userId = authenticator.currentUser?.uid
             try authenticator.signOut()
             self.userDataService.resetUser()
             successfulSignOut.send(true)
+            if let userId = userId {
+                Messaging.messaging().unsubscribe(fromTopic: userId)
+            }
         } catch {
             successfulSignOut.send(completion: .failure(error))
         }

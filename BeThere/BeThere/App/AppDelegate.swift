@@ -24,18 +24,28 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(
         _ center: UNUserNotificationCenter,
-        willPresent notification: UNNotification
-    ) async -> UNNotificationPresentationOptions {
-        [[.badge, .banner, .sound]]
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+    ) {
+        Messaging.messaging().appDidReceiveMessage(notification.request.content.userInfo)
+        completionHandler([[.banner, .badge, .sound]])
     }
 
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {}
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        didReceive response: UNNotificationResponse,
+        withCompletionHandler completionHandler: @escaping () -> Void
+    ) {
+        Messaging.messaging().appDidReceiveMessage(response.notification.request.content.userInfo)
+        completionHandler()
+    }
 
     func application(
         _ application: UIApplication,
         didReceiveRemoteNotification userInfo: [AnyHashable: Any]
     ) async -> UIBackgroundFetchResult {
-        UIBackgroundFetchResult.newData
+        Messaging.messaging().appDidReceiveMessage(userInfo)
+        return UIBackgroundFetchResult.newData
     }
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
