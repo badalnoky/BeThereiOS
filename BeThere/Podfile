@@ -9,6 +9,7 @@ target 'BeThere' do
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
   pod 'FirebaseStorage'
+  pod 'FirebaseMessaging'
   pod 'SwiftLint'
   pod 'SwiftGen'
   pod 'Resolver'

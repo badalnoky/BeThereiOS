@@ -24,6 +24,16 @@ internal enum Txt {
     /// Add members
     internal static let title = Txt.tr("Localizable", "AddMember.title", fallback: "Add members")
   }
+  internal enum App {
+    internal enum Notifications {
+      /// gcm.Message_ID
+      internal static let gcmKey = Txt.tr("Localizable", "App.Notifications.gcmKey", fallback: "gcm.Message_ID")
+      /// FCMToken
+      internal static let tokenName = Txt.tr("Localizable", "App.Notifications.TokenName", fallback: "FCMToken")
+      /// token
+      internal static let userinfoKey = Txt.tr("Localizable", "App.Notifications.userinfoKey", fallback: "token")
+    }
+  }
   internal enum Chat {
     /// Time and Date:
     internal static let dateLabel = Txt.tr("Localizable", "Chat.dateLabel", fallback: "Time and Date:")
