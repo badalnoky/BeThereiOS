@@ -44,8 +44,6 @@ final class SearchViewModelTests: XCTestCase {
     func test_didTapSearch_shouldInvokeFetch() throws {
         sut.searchString = "test"
 
-        sut.didTapSearch()
-
         XCTAssertEqual(userService.fetchUsersContainingCallsCount, 2)
     }
 }

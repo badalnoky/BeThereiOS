@@ -1,3 +1,7 @@
+// MARK: Notifications
+"App.Notifications.gcmKey" = "gcm.Message_ID";
+"App.Notifications.TokenName" = "FCMToken";
+"App.Notifications.userinfoKey" = "token";
 // MARK: Domain
 
 "User.id" = "id";
